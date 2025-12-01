@@ -1,22 +1,18 @@
-import { TanStackDevtools } from '@tanstack/react-devtools'
-import {
-  HeadContent,
-  Scripts,
-  createRootRouteWithContext,
-} from '@tanstack/react-router'
-import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools'
+import { TanStackDevtools } from '@tanstack/react-devtools';
+import { HeadContent, Scripts, createRootRouteWithContext } from '@tanstack/react-router';
+import { TanStackRouterDevtoolsPanel } from '@tanstack/react-router-devtools';
 
-import Header from '../components/Header'
+import Header from '../components/Header';
 
-import TanStackQueryDevtools from '../integrations/tanstack-query/devtools'
+import TanStackQueryDevtools from '../integrations/tanstack-query/devtools';
 
-import appCss from '../styles.css?url'
+import appCss from '../styles.css?url';
 
-import Footer from '@/components/Footer'
-import type { QueryClient } from '@tanstack/react-query'
+import Footer from '@/components/Footer';
+import type { QueryClient } from '@tanstack/react-query';
 
 interface MyRouterContext {
-  queryClient: QueryClient
+  queryClient: QueryClient;
 }
 
 export const Route = createRootRouteWithContext<MyRouterContext>()({
@@ -42,7 +38,7 @@ export const Route = createRootRouteWithContext<MyRouterContext>()({
   }),
 
   shellComponent: RootDocument,
-})
+});
 
 function RootDocument({ children }: { children: React.ReactNode }) {
   return (
@@ -53,7 +49,7 @@ function RootDocument({ children }: { children: React.ReactNode }) {
       <body>
         <Header />
         {children}
-        <Footer/>
+        <Footer />
         <TanStackDevtools
           config={{
             position: 'bottom-right',
@@ -69,5 +65,5 @@ function RootDocument({ children }: { children: React.ReactNode }) {
         <Scripts />
       </body>
     </html>
-  )
+  );
 }

@@ -1,121 +1,268 @@
+import { confirm, OverlayRender, overlayStore } from '@/components/overlay';
 import { createFileRoute } from '@tanstack/react-router';
+import { AlertCircle, ArrowRight, Layout, Settings, Trash2, User, X } from 'lucide-react';
 
 export const Route = createFileRoute('/')({ component: App });
 
-function App() {
+// --- 1. COMPONENT: SIMPLE SHEET (Trượt từ dưới lên) ---
+const DemoSheet = ({ close }: any) => {
   return (
-    <section>
-      <div className="relative pt-24 md:pt-36">
-        <div className="mask-b-from-35% mask-b-to-90% absolute inset-0 top-56 -z-20 lg:top-32">
-          <img
-            src="https://tailark.com/_next/image?url=https%3A%2F%2Fik.imagekit.io%2Flrigu76hy%2Ftailark%2Fnight-background.jpg%3FupdatedAt%3D1745733451120&w=3840&q=75 1x"
-            alt="background"
-            loading="lazy"
-            width="3276"
-            height="4095"
-            decoding="async"
-            data-nimg="1"
-            className="hidden size-full text-transparent dark:block"
-          />
-        </div>
-        <div className="absolute inset-0 -z-10 size-full [background:radial-gradient(125%_125%_at_50%_100%,transparent_0%,var(--color-background)_75%)]" />
+    <div className="p-6 flex flex-col h-full">
+      <div className="flex justify-between items-center mb-6">
+        <h2 className="text-xl font-bold flex items-center gap-2">
+          <Settings className="w-5 h-5" /> Cấu hình Mobile
+        </h2>
+        <button onClick={close} className="p-2 hover:bg-gray-100 rounded-full">
+          <X size={20} />
+        </button>
+      </div>
+      <div className="space-y-4 overflow-y-auto flex-1">
+        {[1, 2, 3, 4, 5].map(i => (
+          <div key={i} className="p-4 border rounded-lg bg-gray-50">
+            <h3 className="font-semibold">Setting Item {i}</h3>
+            <p className="text-sm text-gray-500">Mô tả cấu hình chi tiết cho mục này...</p>
+          </div>
+        ))}
+      </div>
+      <div className="pt-4 border-t mt-4">
+        <button onClick={close} className="w-full py-3 bg-black text-white rounded-lg font-medium">
+          Lưu thay đổi
+        </button>
+      </div>
+    </div>
+  );
+};
 
-        <div className="mx-auto max-w-7xl px-6">
-          <div className="text-center sm:mx-auto lg:mr-auto lg:mt-0">
-            <div>
-              <a
-                className="hover:bg-background dark:hover:border-t-border bg-muted group mx-auto flex w-fit items-center gap-4 rounded-full border p-1 pl-4 shadow-md shadow-zinc-950/5 transition-colors duration-300 dark:border-t-white/5 dark:shadow-zinc-950"
-                href="#link"
-              >
-                <span className="text-foreground text-sm">Introducing Support for AI Models</span>
-                <span className="dark:border-background block h-4 w-0.5 border-l bg-white dark:bg-zinc-700"></span>
-                <div className="bg-background group-hover:bg-muted size-6 overflow-hidden rounded-full duration-500">
-                  <div className="flex w-12 -translate-x-1/2 duration-500 ease-in-out group-hover:translate-x-0">
-                    <span className="flex size-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        className="lucide lucide-arrow-right m-auto size-3"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="m12 5 7 7-7 7"></path>
-                      </svg>
-                    </span>
-                    <span className="flex size-6">
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="24"
-                        height="24"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        className="lucide lucide-arrow-right m-auto size-3"
-                      >
-                        <path d="M5 12h14"></path>
-                        <path d="m12 5 7 7-7 7"></path>
-                      </svg>
-                    </span>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <h1 className="mx-auto mt-8 max-w-4xl text-balance text-5xl max-md:font-semibold md:text-7xl lg:mt-16 xl:text-[5.25rem]">
-              <span className="sr-only">Modern Solutions for Customer Engagement</span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                Modern
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                {' '}
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                Solutions
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                {' '}
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                for
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                {' '}
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                Customer
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                {' '}
-              </span>
-              <span aria-hidden="true" className="inline-block whitespace-pre">
-                Engagement
-              </span>
-            </h1>
-            <p className="mx-auto mt-8 max-w-2xl text-balance text-lg">
-              Highly customizable components for building modern websites and applications that look
-              and feel the way you mean it.
+// --- 2. COMPONENT: SIMPLE DIALOG (Hiện giữa màn hình) ---
+const DemoDialog = ({ close, title, message }: any) => {
+  return (
+    <div className="p-6 text-center">
+      <div className="w-12 h-12 bg-red-100 text-red-600 rounded-full flex items-center justify-center mx-auto mb-4">
+        <AlertCircle size={24} />
+      </div>
+      <h3 className="text-lg font-bold mb-2">{title || 'Thông báo'}</h3>
+      <p className="text-gray-500 mb-6">{message || 'Đây là nội dung mặc định của Dialog.'}</p>
+      <div className="flex gap-3 justify-center">
+        <button onClick={close} className="px-4 py-2 border rounded-md hover:bg-gray-50 transition">
+          Đóng
+        </button>
+        <button
+          onClick={close}
+          className="px-4 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition"
+        >
+          Xác nhận
+        </button>
+      </div>
+    </div>
+  );
+};
+
+// --- 3. COMPONENT: NESTED DRAWER (Case phức tạp) ---
+// Đây là component quan trọng để test case lồng nhau
+const ComplexDrawer = ({ id, close }: any) => {
+  // ID định danh cho vùng chứa bên trong drawer này
+  const INTERNAL_CONTAINER_ID = `drawer-inner-container-${id}`;
+
+  const openNestedDialog = () => {
+    overlayStore.open(DemoDialog, {
+      containerId: INTERNAL_CONTAINER_ID, // <--- MAGIC: Chỉ định render vào trong vùng này
+      type: 'dialog',
+      title: 'Dialog Lồng Nhau',
+      message:
+        'Chú ý: Tôi chỉ nằm gọn trong phạm vi của cái Drawer này thôi, không che hết màn hình!',
+    });
+  };
+
+  const openNestedSheet = () => {
+    overlayStore.open(DemoSheet, {
+      containerId: INTERNAL_CONTAINER_ID,
+      type: 'sheet',
+    });
+  };
+
+  const handleDeleteClick = async () => {
+    await confirm({
+      containerId: INTERNAL_CONTAINER_ID,
+      title: 'Xóa người dùng?',
+      description: `Bạn có chắc muốn xóa vĩnh viễn user? Hành động này không thể hoàn tác.`,
+      confirmText: 'Xóa ngay',
+      cancelText: 'Thôi, giữ lại',
+      type: 'warning', // Hiện màu đỏ cảnh báo
+      onConfirm: () => console.log('Xóa người dùng'),
+      onCancel: () => console.log('Hủy xóa'),
+    });
+  };
+
+  return (
+    <div id={INTERNAL_CONTAINER_ID} className="flex flex-col h-full bg-white">
+      {/* Header */}
+      <div className="p-4 border-b flex justify-between items-center bg-white z-10">
+        <h2 className="text-xl font-bold flex items-center gap-2">
+          <User className="w-5 h-5" /> User Profile (Drawer)
+        </h2>
+        <button onClick={close}>
+          <X />
+        </button>
+      </div>
+
+      {/* BODY: Đây là nơi chứa Dialog con */}
+      {/* QUAN TRỌNG: Phải có id và position relative */}
+      <div className="flex-1 relative overflow-hidden bg-gray-50 p-6 flex flex-col gap-4">
+        <div className="bg-white p-4 rounded shadow-sm border">
+          <h3 className="font-semibold mb-2">Thông tin cá nhân</h3>
+          <p className="text-gray-600 text-sm mb-4">
+            Vùng màu xám này chính là <code>containerId</code>. Khi bạn mở Dialog lồng, nó sẽ dùng
+            Portal chui vào div này.
+          </p>
+
+          <div className="flex flex-wrap gap-3">
+            <button
+              onClick={openNestedDialog}
+              className="px-4 py-2 bg-indigo-600 text-white rounded shadow hover:bg-indigo-700 text-sm flex items-center gap-2"
+            >
+              <Layout size={16} />
+              Mở Nested Dialog
+            </button>
+
+            <button
+              onClick={openNestedSheet}
+              className="px-4 py-2 bg-emerald-600 text-white rounded shadow hover:bg-emerald-700 text-sm flex items-center gap-2"
+            >
+              <Layout size={16} />
+              Mở Nested Sheet
+            </button>
+
+            <button
+              onClick={handleDeleteClick}
+              className="text-red-600 hover:bg-red-50 p-2 rounded"
+            >
+              <Trash2 size={18} />
+            </button>
+          </div>
+        </div>
+
+        {/* Dummy Content để test scroll */}
+        <div className="space-y-3">
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="h-24 bg-gray-200 rounded animate-pulse" />
+          ))}
+        </div>
+      </div>
+
+      <div className="p-4 border-t bg-white z-10">
+        <button onClick={close} className="w-full py-2 border rounded hover:bg-gray-50">
+          Đóng Drawer
+        </button>
+      </div>
+    </div>
+  );
+};
+
+function App() {
+  // Handlers mở overlay thường (Global - Body)
+  const openGlobalDialog = () => {
+    overlayStore.open(DemoDialog, {
+      type: 'dialog',
+      title: 'Global Dialog',
+      message: 'Tôi là dialog bình thường, đè lên toàn bộ trang web.',
+    });
+  };
+
+  const openGlobalSheet = () => {
+    overlayStore.open(DemoSheet, { type: 'sheet' });
+  };
+
+  const openGlobalDrawer = () => {
+    overlayStore.open(ComplexDrawer, {
+      type: 'drawer',
+      width: 'w-[480px]', // Custom width
+    });
+  };
+
+  const handleDeleteClick = async () => {
+    await confirm({
+      title: 'Xóa người dùng?',
+      description: `Bạn có chắc muốn xóa vĩnh viễn user? Hành động này không thể hoàn tác.`,
+      confirmText: 'Xóa ngay',
+      cancelText: 'Thôi, giữ lại',
+      type: 'warning', // Hiện màu đỏ cảnh báo
+      onConfirm: () => console.log('Xóa người dùng'),
+      onCancel: () => console.log('Hủy xóa'),
+    });
+  };
+  return (
+    <>
+      <div className="min-h-screen bg-gray-100 flex items-center justify-center p-4">
+        <div className="max-w-4xl w-full space-y-8">
+          <div className="text-center space-y-2">
+            <h1 className="text-3xl font-bold text-gray-900">Overlay System Test Lab</h1>
+            <p className="text-gray-500">
+              Kiểm thử hệ thống Dialog, Drawer, Sheet và Nested Context
             </p>
-            <div className="mt-12 flex flex-col items-center justify-center gap-2 md:flex-row">
-              <div className="bg-foreground/10 rounded-[calc(var(--radius-xl)+0.125rem)] border p-0.5">
-                <a
-                  className="cursor-pointer inline-flex items-center justify-center gap-2 whitespace-nowrap font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&amp;_svg]:pointer-events-none [&amp;_svg]:size-4 [&amp;_svg]:shrink-0 shadow-sm shadow-black/20 bg-primary text-primary-foreground hover:bg-primary/90 h-10 rounded-xl px-5 text-base"
-                  href="#link"
-                >
-                  <span className="text-nowrap">Start Building</span>
-                </a>
+          </div>
+
+          <button onClick={handleDeleteClick} className="text-red-600 hover:bg-red-50 p-2 rounded">
+            <Trash2 size={18} />
+          </button>
+
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+            {/* Card 1: Dialog */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+              <div className="w-10 h-10 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center mb-4">
+                <AlertCircle size={20} />
               </div>
+              <h3 className="font-semibold text-lg mb-2">Standard Dialog</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Dialog hiển thị ở giữa màn hình (Fixed center).
+              </p>
+              <button
+                onClick={openGlobalDialog}
+                className="w-full py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition"
+              >
+                Open Dialog
+              </button>
+            </div>
+
+            {/* Card 2: Sheet */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border hover:shadow-md transition">
+              <div className="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center mb-4">
+                <Layout size={20} />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Bottom Sheet</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Sheet trượt từ dưới lên, dùng cho mobile view.
+              </p>
+              <button
+                onClick={openGlobalSheet}
+                className="w-full py-2 bg-orange-600 text-white rounded-lg hover:bg-orange-700 transition"
+              >
+                Open Sheet
+              </button>
+            </div>
+
+            {/* Card 3: Drawer (Key Feature) */}
+            <div className="bg-white p-6 rounded-xl shadow-sm border ring-2 ring-indigo-50 hover:shadow-md transition relative overflow-hidden">
+              <div className="absolute top-0 right-0 bg-indigo-500 text-white text-[10px] px-2 py-1 rounded-bl">
+                Focus
+              </div>
+              <div className="w-10 h-10 bg-indigo-100 text-indigo-600 rounded-lg flex items-center justify-center mb-4">
+                <User size={20} />
+              </div>
+              <h3 className="font-semibold text-lg mb-2">Drawer & Nested</h3>
+              <p className="text-sm text-gray-500 mb-4">
+                Drawer trượt phải + Test case mở Dialog con bên trong.
+              </p>
+              <button
+                onClick={openGlobalDrawer}
+                className="w-full py-2 bg-indigo-600 text-white rounded-lg hover:bg-indigo-700 transition flex items-center justify-center gap-2"
+              >
+                Test Nested Case <ArrowRight size={16} />
+              </button>
             </div>
           </div>
         </div>
       </div>
-    </section>
+      <OverlayRender />
+    </>
   );
 }
