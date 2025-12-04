@@ -4,23 +4,16 @@
   "typescript": true,
   "tailwind": true,
   "packageManager": "npm",
-  "addOnOptions": {
-    "drizzle": {
-      "database": "postgresql"
-    }
-  },
+  "addOnOptions": {},
   "git": true,
   "version": 1,
   "framework": "react-cra",
   "chosenAddOns": [
     "biome",
-    "cloudflare",
+    "nitro",
     "start",
-    "neon",
-    "db",
-    "drizzle",
-    "shadcn",
     "form",
+    "shadcn",
     "tanstack-query"
   ]
 }
