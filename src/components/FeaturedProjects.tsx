@@ -22,7 +22,7 @@ const projects: ProjectItem[] = [
     title: 'Loyalty Booking App',
     category: 'Flutter Mobile App',
     description:
-      'Ứng dụng đặt lịch và tích điểm thưởng cho chuỗi Spa 50+ chi nhánh. Tối ưu hóa trải nghiệm người dùng với Lazy Loading và Clean Architecture.',
+      'Appointment booking and reward points accumulation application for Spa chain with 50+ branches. Optimize user experience with Lazy Loading and Clean Architecture',
     tech: ['Flutter', 'Bloc', 'Firebase', 'Google Maps API'],
     type: 'mobile', // Kiểu hiển thị khung điện thoại
     links: { demo: '#', git: '#' },
@@ -37,7 +37,7 @@ const projects: ProjectItem[] = [
     title: '1Touch E-commerce',
     category: 'Zalo Mini App',
     description:
-      'Hệ thống thương mại điện tử chạy trên nền tảng Zalo. Tích hợp Dynamic Form Engine giúp Admin tự cấu hình các chiến dịch bán hàng.',
+      'E-commerce system running on Zalo platform. Integrated Dynamic Form Engine helps Admin to configure sales campaigns.',
     tech: ['React', 'ZMP', 'Tailwind', 'Node.js'],
     type: 'web', // Kiểu hiển thị khung trình duyệt
     links: { demo: '#', git: '#' },
@@ -110,13 +110,13 @@ export default function FeaturedProjects() {
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Featured{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
               Projects
             </span>
           </h2>
           <p className="text-muted-foreground max-w-2xl text-lg">
-            Khám phá các dự án thực tế tôi đã xây dựng, tập trung vào hiệu năng,
-            trải nghiệm người dùng và kiến trúc hệ thống.
+            Explore real-world projects I've built, focusing on performance,
+            user experience, and system architecture.
           </p>
         </div>
 

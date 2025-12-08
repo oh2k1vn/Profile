@@ -14,7 +14,6 @@ import {
   Smartphone,
 } from 'lucide-react'
 
-// Dữ liệu từ các nội dung đã chuẩn hóa trước đó
 const experiences = [
   {
     role: 'Flutter Mobile Developer',
@@ -24,12 +23,12 @@ const experiences = [
     color: 'border-blue-500/20 hover:border-blue-500/50',
     bgHover: 'hover:bg-blue-500/5',
     description:
-      'Chuyên sâu về tối ưu hiệu năng ứng dụng Mobile và kiến trúc hệ thống Clean Architecture.',
+      'Specializing in mobile app performance optimization and Clean Architecture system design.',
     achievements: [
-      "Tối ưu thời gian khởi động App giảm <span class='text-blue-600 dark:text-blue-400 font-bold'>45%</span> nhờ chiến lược Lazy Loading & Caching.",
-      "Đảm bảo hiệu suất mượt mà <span class='text-blue-600 dark:text-blue-400 font-bold'>60fps</span> ngay cả trên thiết bị cấu hình thấp.",
-      "Tái cấu trúc (Refactor) code cũ sang <span class='font-semibold'>Clean Architecture (BLoC)</span>, giảm 30% bugs.",
-      'Xây dựng module phức tạp: Booking, Loyalty Rewards & Real-time Notifications.',
+      "Reduced app startup time by <span class='text-blue-600 dark:text-blue-400 font-bold'>45%</span> using Lazy Loading & Caching strategies.",
+      "Maintained smooth <span class='text-blue-600 dark:text-blue-400 font-bold'>60fps</span> performance even on low-end devices.",
+      "Refactored legacy code to <span class='font-semibold'>Clean Architecture (BLoC)</span>, reducing bugs by 30%.",
+      'Built complex modules: Booking, Loyalty Rewards & Real-time Notifications.',
     ],
     stack: ['Flutter', 'Dart', 'BLoC', 'Firebase', 'CI/CD'],
   },
@@ -41,12 +40,12 @@ const experiences = [
     color: 'border-cyan-500/20 hover:border-cyan-500/50',
     bgHover: 'hover:bg-cyan-500/5',
     description:
-      'Phát triển hệ sinh thái Zalo Mini App và các công cụ Dynamic Form cho doanh nghiệp.',
+      'Developing the Zalo Mini App ecosystem and Dynamic Form tools for enterprises.',
     achievements: [
-      "Phát triển App TMĐT <span class='font-semibold'>'1Touch'</span> & <span class='font-semibold'>'Sell'</span> tích hợp sâu vào Zalo.",
-      "Xây dựng <span class='text-cyan-600 dark:text-cyan-400 font-bold'>Dynamic Form Engine</span>, giảm 40% thời gian setup chiến dịch Marketing.",
-      'Thiết kế hệ thống Reward System xử lý logic đa chiến dịch (Multi-campaign).',
-      'Tích hợp thanh toán Token ZaloPay & xác thực người dùng bảo mật.',
+      "Developed e-commerce apps <span class='font-semibold'>'1Touch'</span> & <span class='font-semibold'>'Sell'</span> deeply integrated into Zalo.",
+      "Built a <span class='text-cyan-600 dark:text-cyan-400 font-bold'>Dynamic Form Engine</span>, cutting marketing campaign setup time by 40%.",
+      'Designed a Reward System handling complex multi-campaign logic.',
+      'Integrated ZaloPay Token payments & secure user authentication.',
     ],
     stack: ['React', 'ZMP', 'TypeScript', 'Tailwind', 'Node.js'],
   },
@@ -79,13 +78,13 @@ export default function ExperienceSection() {
           </Badge>
           <h2 className="text-3xl md:text-5xl font-bold tracking-tight mb-4">
             Work{' '}
-            <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
+            <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
               Experience
             </span>
           </h2>
           <p className="text-lg text-muted-foreground">
-            Hành trình giải quyết các bài toán kỹ thuật phức tạp và mang lại giá
-            trị thực tế.
+            The journey of solving complex technical problems and delivering
+            real value.
           </p>
         </div>
 

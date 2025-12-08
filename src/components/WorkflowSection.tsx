@@ -6,28 +6,28 @@ const steps = [
     title: 'Discovery & Analysis',
     icon: Search,
     description:
-      'Tôi bắt đầu bằng việc hiểu rõ nghiệp vụ. Với kinh nghiệm làm E-commerce và Booking, tôi phân tích kỹ các edge-cases trước khi viết dòng code đầu tiên.',
+      'I begin by deeply understanding business requirements. Leveraging my background in E-commerce and Booking systems, I rigorously analyze edge-cases before writing a single line of code.',
   },
   {
     id: '02',
     title: 'Architecture Design',
     icon: PenTool,
     description:
-      'Lên kế hoạch cấu trúc dự án. Dù là Clean Architecture cho Flutter hay Modular cho React, tôi đảm bảo code dễ mở rộng và bảo trì.',
+      'Planning the project structure. Whether it’s Clean Architecture for Flutter or a Modular approach for React, I ensure the codebase remains scalable and maintainable.',
   },
   {
     id: '03',
     title: 'Development',
     icon: Code,
     description:
-      'Viết code sạch (Clean Code), tối ưu hiệu năng ngay trong quá trình phát triển. Tích hợp CI/CD và Unit Test để giảm thiểu lỗi.',
+      'Writing Clean Code and optimizing performance during development. I integrate CI/CD pipelines and Unit Testing to minimize production bugs.',
   },
   {
     id: '04',
     title: 'Optimization & Launch',
     icon: Rocket,
     description:
-      'Đo lường các chỉ số Core Web Vitals hoặc FPS. Refactor và tinh chỉnh để sản phẩm đạt tốc độ cao nhất trước khi đến tay người dùng.',
+      'Measuring Core Web Vitals or FPS metrics. I refactor and fine-tune the product to achieve peak performance before final delivery to users.',
   },
 ]
 
@@ -40,13 +40,14 @@ export default function WorkflowSection() {
             How I <span className="text-blue-500">Work</span>
           </h2>
           <p className="text-muted-foreground">
-            Quy trình biến yêu cầu phức tạp thành sản phẩm chất lượng cao.
+            The process of turning complex requirements into high quality
+            products.
           </p>
         </div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8 relative">
           {/* Connecting Line (Desktop only) */}
-          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-gradient-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 -z-10" />
+          <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-linear-to-r from-blue-500/0 via-blue-500/20 to-blue-500/0 -z-10" />
 
           {steps.map((step, index) => (
             <div key={index} className="group relative bg-background pt-8">

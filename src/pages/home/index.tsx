@@ -2,9 +2,7 @@ import ContactSection from '@/components/ContactSection'
 import ExperienceSection from '@/components/ExperienceSection'
 import FeaturedProjects from '@/components/FeaturedProjects'
 import HeroSectionWithImage from '@/components/HeroSectionWithImage'
-import ServicesSection from '@/components/ServicesSection'
 import TechnicalSkills from '@/components/TechnicalSkills'
-import TestimonialsSection from '@/components/TestimonialsSection'
 import WorkflowSection from '@/components/WorkflowSection'
 
 export default function HomePage() {
@@ -14,9 +12,9 @@ export default function HomePage() {
       <TechnicalSkills />
       <FeaturedProjects />
       <ExperienceSection />
-      <ServicesSection />
+      {/* <ServicesSection /> */}
       <WorkflowSection />
-      <TestimonialsSection />
+      {/* <TestimonialsSection /> */}
       <ContactSection />
     </div>
   )

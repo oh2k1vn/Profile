@@ -1,16 +1,7 @@
 import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { Textarea } from '@/components/ui/textarea'
-import {
-  Code2,
-  Facebook,
-  Github,
-  Linkedin,
-  Mail,
-  MapPin,
-  Phone,
-  Send,
-} from 'lucide-react'
+import { Code2, Mail, MapPin, Phone, Send } from 'lucide-react'
 
 export default function ContactSection() {
   return (
@@ -36,9 +27,9 @@ export default function ContactSection() {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-              Bạn đang tìm kiếm giải pháp tối ưu cho Mobile App hay Zalo Mini
-              App? Hoặc cần tư vấn về kiến trúc hệ thống? Hãy để lại lời nhắn,
-              tôi sẽ phản hồi trong vòng 24h.
+              Are you looking for the optimal solution for Mobile App or Zalo
+              Mini App? Or need advice on system architecture? Leave a message,
+              I will respond within 24 hours.
             </p>
 
             <div className="space-y-6">
@@ -54,13 +45,13 @@ export default function ContactSection() {
                     Email me at
                   </p>
                   <p className="font-semibold text-foreground group-hover:text-blue-600 transition-colors">
-                    dev.profile@gmail.com
+                    oh2k1vn@gmail.com
                   </p>
                 </div>
               </a>
 
               <a
-                href="tel:+84999999999"
+                href="tel:+84972350070"
                 className="flex items-center gap-4 group p-4 rounded-2xl transition-all hover:bg-secondary/50 border border-transparent hover:border-border"
               >
                 <div className="w-12 h-12 bg-background rounded-full flex items-center justify-center border border-border group-hover:border-green-500 group-hover:text-green-500 transition-colors shadow-sm">
@@ -71,7 +62,7 @@ export default function ContactSection() {
                     Call or Zalo
                   </p>
                   <p className="font-semibold text-foreground group-hover:text-green-600 transition-colors">
-                    (+84) 099 999 999
+                    (+84) 0972 350 070
                   </p>
                 </div>
               </a>
@@ -89,31 +80,6 @@ export default function ContactSection() {
                   </p>
                 </div>
               </div>
-            </div>
-
-            {/* Social Links */}
-            <div className="flex gap-4 mt-10 pl-4">
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all"
-              >
-                <Linkedin size={20} />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full hover:bg-gray-900 hover:text-white hover:border-gray-900 transition-all"
-              >
-                <Github size={20} />
-              </Button>
-              <Button
-                variant="outline"
-                size="icon"
-                className="rounded-full hover:bg-blue-500 hover:text-white hover:border-blue-500 transition-all"
-              >
-                <Facebook size={20} />
-              </Button>
             </div>
           </div>
 
@@ -182,7 +148,7 @@ export default function ContactSection() {
         <div className="border-t border-border pt-8 mt-12 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>
             &copy; {new Date().getFullYear()}{' '}
-            <span className="font-semibold text-foreground">Your Name</span>.
+            <span className="font-semibold text-foreground">HieuNguyen</span>.
             All rights reserved.
           </p>
           <p className="flex items-center gap-1">

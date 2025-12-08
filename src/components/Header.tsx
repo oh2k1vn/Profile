@@ -2,6 +2,7 @@ import Logo from '@/assets/images/logo.png'
 import { cn } from '@/lib/utils'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
+import LanguageToggle from './LanguageToggle'
 import { ModeToggle } from './ModeToggle'
 
 const menuItems = [
@@ -67,38 +68,9 @@ export default function Header() {
           <div className="flex items-center gap-3">
             {/* Logic Button thay đổi theo trạng thái Scroll */}
             <div className="hidden sm:flex items-center gap-3">
-              {/* Khi Scrolled: Chỉ hiện nút Get Started (Icon style) */}
-              {/* <div
-                className={cn(
-                  'transition-all duration-300 overflow-hidden flex gap-2',
-                  isScrolled ? 'w-0 opacity-0' : 'w-auto opacity-100',
-                )}
-              >
-                <Button variant="ghost" size="sm">
-                  Log In
-                </Button>
-                <Button variant="outline" size="sm">
-                  Sign Up
-                </Button>
-              </div> */}
-
+              <LanguageToggle />
               <ModeToggle />
-
-              {/* <Button
-                size={isScrolled ? 'sm' : 'default'}
-                className={cn(
-                  'transition-all duration-300',
-                  isScrolled ? 'rounded-full px-6' : '',
-                )}
-              >
-                {isScrolled ? 'Contact Me' : 'Hire Me'}
-              </Button> */}
             </div>
-
-            {/* Nút Github (Optional - để trông dev hơn) */}
-            {/* <Button variant="ghost" size="icon" className="hidden sm:flex">
-              <Github size={20} />
-            </Button> */}
 
             {/* Mobile Menu Button */}
             <button
@@ -132,11 +104,8 @@ export default function Header() {
               </a>
             ))}
             <div className="h-px bg-border my-2" />
-            <div className="flex flex-col gap-2">
-              {/* <Button variant="outline" className="w-full justify-start">
-                Log In
-              </Button>
-              <Button className="w-full">Hire Me</Button> */}
+            <div className="flex flex-row gap-2">
+              <LanguageToggle />
               <ModeToggle />
             </div>
           </div>

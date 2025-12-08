@@ -119,13 +119,15 @@ export default function HeroSectionWithImage() {
 
               {/* Main Image Frame */}
               <div className="absolute inset-0 bg-linear-to-tr from-blue-500 to-cyan-400 rounded-4xl p-1 shadow-2xl rotate-3 transition-transform hover:rotate-0 duration-500">
-                <div className="w-full h-full bg-slate-100 dark:bg-slate-900 rounded-[1.8rem] overflow-hidden relative">
-                  {/* THAY HÌNH CỦA BẠN VÀO ĐÂY */}
-                  {/* Lời khuyên: Dùng ảnh nền tách (transparent) hoặc ảnh chụp chân dung xóa phông */}
+                {/* 1. Đã bỏ 'overflow-hidden' để bóng phản chiếu có thể hiển thị ra ngoài.
+      2. Đã bỏ 'bg-slate...' vì img đã che hết, trừ khi ảnh transparent.
+  */}
+                <div className="w-full h-full relative">
                   <img
                     src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/304301744_646096167073918_6201416130930987462_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHIHgy3WYzL2vW1TfxR5xWeWj4cQU-puNRaPhxBT6m41KV5HBCqP2gkMXQHviEhjN22eBSS00X6Y1CeTYbu9y_N&_nc_ohc=bz2-mn6187IQ7kNvwGV4DBk&_nc_oc=AdmIBneCMPq_UKGs88jsf_CFvMvVp-itnuXBINMLB0SwsbgpvNiUH1fby1FHlc-YGfo&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=TUZK6D2ZNWdw0Al34kQ04Q&oh=00_AfngG5edVBhr6oW15nZ-sl6AZE1Nu7RtqlRXQaFyJ55XeQ&oe=693C8AB6"
                     alt="Developer Portrait"
-                    className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                    className="w-full h-full object-cover rounded-[1.8rem] grayscale hover:grayscale-0 transition-all duration-500 hover:[-webkit-box-reflect:below_0px_linear-gradient(to_bottom,transparent,transparent_70%,rgba(255,255,255,0.3))]
+      dark:hover:[-webkit-box-reflect:below_0px_linear-gradient(to_bottom,transparent,transparent_70%,rgba(255,255,255,0.1))]"
                   />
                 </div>
               </div>
