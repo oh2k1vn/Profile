@@ -5,7 +5,6 @@ import ReactDOM from 'react-dom/client'
 // Import the generated route tree
 import { routeTree } from './routeTree.gen'
 
-import { AuthProvider, useAuth } from './components/AuthProvider.tsx'
 import { ThemeProvider } from './components/ThemeProvider.tsx'
 import reportWebVitals from './reportWebVitals.ts'
 import './styles.css'
@@ -13,9 +12,7 @@ import './styles.css'
 // Create a new router instance
 const router = createRouter({
   routeTree,
-  context: {
-    auth: { isAuthenticated: false, token: null },
-  },
+  context: {},
   defaultPreload: 'intent',
   scrollRestoration: true,
   defaultStructuralSharing: true,
@@ -30,9 +27,7 @@ declare module '@tanstack/react-router' {
 }
 
 function InnerApp() {
-  const auth = useAuth()
-
-  return <RouterProvider router={router} context={{ auth }} />
+  return <RouterProvider router={router} />
 }
 
 // Render the app
@@ -42,9 +37,7 @@ if (rootElement && !rootElement.innerHTML) {
   root.render(
     <StrictMode>
       <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <AuthProvider>
-          <InnerApp />
-        </AuthProvider>
+        <InnerApp />
       </ThemeProvider>
     </StrictMode>,
   )

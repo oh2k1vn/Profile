@@ -4,8 +4,19 @@ import { cn } from '@/lib/utils'
 import { ExternalLink, Github, Globe, Smartphone } from 'lucide-react'
 import { useEffect, useState } from 'react'
 
+type ProjectItem = {
+  id: number
+  title: string
+  category: string
+  description: string
+  tech: string[]
+  type: 'mobile' | 'web' // Định nghĩa chính xác kiểu literal ở đây
+  links: { demo: string; git: string }
+  images: string[]
+}
+
 // --- DỮ LIỆU DỰ ÁN (Thay ảnh thật của bạn vào đây) ---
-const projects = [
+const projects: ProjectItem[] = [
   {
     id: 1,
     title: 'Loyalty Booking App',
@@ -39,13 +50,7 @@ const projects = [
 ]
 
 // --- COMPONENT CON: IMAGE SLIDESHOW (XỬ LÝ AUTOPLAY) ---
-const ProjectSlideshow = ({
-  images,
-  type,
-}: {
-  images: string[]
-  type: string
-}) => {
+const ProjectSlideshow = ({ images }: { images: string[] }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
 
   useEffect(() => {
@@ -131,7 +136,7 @@ export default function FeaturedProjects() {
                   <div className="relative w-[280px] h-[580px] bg-gray-900 rounded-[3rem] border-8 border-gray-900 shadow-2xl shadow-blue-500/20 overflow-hidden ring-1 ring-white/10">
                     {/* Notch tai thỏ */}
                     <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-20"></div>
-                    <ProjectSlideshow images={project.images} type="mobile" />
+                    <ProjectSlideshow images={project.images} />
                   </div>
                 ) : (
                   // --- MOCKUP TRÌNH DUYỆT (Cho Web/Zalo App) ---
@@ -147,7 +152,7 @@ export default function FeaturedProjects() {
                     </div>
                     {/* Content Slideshow */}
                     <div className="pt-8 h-full">
-                      <ProjectSlideshow images={project.images} type="web" />
+                      <ProjectSlideshow images={project.images} />
                     </div>
                   </div>
                 )}
