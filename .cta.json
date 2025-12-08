@@ -1,5 +1,5 @@
 {
-  "projectName": "profile",
+  "projectName": "vite-project",
   "mode": "file-router",
   "typescript": true,
   "tailwind": true,
@@ -10,8 +10,6 @@
   "framework": "react-cra",
   "chosenAddOns": [
     "eslint",
-    "cloudflare",
-    "start",
     "form",
     "shadcn"
   ]
