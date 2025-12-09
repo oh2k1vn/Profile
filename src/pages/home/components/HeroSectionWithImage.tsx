@@ -217,15 +217,7 @@ export default function HeroSectionWithImage() {
               </motion.div>
 
               {/* Floating Card 1: Experience */}
-              <motion.div
-                animate={{ y: [0, -10, 0] }}
-                transition={{
-                  duration: 4,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                }}
-                className="absolute -left-4 top-10 md:-left-12 md:top-16 bg-background/90 backdrop-blur-md border border-border p-3 rounded-xl shadow-xl flex items-center gap-3"
-              >
+              <div className="absolute -left-4 top-10 md:-left-12 md:top-16 bg-background/90 backdrop-blur-md border border-border p-3 rounded-xl shadow-xl flex items-center gap-3">
                 <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg text-blue-600">
                   <Code2 size={20} />
                 </div>
@@ -235,19 +227,10 @@ export default function HeroSectionWithImage() {
                   </p>
                   <p className="text-sm font-bold text-foreground">3+ Years</p>
                 </div>
-              </motion.div>
+              </div>
 
               {/* Floating Card 2: Performance */}
-              <motion.div
-                animate={{ y: [0, -15, 0] }}
-                transition={{
-                  duration: 5,
-                  repeat: Infinity,
-                  ease: 'easeInOut',
-                  delay: 1,
-                }}
-                className="absolute -right-4 bottom-10 md:-right-8 md:bottom-16 bg-background/90 backdrop-blur-md border border-border p-3 rounded-xl shadow-xl flex items-center gap-3"
-              >
+              <div className="absolute -right-4 bottom-10 md:-right-8 md:bottom-16 bg-background/90 backdrop-blur-md border border-border p-3 rounded-xl shadow-xl flex items-center gap-3">
                 <div className="p-2 bg-green-100 dark:bg-green-900/50 rounded-lg text-green-600">
                   <Rocket size={20} />
                 </div>
@@ -259,7 +242,7 @@ export default function HeroSectionWithImage() {
                     High Perf.
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </motion.div>
         </div>

@@ -1,8 +1,9 @@
 import { useEffect, useState } from 'react'
 
 import { AnimatePresence, motion } from 'framer-motion' // Import framer-motion
-import { ExternalLink, Github, Globe, Smartphone } from 'lucide-react'
+import { ExternalLink, Globe, Smartphone } from 'lucide-react'
 
+import Interface from '@/components/Interface'
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 import { cn } from '@/lib/utils'
@@ -13,7 +14,7 @@ type ProjectItem = {
   category: string
   description: string
   tech: Array<string>
-  type: 'mobile' | 'web'
+  type: 'phone' | 'browser'
   links: { demo: string; git: string }
   images: Array<string>
 }
@@ -27,7 +28,7 @@ const projects: Array<ProjectItem> = [
     description:
       'Appointment booking and reward points accumulation application for Spa chain with 50+ branches. Optimize user experience with Lazy Loading and Clean Architecture',
     tech: ['Flutter', 'Bloc', 'Firebase', 'Google Maps API'],
-    type: 'mobile',
+    type: 'phone',
     links: { demo: '#', git: '#' },
     images: [
       'https://images.unsplash.com/photo-1616469829581-73993eb86b02?q=80&w=1000&auto=format&fit=crop', // Ảnh demo ví dụ
@@ -41,7 +42,7 @@ const projects: Array<ProjectItem> = [
     description:
       'E-commerce system running on Zalo platform. Integrated Dynamic Form Engine helps Admin to configure sales campaigns.',
     tech: ['React', 'ZMP', 'Tailwind', 'Node.js'],
-    type: 'web',
+    type: 'browser',
     links: { demo: '#', git: '#' },
     images: [
       'https://images.unsplash.com/photo-1557821552-17105176677c?q=80&w=1000&auto=format&fit=crop', // Ảnh demo ví dụ
@@ -149,50 +150,9 @@ export default function FeaturedProjects() {
             >
               {/* --- PHẦN HÌNH ẢNH (MOCKUP) --- */}
               <div className="w-full lg:w-1/2 flex justify-center perspective-1000">
-                {project.type === 'mobile' ? (
-                  // --- MOCKUP ĐIỆN THOẠI (Floating Animation) ---
-                  <motion.div
-                    animate={{ y: [0, -15, 0] }}
-                    transition={{
-                      duration: 6,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                    }}
-                    whileHover={{ scale: 1.02, rotateY: 5 }}
-                    className="relative w-[280px] h-[580px] bg-gray-900 rounded-[3rem] border-8 border-gray-900 shadow-2xl shadow-blue-500/20 overflow-hidden ring-1 ring-white/10"
-                  >
-                    {/* Notch tai thỏ */}
-                    <div className="absolute top-0 left-1/2 -translate-x-1/2 w-32 h-6 bg-gray-900 rounded-b-2xl z-20"></div>
-                    <ProjectSlideshow images={project.images} />
-                  </motion.div>
-                ) : (
-                  // --- MOCKUP TRÌNH DUYỆT (Floating Animation) ---
-                  <motion.div
-                    animate={{ y: [0, -10, 0] }}
-                    transition={{
-                      duration: 5,
-                      repeat: Infinity,
-                      ease: 'easeInOut',
-                      delay: 0.5,
-                    }}
-                    whileHover={{ scale: 1.02 }}
-                    className="relative w-full max-w-xl aspect-video bg-gray-900 rounded-xl border border-border shadow-2xl shadow-cyan-500/20 overflow-hidden ring-1 ring-white/10 group"
-                  >
-                    {/* Browser Header Bar */}
-                    <div className="h-8 bg-muted/95 backdrop-blur-md border-b border-border flex items-center px-4 gap-2 z-20 absolute top-0 w-full">
-                      <div className="w-3 h-3 rounded-full bg-red-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-yellow-500/80" />
-                      <div className="w-3 h-3 rounded-full bg-green-500/80" />
-                      <div className="ml-4 flex-1 h-5 bg-background/50 rounded-md text-[10px] text-muted-foreground flex items-center px-2 truncate">
-                        zalo-miniapp.com/store/1touch
-                      </div>
-                    </div>
-                    {/* Content Slideshow */}
-                    <div className="pt-8 h-full">
-                      <ProjectSlideshow images={project.images} />
-                    </div>
-                  </motion.div>
-                )}
+                <Interface mode={project.type}>
+                  <ProjectSlideshow images={project.images} />
+                </Interface>
               </div>
 
               {/* --- PHẦN THÔNG TIN (CONTENT) --- */}
@@ -216,12 +176,12 @@ export default function FeaturedProjects() {
                   <div
                     className={cn(
                       'p-2 rounded-lg',
-                      project.type === 'mobile'
+                      project.type === 'phone'
                         ? 'bg-blue-100 text-blue-600 dark:bg-blue-900/30'
                         : 'bg-cyan-100 text-cyan-600 dark:bg-cyan-900/30',
                     )}
                   >
-                    {project.type === 'mobile' ? (
+                    {project.type === 'phone' ? (
                       <Smartphone size={24} />
                     ) : (
                       <Globe size={24} />
@@ -276,10 +236,7 @@ export default function FeaturedProjects() {
                   className="flex gap-4 pt-4 border-t border-border/40"
                 >
                   <Button className="gap-2 shadow-lg shadow-primary/20 hover:shadow-primary/40 transition-shadow">
-                    Live Demo <ExternalLink size={16} />
-                  </Button>
-                  <Button variant="outline" className="gap-2">
-                    Source Code <Github size={16} />
+                    See Details <ExternalLink size={16} />
                   </Button>
                 </motion.div>
               </motion.div>

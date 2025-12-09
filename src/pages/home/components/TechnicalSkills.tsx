@@ -196,7 +196,6 @@ export default function TechnicalSkills() {
           {skillCategories.map((category, index) => (
             <motion.div key={index} variants={cardVariants}>
               <Card className="group relative overflow-hidden border-border/50 bg-background/50 backdrop-blur-sm hover:border-primary/50 transition-colors h-full ">
-                {/* Gradient Border Bottom Effect */}
                 <div
                   className={cn(
                     'absolute bottom-0 left-0 w-full h-1 scale-x-0 group-hover:scale-x-100 transition-transform duration-500 origin-left bg-linear-to-r from-transparent via-primary to-transparent',
@@ -207,7 +206,7 @@ export default function TechnicalSkills() {
                 <CardHeader>
                   <div
                     className={cn(
-                      'w-12 h-12 rounded-xl flex items-center justify-center mb-4 transition-colors group-hover:bg-background shadow-inner',
+                      'w-12 h-12 rounded-xl flex items-center justify-center mb-4 shadow-inner',
                       category.bg,
                       category.color,
                     )}
