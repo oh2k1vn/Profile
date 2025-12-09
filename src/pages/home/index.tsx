@@ -1,9 +1,9 @@
-import ContactSection from '@/components/ContactSection'
-import ExperienceSection from '@/components/ExperienceSection'
-import FeaturedProjects from '@/components/FeaturedProjects'
-import HeroSectionWithImage from '@/components/HeroSectionWithImage'
-import TechnicalSkills from '@/components/TechnicalSkills'
-import WorkflowSection from '@/components/WorkflowSection'
+import ContactSection from './components/ContactSection'
+import ExperienceSection from './components/ExperienceSection'
+import FeaturedProjects from './components/FeaturedProjects'
+import HeroSectionWithImage from './components/HeroSectionWithImage'
+import TechnicalSkills from './components/TechnicalSkills'
+import WorkflowSection from './components/WorkflowSection'
 
 export default function HomePage() {
   return (

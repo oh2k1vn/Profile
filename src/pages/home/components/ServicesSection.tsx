@@ -1,5 +1,6 @@
-import { Button } from '@/components/ui/button'
 import { Check, Code2, Smartphone, Zap } from 'lucide-react'
+
+import { Button } from '@/components/ui/button'
 
 const services = [
   {
@@ -63,7 +64,7 @@ export default function ServicesSection() {
               className={`relative flex flex-col p-8 rounded-3xl border transition-all duration-300 hover:shadow-2xl ${service.popular ? 'border-blue-500 bg-blue-500/5 shadow-blue-500/10' : 'border-border bg-card'}`}
             >
               {service.popular && (
-                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-gradient-to-r from-blue-600 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
+                <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-linear-to-r from-blue-600 to-cyan-500 text-white px-4 py-1 rounded-full text-sm font-bold shadow-lg">
                   Most Popular
                 </div>
               )}
