@@ -1,16 +1,9 @@
-import Logo from '@/assets/images/logo.png'
+import { HERO_CONSTANTS } from '@/constants/hero'
 import { cn } from '@/lib/utils'
 import { Menu, X } from 'lucide-react'
 import { useEffect, useState } from 'react'
 import LanguageToggle from './LanguageToggle'
 import { ModeToggle } from './ModeToggle'
-
-const menuItems = [
-  { name: 'Projects', href: '#projects' },
-  { name: 'Tech Stack', href: '#skills' },
-  { name: 'Experience', href: '#experience' },
-  { name: 'Contact', href: '#contact' },
-]
 
 export default function Header() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
@@ -38,7 +31,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* LOGO */}
           <div className="flex items-center gap-2 cursor-pointer">
-            <img src={Logo} alt="" className="w-8 h-auto" />
+            <img src={HERO_CONSTANTS.logo} alt="Logo" className="w-8 h-auto" />
             {/* Ẩn tên khi scroll để tiết kiệm diện tích trên mobile, hoặc giữ nguyên tùy ý */}
             <span
               className={cn(
@@ -46,18 +39,19 @@ export default function Header() {
                 isScrolled ? 'hidden sm:block' : 'block',
               )}
             >
-              HieuNguyen.
+              {HERO_CONSTANTS.textLogo}
             </span>
           </div>
 
           {/* DESKTOP MENU */}
           <ul className="hidden md:flex items-center gap-8">
-            {menuItems.map((item, index) => (
+            {HERO_CONSTANTS.menuHeader.map((item, index) => (
               <li key={index}>
                 <a
                   href={item.href}
-                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors duration-200"
+                  className="text-sm font-medium flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors duration-200"
                 >
+                  <item.icon size={14} />
                   {item.name}
                 </a>
               </li>
@@ -93,13 +87,14 @@ export default function Header() {
           )}
         >
           <div className="flex flex-col gap-4 bg-card/50 backdrop-blur-sm p-4 rounded-2xl border border-border/50">
-            {menuItems.map((item, index) => (
+            {HERO_CONSTANTS.menuHeader.map((item, index) => (
               <a
                 key={index}
                 href={item.href}
-                className="text-sm font-medium p-2 hover:bg-primary/10 hover:text-primary rounded-lg transition-colors"
+                className="text-sm font-medium flex items-center gap-1.5 text-muted-foreground hover:text-primary transition-colors duration-200"
                 onClick={() => setIsMobileMenuOpen(false)}
               >
+                <item.icon size={14} />
                 {item.name}
               </a>
             ))}

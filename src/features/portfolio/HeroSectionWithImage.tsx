@@ -1,23 +1,13 @@
+import { HERO_CONSTANTS } from '@/constants/hero'
 import { motion } from 'framer-motion'
-import {
-  ArrowRight,
-  Code2,
-  Facebook,
-  Github,
-  Layers,
-  Linkedin,
-  Rocket,
-  Smartphone,
-  Zap,
-} from 'lucide-react'
+import { ArrowRight, Code2, Rocket } from 'lucide-react'
 
 import { Badge } from '@/components/ui/badge'
 import { Button } from '@/components/ui/button'
 
-import type { Variants } from 'framer-motion' // Import framer-motion
+import type { Variants } from 'framer-motion'
 
 export default function HeroSectionWithImage() {
-  // Variants cho container chứa text để chạy hiệu ứng so le (stagger)
   const containerVariants: Variants = {
     hidden: { opacity: 0 },
     visible: {
@@ -36,14 +26,14 @@ export default function HeroSectionWithImage() {
       y: 0,
       transition: {
         duration: 0.5,
-        ease: 'easeOut', // Giờ TS đã hiểu đây là Easing type
+        ease: 'easeOut',
       },
     },
   }
 
   return (
     <section className="relative w-full overflow-hidden bg-background py-12 md:py-20 lg:py-32">
-      {/* Background Decor - Có thêm hiệu ứng pulse nhẹ */}
+      {/* Background Decor */}
       <motion.div
         animate={{ opacity: [0.5, 0.8, 0.5], scale: [1, 1.05, 1] }}
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
@@ -79,7 +69,7 @@ export default function HeroSectionWithImage() {
               className="mb-6 inline-flex items-center rounded-full border border-border bg-background/80 px-3 py-1 text-sm font-medium backdrop-blur-sm shadow-sm"
             >
               <span className="flex h-2 w-2 rounded-full bg-green-500 mr-2 animate-pulse"></span>
-              Available for new projects
+              Sẵn sàng cho dự án mới
             </motion.div>
 
             {/* Main Headline */}
@@ -87,12 +77,12 @@ export default function HeroSectionWithImage() {
               variants={itemVariants}
               className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6 leading-tight"
             >
-              Building{' '}
+              Xây dựng{' '}
               <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
-                Scalable Apps
+                Ứng dụng Quy mô
               </span>{' '}
               <br />
-              on Mobile & Web.
+              trên Mobile & Web.
             </motion.h1>
 
             {/* Sub-headline */}
@@ -100,11 +90,14 @@ export default function HeroSectionWithImage() {
               variants={itemVariants}
               className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-lg"
             >
-              Expert in{' '}
-              <strong className="text-foreground">Flutter Performance</strong>{' '}
-              and the <strong className="text-foreground">Zalo Mini App</strong>{' '}
-              ecosystem. I transform complex logic into smooth, high-speed user
-              experiences.
+              Chuyên gia về{' '}
+              <strong className="text-foreground">
+                Tối ưu hiệu năng Flutter
+              </strong>{' '}
+              và hệ sinh thái{' '}
+              <strong className="text-foreground">Zalo Mini App</strong>. Tôi
+              biến các logic phức tạp thành trải nghiệm người dùng mượt mà, tốc
+              độ cao.
             </motion.p>
 
             {/* Tech Stack */}
@@ -112,17 +105,14 @@ export default function HeroSectionWithImage() {
               variants={itemVariants}
               className="flex flex-wrap justify-center lg:justify-start gap-2 mb-10"
             >
-              {[
-                { icon: Smartphone, label: 'Flutter', color: 'text-blue-500' },
-                { icon: Layers, label: 'React', color: 'text-cyan-500' },
-                { icon: Zap, label: 'Zalo Mini App', color: 'text-yellow-500' },
-              ].map((tech, index) => (
+              {HERO_CONSTANTS.techStack.map((tech, index) => (
                 <Badge
                   key={index}
                   variant="outline"
                   className="px-3 py-1.5 text-sm flex gap-2 items-center bg-background/50 hover:bg-background/80 transition-colors"
                 >
-                  <tech.icon size={14} className={tech.color} /> {tech.label}
+                  <tech.icon size={14} className={tech.color} />
+                  {tech.key}
                 </Badge>
               ))}
             </motion.div>
@@ -141,7 +131,7 @@ export default function HeroSectionWithImage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  View My Work <ArrowRight size={16} />
+                  Xem Dự Án <ArrowRight size={16} />
                 </motion.button>
               </Button>
               <Button
@@ -154,7 +144,7 @@ export default function HeroSectionWithImage() {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Download CV
+                  Tải CV
                 </motion.button>
               </Button>
             </motion.div>
@@ -164,17 +154,7 @@ export default function HeroSectionWithImage() {
               variants={itemVariants}
               className="mt-8 flex gap-6 text-muted-foreground"
             >
-              {[
-                { icon: Github, href: 'https://github.com/oh2k1vn' },
-                {
-                  icon: Linkedin,
-                  href: 'https://www.linkedin.com/in/hieu-nguyen-879101241/',
-                },
-                {
-                  icon: Facebook,
-                  href: 'https://www.facebook.com/GeminiDev1606/',
-                },
-              ].map((social, index) => (
+              {HERO_CONSTANTS.socials.map((social, index) => (
                 <motion.a
                   key={index}
                   href={social.href}
@@ -205,8 +185,8 @@ export default function HeroSectionWithImage() {
               >
                 <div className="w-full h-full relative rounded-[1.8rem] bg-gray-900">
                   <img
-                    src="https://scontent.fsgn5-12.fna.fbcdn.net/v/t39.30808-6/304301744_646096167073918_6201416130930987462_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=6ee11a&_nc_eui2=AeHIHgy3WYzL2vW1TfxR5xWeWj4cQU-puNRaPhxBT6m41KV5HBCqP2gkMXQHviEhjN22eBSS00X6Y1CeTYbu9y_N&_nc_ohc=bz2-mn6187IQ7kNvwGV4DBk&_nc_oc=AdmIBneCMPq_UKGs88jsf_CFvMvVp-itnuXBINMLB0SwsbgpvNiUH1fby1FHlc-YGfo&_nc_zt=23&_nc_ht=scontent.fsgn5-12.fna&_nc_gid=TUZK6D2ZNWdw0Al34kQ04Q&oh=00_AfngG5edVBhr6oW15nZ-sl6AZE1Nu7RtqlRXQaFyJ55XeQ&oe=693C8AB6"
-                    alt="Portrait"
+                    src={HERO_CONSTANTS.profileImage}
+                    alt="Chân dung Nguyễn Minh Hiếu"
                     className="w-full h-full object-cover rounded-[1.8rem]"
                     style={{
                       WebkitBoxReflect:
@@ -223,9 +203,9 @@ export default function HeroSectionWithImage() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-medium">
-                    Experience
+                    Kinh nghiệm
                   </p>
-                  <p className="text-sm font-bold text-foreground">3+ Years</p>
+                  <p className="text-sm font-bold text-foreground">3+ Năm</p>
                 </div>
               </div>
 
@@ -236,10 +216,10 @@ export default function HeroSectionWithImage() {
                 </div>
                 <div>
                   <p className="text-xs text-muted-foreground font-medium">
-                    Optimization
+                    Tối ưu hóa
                   </p>
                   <p className="text-sm font-bold text-foreground">
-                    High Perf.
+                    Hiệu năng cao
                   </p>
                 </div>
               </div>

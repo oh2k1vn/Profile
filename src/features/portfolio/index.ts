@@ -1,0 +1,7 @@
+export { default as ContactSection } from './ContactSection'
+export { default as ExperienceSection } from './ExperienceSection'
+export { default as FeaturedProjects } from './FeaturedProjects'
+export { default as HeroSectionWithImage } from './HeroSectionWithImage'
+export { default as ServicesSection } from './ServicesSection'
+export { default as TechnicalSkills } from './TechnicalSkills'
+export { default as WorkflowSection } from './WorkflowSection'

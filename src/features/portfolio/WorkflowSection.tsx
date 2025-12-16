@@ -1,68 +1,33 @@
-import { motion } from 'framer-motion'
-import { Code, PenTool, Rocket, Search } from 'lucide-react'
-
+import { HERO_CONSTANTS } from '@/constants/hero' // Import data
 import type { Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 
-const steps = [
-  {
-    id: '01',
-    title: 'Discovery & Analysis',
-    icon: Search,
-    description:
-      'I begin by deeply understanding business requirements. Leveraging my background in E-commerce and Booking systems, I rigorously analyze edge-cases before writing a single line of code.',
+const headerVariants: Variants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
+}
+
+const containerVariants: Variants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+      delayChildren: 0.3,
+    },
   },
-  {
-    id: '02',
-    title: 'Architecture Design',
-    icon: PenTool,
-    description:
-      'Planning the project structure. Whether it’s Clean Architecture for Flutter or a Modular approach for React, I ensure the codebase remains scalable and maintainable.',
+}
+
+const itemVariants: Variants = {
+  hidden: { opacity: 0, y: 30 },
+  visible: {
+    opacity: 1,
+    y: 0,
+    transition: { duration: 0.5, ease: 'easeOut' },
   },
-  {
-    id: '03',
-    title: 'Development',
-    icon: Code,
-    description:
-      'Writing Clean Code and optimizing performance during development. I integrate CI/CD pipelines and Unit Testing to minimize production bugs.',
-  },
-  {
-    id: '04',
-    title: 'Optimization & Launch',
-    icon: Rocket,
-    description:
-      'Measuring Core Web Vitals or FPS metrics. I refactor and fine-tune the product to achieve peak performance before final delivery to users.',
-  },
-]
+}
 
 export default function WorkflowSection() {
-  // Variants cho tiêu đề
-  const headerVariants: Variants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: { opacity: 1, y: 0, transition: { duration: 0.6 } },
-  }
-
-  // Variants cho container chứa các bước
-  const containerVariants: Variants = {
-    hidden: { opacity: 0 },
-    visible: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Các bước hiện cách nhau 0.2s
-        delayChildren: 0.3, // Đợi đường kẻ chạy được 1 chút rồi mới hiện bước
-      },
-    },
-  }
-
-  // Variants cho từng bước (Card)
-  const itemVariants: Variants = {
-    hidden: { opacity: 0, y: 30 },
-    visible: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.5, ease: 'easeOut' },
-    },
-  }
-
   return (
     <section className="py-24 bg-background relative overflow-hidden">
       <div className="container px-4 mx-auto">
@@ -75,11 +40,12 @@ export default function WorkflowSection() {
           variants={headerVariants}
         >
           <h2 className="text-3xl md:text-5xl font-bold mb-4">
-            How I <span className="text-blue-500">Work</span>
+            Quy Trình
+            <span className="text-blue-500">Làm Việc</span>
           </h2>
           <p className="text-muted-foreground max-w-2xl mx-auto">
-            The process of turning complex requirements into high quality
-            products.
+            Cách tôi chuyển đổi các yêu cầu phức tạp thành sản phẩm chất lượng
+            cao.
           </p>
         </motion.div>
 
@@ -90,7 +56,7 @@ export default function WorkflowSection() {
           whileInView="visible"
           viewport={{ once: true, margin: '-100px' }}
         >
-          {/* Connecting Line (Desktop only) - Hiệu ứng vẽ đường */}
+          {/* Connecting Line (Desktop only) */}
           <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-secondary -z-10 overflow-hidden">
             <motion.div
               className="h-full bg-linear-to-r from-blue-500/0 via-blue-500 to-blue-500/0"
@@ -104,22 +70,21 @@ export default function WorkflowSection() {
               }}
             />
           </div>
-
-          {/* Static Line Overlay để làm mờ 2 đầu (Optional) */}
           <div className="hidden lg:block absolute top-12 left-0 w-full h-0.5 bg-linear-to-r from-background via-transparent to-background -z-10" />
 
-          {steps.map((step, index) => (
+          {/* Render Steps từ Data */}
+          {HERO_CONSTANTS.workflow.map((step, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
               className="group relative pt-8"
             >
               {/* Step Number */}
-              <div className=" text-6xl font-black text-secondary/40 absolute -top-4 -left-2 select-none group-hover:text-blue-500/10 transition-colors">
+              <div className="text-6xl font-black text-secondary/40 absolute -top-4 -left-2 select-none group-hover:text-blue-500/10 transition-colors">
                 {step.id}
               </div>
 
-              {/* Icon - Có hiệu ứng lắc nhẹ khi hover */}
+              {/* Icon */}
               <motion.div
                 whileHover={{ scale: 1.1, rotate: [0, -10, 10, 0] }}
                 transition={{ type: 'spring', stiffness: 300 }}

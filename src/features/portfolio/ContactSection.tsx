@@ -67,16 +67,16 @@ export default function ContactSection() {
               variants={fadeInUp}
               className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/30 dark:text-blue-300 text-xs font-bold uppercase tracking-wider mb-6"
             >
-              Get in touch
+              Liên hệ ngay
             </motion.div>
 
             <motion.h2
               variants={fadeInUp}
               className="text-4xl md:text-5xl font-bold mb-6 tracking-tight"
             >
-              Let's build something <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">
-                amazing together.
+              Cùng nhau kiến tạo <br />
+              <span className="text-transparent bg-clip-text bg-linear-to-r from-blue-600 to-cyan-500">
+                những sản phẩm tuyệt vời.
               </span>
             </motion.h2>
 
@@ -84,9 +84,9 @@ export default function ContactSection() {
               variants={fadeInUp}
               className="text-lg text-muted-foreground mb-8 leading-relaxed"
             >
-              Are you looking for the optimal solution for Mobile App or Zalo
-              Mini App? Or need advice on system architecture? Leave a message,
-              I will respond within 24 hours.
+              Bạn đang tìm giải pháp tối ưu cho Mobile App hay Zalo Mini App?
+              Hay cần tư vấn về kiến trúc hệ thống? Hãy để lại lời nhắn, tôi sẽ
+              phản hồi trong vòng 24 giờ.
             </motion.p>
 
             <div className="space-y-6">
@@ -102,7 +102,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-medium">
-                    Email me at
+                    Email cho tôi
                   </p>
                   <p className="font-semibold text-foreground group-hover:text-blue-600 transition-colors">
                     oh2k1vn@gmail.com
@@ -122,7 +122,7 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-medium">
-                    Call or Zalo
+                    Gọi điện hoặc Zalo
                   </p>
                   <p className="font-semibold text-foreground group-hover:text-green-600 transition-colors">
                     (+84) 0972 350 070
@@ -140,10 +140,10 @@ export default function ContactSection() {
                 </div>
                 <div>
                   <p className="text-sm text-muted-foreground font-medium">
-                    Based in
+                    Khu vực
                   </p>
                   <p className="font-semibold text-foreground">
-                    Ho Chi Minh City, Vietnam
+                    TP. Hồ Chí Minh, Việt Nam
                   </p>
                 </div>
               </motion.div>
@@ -167,19 +167,19 @@ export default function ContactSection() {
               <Code2 size={200} />
             </motion.div>
 
-            <h3 className="text-2xl font-bold mb-2">Send a message</h3>
+            <h3 className="text-2xl font-bold mb-2">Gửi lời nhắn</h3>
             <p className="text-muted-foreground mb-8 text-sm">
-              Fill out the form below and I'll get back to you shortly.
+              Điền vào biểu mẫu bên dưới và tôi sẽ liên hệ lại sớm nhất.
             </p>
 
             <form className="space-y-4 relative z-10">
               <div className="grid grid-cols-2 gap-4">
                 <div className="space-y-2">
                   <label className="text-xs font-bold uppercase text-muted-foreground tracking-wider">
-                    Name
+                    Họ tên
                   </label>
                   <Input
-                    placeholder="John Doe"
+                    placeholder="Nguyễn Văn A"
                     className="bg-background focus-visible:ring-blue-500"
                   />
                 </div>
@@ -188,7 +188,7 @@ export default function ContactSection() {
                     Email
                   </label>
                   <Input
-                    placeholder="john@example.com"
+                    placeholder="nguyenvana@example.com"
                     type="email"
                     className="bg-background focus-visible:ring-blue-500"
                   />
@@ -197,21 +197,21 @@ export default function ContactSection() {
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase text-muted-foreground tracking-wider">
-                  Subject
+                  Chủ đề
                 </label>
                 <Input
-                  placeholder="Project Discussion"
+                  placeholder="Trao đổi dự án..."
                   className="bg-background focus-visible:ring-blue-500"
                 />
               </div>
 
               <div className="space-y-2">
                 <label className="text-xs font-bold uppercase text-muted-foreground tracking-wider">
-                  Message
+                  Nội dung
                 </label>
                 <Textarea
                   className="min-h-[150px] resize-none bg-background focus-visible:ring-blue-500"
-                  placeholder="Tell me about your project needs..."
+                  placeholder="Mô tả yêu cầu dự án của bạn..."
                 />
               </div>
 
@@ -224,7 +224,7 @@ export default function ContactSection() {
                   whileHover={{ scale: 1.02 }}
                   whileTap={{ scale: 0.95 }}
                 >
-                  Send Message <Send size={16} />
+                  Gửi Tin Nhắn <Send size={16} />
                 </motion.button>
               </Button>
             </form>
@@ -245,7 +245,7 @@ export default function ContactSection() {
             All rights reserved.
           </p>
           <p className="flex items-center gap-1">
-            Built with{' '}
+            Xây dựng bằng{' '}
             <span className="text-foreground font-medium">React</span>,{' '}
             <span className="text-foreground font-medium">Tailwind</span> &{' '}
             <span className="text-foreground font-medium">Shadcn UI</span>.
