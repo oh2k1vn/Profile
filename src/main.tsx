@@ -1,50 +1,35 @@
-import { RouterProvider, createRouter } from '@tanstack/react-router'
 import { StrictMode } from 'react'
+
+import { RouterProvider } from '@tanstack/react-router'
 import ReactDOM from 'react-dom/client'
 
-// Import the generated route tree
-import { routeTree } from './routeTree.gen'
+import '@/app/assets/style/index.css'
+import '@/app/assets/style/keyframes.css'
+import '@/app/assets/style/variable.css'
 
-import '@/locales/i18n'
-import { ThemeProvider } from './components/ThemeProvider.tsx'
-import reportWebVitals from './reportWebVitals.ts'
-import './styles.css'
+import { ThemeProvider } from './app/providers/ThemeProvider'
+import { router } from './app/router'
+import reportWebVitals from './reportWebVitals'
+import { useFirebaseAuth } from './shared/hooks/useFirebaseAuth'
 
-// Create a new router instance
-const router = createRouter({
-  routeTree,
-  context: {},
-  defaultPreload: 'intent',
-  scrollRestoration: true,
-  defaultStructuralSharing: true,
-  defaultPreloadStaleTime: 0,
-})
+function App() {
+  const auth = useFirebaseAuth()
 
-// Register the router instance for type safety
-declare module '@tanstack/react-router' {
-  interface Register {
-    router: typeof router
-  }
+  return (
+    <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
+      <RouterProvider router={router} context={{ auth }} />
+    </ThemeProvider>
+  )
 }
 
-function InnerApp() {
-  return <RouterProvider router={router} />
-}
-
-// Render the app
 const rootElement = document.getElementById('app')
 if (rootElement && !rootElement.innerHTML) {
   const root = ReactDOM.createRoot(rootElement)
   root.render(
     <StrictMode>
-      <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
-        <InnerApp />
-      </ThemeProvider>
+      <App />
     </StrictMode>,
   )
 }
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals()

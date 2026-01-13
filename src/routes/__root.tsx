@@ -1,29 +1,12 @@
-import { createRootRoute, Outlet } from '@tanstack/react-router'
+import { Outlet, createRootRoute } from '@tanstack/react-router'
 
-import ChatBot from '@/components/ChatBot'
-import Header from '@/components/Header'
-import ErrorPage from '@/pages/error'
-import NotFoundPage from '@/pages/notFound'
+import { AuthProvider } from '@/app/providers/AuthProvider'
+
 
 export const Route = createRootRoute({
   component: () => (
-    <>
-      <Header />
+    <AuthProvider>
       <Outlet />
-      <ChatBot />
-      {/* <TanStackDevtools
-        config={{
-          position: 'bottom-right',
-        }}
-        plugins={[
-          {
-            name: 'Tanstack Router',
-            render: <TanStackRouterDevtoolsPanel />,
-          },
-        ]}
-      /> */}
-    </>
+    </AuthProvider>
   ),
-  notFoundComponent: NotFoundPage,
-  errorComponent: ErrorPage,
 })
