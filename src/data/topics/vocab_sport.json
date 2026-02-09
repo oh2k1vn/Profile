@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic sport"
+  },
+  "data": [
+    {
+      "id": 664238,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 315759,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 661287,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 341146,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 963650,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 622622,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 673963,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 762768,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 769574,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 560924,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 760195,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 531302,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 585290,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 692121,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 844124,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 601161,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 870920,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 501649,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 947329,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 713874,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 265394,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 153841,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 403269,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 781756,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 919352,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 611971,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 235204,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 592207,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 594513,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 291874,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 513362,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 840971,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 321698,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 652710,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 124635,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 724806,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 711373,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 448931,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 920897,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 855104,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 879838,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 536088,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 940765,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 268030,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 708028,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 899729,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 768984,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 297490,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 685261,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 619779,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 756612,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 955480,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 382192,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 592287,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 662236,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 295580,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 319895,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 584157,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 627349,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 381682,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 250201,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 955958,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 850401,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 249806,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 756166,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 182146,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 563582,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 261552,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 422110,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 475234,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 418423,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 111868,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 199983,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 336485,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 526081,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 728482,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 288696,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 801300,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 818657,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 878353,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 646865,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 154340,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 482033,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 257125,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 587067,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 631848,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 416209,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 960070,
+      "topic": "sport",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 889100,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 379915,
+      "topic": "sport",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 848412,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 859297,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 101611,
+      "topic": "sport",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 621589,
+      "topic": "sport",
+      "word": "goal",
+      "type": "noun",
+      "meaning_vi": "bàn thắng / mục tiêu",
+      "example_simple": "I goal.",
+      "example_expand": "I goal every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 366008,
+      "topic": "sport",
+      "word": "match",
+      "type": "noun",
+      "meaning_vi": "trận đấu",
+      "example_simple": "I match.",
+      "example_expand": "I match every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 672882,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 465416,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 942184,
+      "topic": "sport",
+      "word": "sport",
+      "type": "noun",
+      "meaning_vi": "thể thao",
+      "example_simple": "I sport.",
+      "example_expand": "I sport every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 433966,
+      "topic": "sport",
+      "word": "train",
+      "type": "verb",
+      "meaning_vi": "tập luyện",
+      "example_simple": "I train.",
+      "example_expand": "I train every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    },
+    {
+      "id": 796249,
+      "topic": "sport",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "sport"
+      ]
+    }
+  ]
+}

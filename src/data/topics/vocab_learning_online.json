@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic learning_online"
+  },
+  "data": [
+    {
+      "id": 428669,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 862645,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 970856,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 336023,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 116263,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 544282,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 857031,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 900940,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 672843,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 292668,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 371605,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 826076,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 291554,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 390609,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 736903,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 959731,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 725482,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 646032,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 323189,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 200846,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 595219,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 333410,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 629233,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 709482,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 964005,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 393564,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 297681,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 830229,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 144905,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 321650,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 893131,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 323230,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 719114,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 277693,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 422262,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 823030,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 717494,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 438358,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 706963,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 747892,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 579752,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 178899,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 958693,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 680593,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 263703,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 886438,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 478407,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 814163,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 683489,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 142920,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 141330,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 613215,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 523990,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 651561,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 135172,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 440175,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 897055,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 955595,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 618862,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 542315,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 926161,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 354179,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 955416,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 486476,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 143281,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 575487,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 951108,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 622066,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 222233,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 238264,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 974611,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 496869,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 640520,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 228604,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 422559,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 910473,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 708004,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 451434,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 800870,
+      "topic": "learning_online",
+      "word": "lesson",
+      "type": "noun",
+      "meaning_vi": "bài học",
+      "example_simple": "I lesson.",
+      "example_expand": "I lesson every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 676362,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 204622,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 411171,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 685128,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 736738,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 534269,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 785163,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 272596,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 292879,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 575151,
+      "topic": "learning_online",
+      "word": "video",
+      "type": "noun",
+      "meaning_vi": "video",
+      "example_simple": "I video.",
+      "example_expand": "I video every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 108824,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 158370,
+      "topic": "learning_online",
+      "word": "study",
+      "type": "verb",
+      "meaning_vi": "học tập",
+      "example_simple": "I study.",
+      "example_expand": "I study every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 868193,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 746603,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 115212,
+      "topic": "learning_online",
+      "word": "practice",
+      "type": "verb",
+      "meaning_vi": "luyện tập",
+      "example_simple": "I practice.",
+      "example_expand": "I practice every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 229027,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 252948,
+      "topic": "learning_online",
+      "word": "teacher",
+      "type": "noun",
+      "meaning_vi": "giáo viên",
+      "example_simple": "I teacher.",
+      "example_expand": "I teacher every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 330846,
+      "topic": "learning_online",
+      "word": "skill",
+      "type": "noun",
+      "meaning_vi": "kỹ năng",
+      "example_simple": "I skill.",
+      "example_expand": "I skill every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 980072,
+      "topic": "learning_online",
+      "word": "learn",
+      "type": "verb",
+      "meaning_vi": "học",
+      "example_simple": "I learn.",
+      "example_expand": "I learn every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 239844,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    },
+    {
+      "id": 326901,
+      "topic": "learning_online",
+      "word": "course",
+      "type": "noun",
+      "meaning_vi": "khóa học",
+      "example_simple": "I course.",
+      "example_expand": "I course every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "learning_online"
+      ]
+    }
+  ]
+}

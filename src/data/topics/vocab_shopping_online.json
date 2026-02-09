@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic shopping_online"
+  },
+  "data": [
+    {
+      "id": 789955,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 919169,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 630505,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 655660,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 343568,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 876097,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 389227,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 258387,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 416918,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 326892,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 617124,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 618913,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 570583,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 945390,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 527720,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 413519,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 411352,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 340333,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 934105,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 585238,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 260653,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 570520,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 950180,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 724931,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 502571,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 639911,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 410547,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 655365,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 660947,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 851380,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 563402,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 227486,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 716017,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 915437,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 917240,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 923582,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 346576,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 339348,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 523727,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 300110,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 151626,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 522631,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 645225,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 876164,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 898878,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 529380,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 218959,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 897238,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 962901,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 380860,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 562469,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 454810,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 556677,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 776042,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 898623,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 289662,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 897033,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 580843,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 940511,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 553163,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 645033,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 175543,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 619593,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 757604,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 697794,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 846170,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 537679,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 485593,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 800761,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 552746,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 686372,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 425552,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 541764,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 316662,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 723382,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 103050,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 558212,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 830101,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 611955,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 966784,
+      "topic": "shopping_online",
+      "word": "buy",
+      "type": "verb",
+      "meaning_vi": "mua",
+      "example_simple": "I buy.",
+      "example_expand": "I buy every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 312823,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 439326,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 896309,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 531485,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 443374,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 661031,
+      "topic": "shopping_online",
+      "word": "sale",
+      "type": "noun",
+      "meaning_vi": "giảm giá",
+      "example_simple": "I sale.",
+      "example_expand": "I sale every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 150973,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 151420,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 635354,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 581001,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 352881,
+      "topic": "shopping_online",
+      "word": "delivery",
+      "type": "noun",
+      "meaning_vi": "giao hàng",
+      "example_simple": "I delivery.",
+      "example_expand": "I delivery every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 225990,
+      "topic": "shopping_online",
+      "word": "cart",
+      "type": "noun",
+      "meaning_vi": "giỏ hàng",
+      "example_simple": "I cart.",
+      "example_expand": "I cart every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 753133,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 653314,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 844733,
+      "topic": "shopping_online",
+      "word": "payment",
+      "type": "noun",
+      "meaning_vi": "thanh toán",
+      "example_simple": "I payment.",
+      "example_expand": "I payment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 761528,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 567230,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 963585,
+      "topic": "shopping_online",
+      "word": "price",
+      "type": "noun",
+      "meaning_vi": "giá",
+      "example_simple": "I price.",
+      "example_expand": "I price every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 937707,
+      "topic": "shopping_online",
+      "word": "return",
+      "type": "verb",
+      "meaning_vi": "trả hàng",
+      "example_simple": "I return.",
+      "example_expand": "I return every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    },
+    {
+      "id": 130900,
+      "topic": "shopping_online",
+      "word": "order",
+      "type": "verb",
+      "meaning_vi": "đặt hàng",
+      "example_simple": "I order.",
+      "example_expand": "I order every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "shopping_online"
+      ]
+    }
+  ]
+}
