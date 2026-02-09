@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic social_media"
+  },
+  "data": [
+    {
+      "id": 351978,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 650458,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 936655,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 722901,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 341036,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 910160,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 733929,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 439776,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 177061,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 140643,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 480069,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 148979,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 359943,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 829620,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 514671,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 160971,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 961926,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 826629,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 107855,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 794488,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 432874,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 560504,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 261224,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 488050,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 500694,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 448888,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 310483,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 300039,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 843334,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 894637,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 595739,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 556692,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 732340,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 935708,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 873320,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 819239,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 109829,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 578753,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 663189,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 561668,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 877875,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 372691,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 217913,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 948141,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 867921,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 801263,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 557367,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 371483,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 782206,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 318654,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 444402,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 477065,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 669564,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 165965,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 624463,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 490525,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 852492,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 706476,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 961271,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 819378,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 177447,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 338979,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 280000,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 694271,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 399885,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 524294,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 816349,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 792155,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 759257,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 692526,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 867444,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 476901,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 304242,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 513576,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 702187,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 211539,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 294924,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 612595,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 815860,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 232629,
+      "topic": "social_media",
+      "word": "post",
+      "type": "noun/verb",
+      "meaning_vi": "bài đăng / đăng",
+      "example_simple": "I post.",
+      "example_expand": "I post every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 909349,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 911441,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 442131,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 463707,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 220734,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 816607,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 274539,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 599291,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 867758,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 727814,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 395156,
+      "topic": "social_media",
+      "word": "follow",
+      "type": "verb",
+      "meaning_vi": "theo dõi",
+      "example_simple": "I follow.",
+      "example_expand": "I follow every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 562832,
+      "topic": "social_media",
+      "word": "message",
+      "type": "noun",
+      "meaning_vi": "tin nhắn",
+      "example_simple": "I message.",
+      "example_expand": "I message every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 618255,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 678948,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 846980,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 118680,
+      "topic": "social_media",
+      "word": "friend",
+      "type": "noun",
+      "meaning_vi": "bạn bè",
+      "example_simple": "I friend.",
+      "example_expand": "I friend every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 805064,
+      "topic": "social_media",
+      "word": "share",
+      "type": "verb",
+      "meaning_vi": "chia sẻ",
+      "example_simple": "I share.",
+      "example_expand": "I share every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 882804,
+      "topic": "social_media",
+      "word": "like",
+      "type": "verb",
+      "meaning_vi": "thích",
+      "example_simple": "I like.",
+      "example_expand": "I like every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 107868,
+      "topic": "social_media",
+      "word": "comment",
+      "type": "noun/verb",
+      "meaning_vi": "bình luận",
+      "example_simple": "I comment.",
+      "example_expand": "I comment every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    },
+    {
+      "id": 447794,
+      "topic": "social_media",
+      "word": "account",
+      "type": "noun",
+      "meaning_vi": "tài khoản",
+      "example_simple": "I account.",
+      "example_expand": "I account every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "social_media"
+      ]
+    }
+  ]
+}

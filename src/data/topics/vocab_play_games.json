@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic play_games"
+  },
+  "data": [
+    {
+      "id": 310267,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 563756,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 541466,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 750622,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 150886,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 900264,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 397831,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 405615,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 814935,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 360501,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 470278,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 311321,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 919721,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 710675,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 790620,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 947991,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 681617,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 929838,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 541730,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 411754,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 332860,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 356358,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 539804,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 898051,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 610826,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 101829,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 851815,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 446981,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 353004,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 880277,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 877883,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 605721,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 840000,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 413670,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 592618,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 699480,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 733795,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 950657,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 334380,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 156797,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 107069,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 906070,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 465154,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 767639,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 848294,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 766063,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 101793,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 551414,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 882431,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 258937,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 432977,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 261009,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 239329,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 139086,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 780242,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 158552,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 460044,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 859128,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 454698,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 136711,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 369384,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 622670,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 111952,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 355985,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 591974,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 635903,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 563334,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 666422,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 462510,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 613771,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 230722,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 336543,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 145427,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 750612,
+      "topic": "play_games",
+      "word": "win",
+      "type": "verb",
+      "meaning_vi": "thắng",
+      "example_simple": "I win.",
+      "example_expand": "I win every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 540581,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 788811,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 141608,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 373778,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 881697,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 135145,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 654427,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 536164,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 510039,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 823353,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 332108,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 193027,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 166322,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 267109,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 631984,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 897451,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 833489,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 239338,
+      "topic": "play_games",
+      "word": "lose",
+      "type": "verb",
+      "meaning_vi": "thua",
+      "example_simple": "I lose.",
+      "example_expand": "I lose every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 607155,
+      "topic": "play_games",
+      "word": "team",
+      "type": "noun",
+      "meaning_vi": "đội",
+      "example_simple": "I team.",
+      "example_expand": "I team every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 315913,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 461589,
+      "topic": "play_games",
+      "word": "fun",
+      "type": "noun",
+      "meaning_vi": "niềm vui",
+      "example_simple": "I fun.",
+      "example_expand": "I fun every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 931287,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 543470,
+      "topic": "play_games",
+      "word": "game",
+      "type": "noun",
+      "meaning_vi": "trò chơi",
+      "example_simple": "I game.",
+      "example_expand": "I game every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 634489,
+      "topic": "play_games",
+      "word": "level",
+      "type": "noun",
+      "meaning_vi": "cấp độ",
+      "example_simple": "I level.",
+      "example_expand": "I level every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 186395,
+      "topic": "play_games",
+      "word": "score",
+      "type": "noun/verb",
+      "meaning_vi": "điểm số / ghi điểm",
+      "example_simple": "I score.",
+      "example_expand": "I score every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    },
+    {
+      "id": 743773,
+      "topic": "play_games",
+      "word": "play",
+      "type": "verb",
+      "meaning_vi": "chơi",
+      "example_simple": "I play.",
+      "example_expand": "I play every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "play_games"
+      ]
+    }
+  ]
+}

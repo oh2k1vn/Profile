@@ -1,0 +1,1408 @@
+{
+  "meta": {
+    "language": "en",
+    "purpose": "Basic English vocabulary for beginners - topic travelling"
+  },
+  "data": [
+    {
+      "id": 893051,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 126271,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 353985,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 936915,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 601685,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 952942,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 138611,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 126848,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 350635,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 987825,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 498789,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 576954,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 833894,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 496891,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 611140,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 352977,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 722532,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 500646,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 123308,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 375868,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 436330,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 721706,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 715620,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 103657,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 617063,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 284613,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 445646,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 237194,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 911723,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 765169,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 141524,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 424278,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 764647,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 122409,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 449759,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 883996,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 906097,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 795834,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 386615,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 194554,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 452490,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 260404,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 922039,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 661959,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 736174,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 161464,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 612670,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 836571,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 177085,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 266649,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 636279,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 123680,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 783018,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 103571,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 714184,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 587530,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 726175,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 395476,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 973488,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 621108,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 290747,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 296617,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 998635,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 354107,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 756888,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 355213,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 471151,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 680428,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 588224,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 173800,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 360645,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 521030,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 908134,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 529096,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 343810,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 996632,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 896202,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 303464,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 198595,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 747695,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 333078,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 220037,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 890438,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 909463,
+      "topic": "travelling",
+      "word": "travel",
+      "type": "verb",
+      "meaning_vi": "du lịch",
+      "example_simple": "I travel.",
+      "example_expand": "I travel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 381972,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 370513,
+      "topic": "travelling",
+      "word": "hotel",
+      "type": "noun",
+      "meaning_vi": "khách sạn",
+      "example_simple": "I hotel.",
+      "example_expand": "I hotel every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 159236,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 392717,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 692485,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 587556,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 372267,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 244945,
+      "topic": "travelling",
+      "word": "visit",
+      "type": "verb",
+      "meaning_vi": "tham quan",
+      "example_simple": "I visit.",
+      "example_expand": "I visit every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 901871,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 621106,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 324532,
+      "topic": "travelling",
+      "word": "flight",
+      "type": "noun",
+      "meaning_vi": "chuyến bay",
+      "example_simple": "I flight.",
+      "example_expand": "I flight every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 492865,
+      "topic": "travelling",
+      "word": "ticket",
+      "type": "noun",
+      "meaning_vi": "vé",
+      "example_simple": "I ticket.",
+      "example_expand": "I ticket every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 331165,
+      "topic": "travelling",
+      "word": "map",
+      "type": "noun",
+      "meaning_vi": "bản đồ",
+      "example_simple": "I map.",
+      "example_expand": "I map every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 113071,
+      "topic": "travelling",
+      "word": "bag",
+      "type": "noun",
+      "meaning_vi": "túi",
+      "example_simple": "I bag.",
+      "example_expand": "I bag every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 620640,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    },
+    {
+      "id": 375689,
+      "topic": "travelling",
+      "word": "trip",
+      "type": "noun",
+      "meaning_vi": "chuyến đi",
+      "example_simple": "I trip.",
+      "example_expand": "I trip every day to improve my English.",
+      "tags": [
+        "basic",
+        "beginner",
+        "travelling"
+      ]
+    }
+  ]
+}
