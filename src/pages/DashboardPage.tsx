@@ -1,7 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, FolderKanban, Tags, Loader2 } from 'lucide-react';
+import { LayoutDashboard, BookOpen, FolderKanban, Tags, Users, Loader2, ShieldAlert } from 'lucide-react';
+
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
+import toast from 'react-hot-toast';
 import { db } from '../services/firebase';
 import { logoutUser } from '../services/authService';
 import { createBlogPost, updateBlogPost, deleteBlogPostById } from '../services/blogService';
@@ -19,8 +21,9 @@ import { ProfileTab } from '../components/dashboard/ProfileTab';
 import { BlogTab } from '../components/dashboard/BlogTab';
 import { CategoriesTab } from '../components/dashboard/CategoriesTab';
 import { ProjectsTab } from '../components/dashboard/ProjectsTab';
+import { UsersTab } from '../components/dashboard/UsersTab';
 
-type DashboardTab = 'profile' | 'blog' | 'categories' | 'projects';
+type DashboardTab = 'profile' | 'blog' | 'categories' | 'projects' | 'users';
 
 export default function DashboardPage() {
   useSEO({
@@ -29,7 +32,7 @@ export default function DashboardPage() {
   });
 
   const navigate = useNavigate();
-  const { user, profile: contextProfile, loading: loadingAuth, updateProfile } = useProfile();
+  const { user, profile: contextProfile, isAdmin, loading: loadingAuth, updateProfile } = useProfile();
   const [activeTab, setActiveTab] = useState<DashboardTab>('profile');
 
   // Local state for profile form editing
@@ -99,11 +102,13 @@ export default function DashboardPage() {
     try {
       await updateProfile(profile);
       audioService.playSuccess();
+      toast.success('Đã lưu thông tin Profile thành công!');
       setProfileSuccess(true);
       setTimeout(() => setProfileSuccess(false), 3000);
     } catch (err) {
       console.error('Error saving profile:', err);
       audioService.playError();
+      toast.error('Lỗi khi lưu profile. Vui lòng thử lại!');
     } finally {
       setSavingProfile(false);
     }
@@ -111,40 +116,76 @@ export default function DashboardPage() {
 
   const handleCreateBlog = async (input: CreateBlogInput) => {
     audioService.playClick();
-    await createBlogPost(input);
-    audioService.playSuccess();
+    try {
+      await createBlogPost(input);
+      audioService.playSuccess();
+      toast.success('Đã xuất bản bài viết blog mới!');
+    } catch (err) {
+      console.error('Error creating blog:', err);
+      audioService.playError();
+      toast.error('Lỗi khi tạo bài viết blog!');
+    }
   };
 
   const handleUpdateBlog = async (id: string, input: CreateBlogInput) => {
     audioService.playClick();
-    await updateBlogPost(id, input);
-    audioService.playSuccess();
+    try {
+      await updateBlogPost(id, input);
+      audioService.playSuccess();
+      toast.success('Đã cập nhật bài viết blog!');
+    } catch (err) {
+      console.error('Error updating blog:', err);
+      audioService.playError();
+      toast.error('Lỗi khi cập nhật bài viết!');
+    }
   };
 
   const handleDeleteBlog = async (id: string) => {
     audioService.playClick();
-    await deleteBlogPostById(id);
-    audioService.playSuccess();
+    try {
+      await deleteBlogPostById(id);
+      audioService.playSuccess();
+      toast.success('Đã xoá bài viết khỏi Firestore!');
+    } catch (err) {
+      console.error('Error deleting blog:', err);
+      audioService.playError();
+      toast.error('Lỗi khi xoá bài viết!');
+    }
   };
 
   const handleCreateProject = async (input: CreateProjectInput, techText: string) => {
     audioService.playClick();
-    const techArray = techText.split(',').map(t => t.trim()).filter(t => t.length > 0);
-    await createProjectInFirestore({
-      ...input,
-      tech: techArray.length > 0 ? techArray : ['React', 'TypeScript'],
-    });
-    audioService.playSuccess();
-    const updated = await fetchProjectsFromFirestore();
-    setProjects(updated);
+    try {
+      const techArray = techText.split(',').map(t => t.trim()).filter(t => t.length > 0);
+      await createProjectInFirestore({
+        ...input,
+        tech: techArray.length > 0 ? techArray : ['React', 'TypeScript'],
+      });
+      audioService.playSuccess();
+      toast.success('Đã thêm dự án mới thành công!');
+      const updated = await fetchProjectsFromFirestore();
+      setProjects(updated);
+    } catch (err) {
+      console.error('Error creating project:', err);
+      audioService.playError();
+      toast.error('Lỗi khi thêm dự án mới!');
+    }
   };
 
   const handleDeleteProject = async (id: string) => {
     audioService.playClick();
-    await deleteProjectInFirestore(id);
-    audioService.playSuccess();
-    setProjects(prev => prev.filter(p => p.id !== id));
+    try {
+      await deleteProjectInFirestore(id);
+      audioService.playSuccess();
+      toast.success('Đã xoá dự án khỏi Firestore!');
+      setProjects(prev => prev.filter(p => p.id !== id));
+    } catch (err) {
+      console.error('Error deleting project:', err);
+      audioService.playError();
+      toast.error('Lỗi khi xoá dự án!');
+    }
   };
+
 
   const handleLogout = async () => {
     audioService.playClick();
@@ -180,8 +221,19 @@ export default function DashboardPage() {
         onLogout={handleLogout}
       />
 
+      {/* Informative Banner for Non-Admin Users */}
+      {!isAdmin && (
+        <div className="p-4 rounded-2xl bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-sans flex items-center gap-3 shadow-lg">
+          <ShieldAlert size={20} className="text-sky-400 shrink-0" />
+          <div>
+            <strong className="block text-white font-semibold text-sm">Chế độ Thành Viên (User Mode)</strong>
+            Tài khoản của bạn đang có quyền <span className="underline font-bold text-sky-200">User</span>. Bạn có thể Thêm, Sửa và Xoá các bài viết, dự án và danh mục <strong className="text-white">do chính bạn tạo ra</strong>.
+          </div>
+        </div>
+      )}
+
       {/* Tab Segmented Control */}
-      <div className="flex bg-slate-900/60 backdrop-blur-xl p-1.5 rounded-2xl border border-white/12 gap-1.5 max-w-2xl overflow-x-auto scrollbar-none">
+      <div className="flex bg-slate-900/60 backdrop-blur-xl p-1.5 rounded-2xl border border-white/12 gap-1.5 max-w-3xl overflow-x-auto scrollbar-none">
         <button
           onClick={() => { audioService.playClick(); setActiveTab('profile'); }}
           className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
@@ -229,6 +281,20 @@ export default function DashboardPage() {
           <FolderKanban size={14} />
           Quản Lý Dự Án
         </button>
+
+        {isAdmin && (
+          <button
+            onClick={() => { audioService.playClick(); setActiveTab('users'); }}
+            className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
+              activeTab === 'users'
+                ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                : 'text-slate-400 hover:text-slate-200'
+            }`}
+          >
+            <Users size={14} />
+            Quản Lý User
+          </button>
+        )}
       </div>
 
       {/* Tab Content */}
@@ -239,6 +305,7 @@ export default function DashboardPage() {
           savingProfile={savingProfile}
           profileSuccess={profileSuccess}
           onSaveProfile={handleSaveProfile}
+          isAdmin={isAdmin}
         />
       )}
 
@@ -249,11 +316,12 @@ export default function DashboardPage() {
           onDeleteBlog={handleDeleteBlog}
           onCreateBlog={handleCreateBlog}
           onUpdateBlog={handleUpdateBlog}
+          isAdmin={isAdmin}
         />
       )}
 
       {activeTab === 'categories' && (
-        <CategoriesTab />
+        <CategoriesTab isAdmin={isAdmin} />
       )}
 
       {activeTab === 'projects' && (
@@ -262,8 +330,14 @@ export default function DashboardPage() {
           loadingProjects={loadingProjects}
           onDeleteProject={handleDeleteProject}
           onCreateProject={handleCreateProject}
+          isAdmin={isAdmin}
         />
+      )}
+
+      {activeTab === 'users' && isAdmin && (
+        <UsersTab currentUserId={user.uid} />
       )}
     </main>
   );
 }
+

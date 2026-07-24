@@ -28,7 +28,7 @@ export const createBlogPost = async (input: CreateBlogInput): Promise<string> =>
   const finalCategory = input.category?.trim() || 'Kỹ Thuật';
 
   // Automatically save new category to Firestore
-  addBlogCategory(finalCategory).catch(() => {});
+  addBlogCategory(finalCategory, input.authorId, input.authorName).catch(() => {});
 
   const docRef = await addDoc(collection(db, 'blog_posts'), {
     title: input.title.trim(),
@@ -38,7 +38,9 @@ export const createBlogPost = async (input: CreateBlogInput): Promise<string> =>
     coverImage: input.coverImage?.trim() || '',
     category: finalCategory,
     tags: input.tags || [],
+    authorId: input.authorId || '',
     authorName: input.authorName || 'Nguyễn Minh Hiếu',
+    authorAvatar: input.authorAvatar || '',
     readTime: readTimeStr,
     published: input.published ?? true,
     views: 0,

@@ -19,22 +19,35 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
   const isBlog = location.pathname.startsWith('/blog');
   const isDashboard = location.pathname.startsWith('/dashboard');
 
+  const scrollToElement = (elementId: string) => {
+    let attempts = 0;
+    const checkAndScroll = () => {
+      const el = document.getElementById(elementId);
+      if (el) {
+        el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      } else if (attempts < 12) {
+        attempts++;
+        setTimeout(checkAndScroll, 100);
+      }
+    };
+    checkAndScroll();
+  };
+
   const navAndScroll = (to: string, elementId?: string) => {
     audioService.playClick();
+
     if (location.pathname !== to) {
       navigate(to);
       if (elementId) {
-        setTimeout(() => {
-          const el = document.getElementById(elementId);
-          if (el) {
-            el.scrollIntoView({ behavior: 'smooth' });
-          }
-        }, 150);
+        scrollToElement(elementId);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
-    } else if (elementId) {
-      const el = document.getElementById(elementId);
-      if (el) {
-        el.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      if (elementId) {
+        scrollToElement(elementId);
+      } else {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
       }
     }
   };

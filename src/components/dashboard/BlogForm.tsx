@@ -24,7 +24,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
   const [title, setTitle] = useState('');
   const [slug, setSlug] = useState('');
   const [categories, setCategories] = useState<string[]>([]);
-  const [category, setCategory] = useState('Frontend Development');
+  const [category, setCategory] = useState('');
   const [isCustomCategory, setIsCustomCategory] = useState(false);
   const [customCategoryInput, setCustomCategoryInput] = useState('');
 
@@ -51,7 +51,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
     if (initialData) {
       setTitle(initialData.title || '');
       setSlug(initialData.slug || slugify(initialData.title || ''));
-      setCategory(initialData.category || 'Frontend Development');
+      setCategory(initialData.category || '');
       setSummary(initialData.summary || '');
       setCoverImage(initialData.coverImage || '');
       setContent(initialData.content || '');
@@ -79,7 +79,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!title.trim() || !content.trim()) return;
+    if (saving || !title.trim() || !content.trim()) return;
     setSaving(true);
 
     const finalCategory = isCustomCategory ? customCategoryInput.trim() : category;
@@ -93,7 +93,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
       await onSave({
         title: title.trim(),
         slug: slug.trim() || slugify(title),
-        category: finalCategory || 'Frontend Development',
+        category: finalCategory || '',
         summary: summary.trim(),
         coverImage: coverImage.trim(),
         content: content.trim(),
@@ -148,7 +148,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
         {/* Dynamic Firestore Category Select */}
         <div className="space-y-1.5">
           <div className="flex items-center justify-between">
-            <label className="text-xs font-semibold text-slate-300">Danh mục bài viết (Firestore)</label>
+            <label className="text-xs font-semibold text-slate-300">Danh mục bài viết</label>
             <button
               type="button"
               onClick={() => setIsCustomCategory(!isCustomCategory)}
@@ -254,7 +254,7 @@ export const BlogForm: React.FC<BlogFormProps> = ({
           <button
             type="submit"
             disabled={saving}
-            className="liquid-glass-accent-btn px-6 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer disabled:opacity-50"
+            className="liquid-glass-accent-btn px-6 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
           >
             {saving ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
             {initialData ? 'Lưu Thay Đổi' : 'Đăng Bài Viết'}

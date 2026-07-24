@@ -9,6 +9,7 @@ import type { UserProfileData } from '../services/profileService';
 interface ProfileContextType {
   user: User | null;
   profile: UserProfileData | null;
+  isAdmin: boolean;
   loading: boolean;
   refreshProfile: () => Promise<void>;
   updateProfile: (data: Partial<UserProfileData>) => Promise<void>;
@@ -17,9 +18,10 @@ interface ProfileContextType {
 const ProfileContext = createContext<ProfileContextType>({
   user: null,
   profile: null,
+  isAdmin: false,
   loading: true,
-  refreshProfile: async () => {},
-  updateProfile: async () => {},
+  refreshProfile: async () => { },
+  updateProfile: async () => { },
 });
 
 export const ProfileProvider: React.FC<{ children: React.ReactNode }> = ({ children }) => {
@@ -73,6 +75,8 @@ export const ProfileProvider: React.FC<{ children: React.ReactNode }> = ({ child
     };
   }, []);
 
+  const isAdmin = !!user && profile?.role === 'admin';
+
   const refreshProfile = async () => {
     // onSnapshot handles real-time updates automatically
   };
@@ -87,6 +91,7 @@ export const ProfileProvider: React.FC<{ children: React.ReactNode }> = ({ child
       value={{
         user,
         profile,
+        isAdmin,
         loading,
         refreshProfile,
         updateProfile: handleUpdateProfile,

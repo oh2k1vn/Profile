@@ -11,6 +11,8 @@ export interface CreateProjectInput {
   github: string;
   demoUrl?: string;
   simulationType: SimulationType;
+  authorId?: string;
+  authorName?: string;
 }
 
 export const fetchProjectsFromFirestore = async (): Promise<Project[]> => {
@@ -28,6 +30,8 @@ export const fetchProjectsFromFirestore = async (): Promise<Project[]> => {
 export const createProjectInFirestore = async (input: CreateProjectInput): Promise<string> => {
   const docRef = await addDoc(collection(db, 'projects'), {
     ...input,
+    authorId: input.authorId || '',
+    authorName: input.authorName || '',
     createdAt: Timestamp.now(),
     updatedAt: Timestamp.now(),
   });

@@ -3,12 +3,12 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Tag, Trash2, Loader2, AlertTriangle } from 'lucide-react';
 import type { BlogPost } from '../types/blog';
 import { fetchBlogPostById, deleteBlogPostById } from '../services/blogService';
-
 import { audioService } from '../services/audioService';
 import { useSEO } from '../hooks/useSEO';
+import { useProfile } from '../contexts/ProfileContext';
+import { canManageResource } from '../utils/authUtils';
 
 function renderMarkdown(md: string): string {
-
   let html = md
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -39,12 +39,14 @@ function renderMarkdown(md: string): string {
 export default function BlogPostPage() {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
+  const { user, isAdmin } = useProfile();
 
   const [post, setPost] = useState<BlogPost | null>(null);
   const [loading, setLoading] = useState(true);
   const [notFound, setNotFound] = useState(false);
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
+
 
   useSEO({
     title: post?.title || 'Bài Viết',
@@ -74,7 +76,6 @@ export default function BlogPostPage() {
     loadPost();
   }, [id]);
 
-
   const handleDelete = async () => {
     if (!id) return;
     setDeleting(true);
@@ -88,7 +89,6 @@ export default function BlogPostPage() {
       setDeleting(false);
     }
   };
-
 
   const formatDate = (ts: { seconds: number }) => {
     const date = new Date(ts.seconds * 1000);
@@ -135,13 +135,16 @@ export default function BlogPostPage() {
           Quay lại Kho Bài Viết
         </button>
 
-        <button
-          onClick={() => { audioService.playClick(); setShowDeleteConfirm(true); }}
-          className="px-3.5 py-1.5 rounded-full text-xs font-medium text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all cursor-pointer flex items-center gap-1.5"
-        >
-          <Trash2 size={12} />
-          Xoá
-        </button>
+        {/* Show Delete button only to Admin or Post Author */}
+        {canManageResource(user, isAdmin, post.authorId) && (
+          <button
+            onClick={() => { audioService.playClick(); setShowDeleteConfirm(true); }}
+            className="px-3.5 py-1.5 rounded-full text-xs font-medium text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all cursor-pointer flex items-center gap-1.5"
+          >
+            <Trash2 size={12} />
+            Xoá
+          </button>
+        )}
 
       </div>
 
@@ -156,7 +159,7 @@ export default function BlogPostPage() {
             <Clock size={14} className="text-sky-400" />
             <span>{formatDate(post.createdAt)}</span>
           </div>
-          {post.tags.length > 0 && (
+          {post.tags && post.tags.length > 0 && (
             <div className="flex items-center gap-2">
               <Tag size={14} className="text-purple-400" />
               {post.tags.map(tag => (
@@ -176,7 +179,7 @@ export default function BlogPostPage() {
       />
 
       {/* Delete Confirmation Modal */}
-      {showDeleteConfirm && (
+      {showDeleteConfirm && user && (
         <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/70 backdrop-blur-md">
           <div className="liquid-glass border border-rose-500/30 rounded-3xl p-6 max-w-sm w-full shadow-2xl space-y-4">
             <div className="flex items-center gap-2 text-rose-400">

@@ -1,5 +1,5 @@
 import React from 'react';
-import { CheckCircle2, Loader2, Save } from 'lucide-react';
+import { CheckCircle2, Loader2, Save, ShieldAlert, UserCheck } from 'lucide-react';
 import type { UserProfileData } from '../../services/profileService';
 
 interface ProfileTabProps {
@@ -8,6 +8,7 @@ interface ProfileTabProps {
   savingProfile: boolean;
   profileSuccess: boolean;
   onSaveProfile: (e: React.FormEvent) => void;
+  isAdmin?: boolean;
 }
 
 export const ProfileTab: React.FC<ProfileTabProps> = ({
@@ -16,12 +17,24 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
   savingProfile,
   profileSuccess,
   onSaveProfile,
+  isAdmin = true,
 }) => {
   return (
     <form onSubmit={onSaveProfile} className="liquid-glass rounded-3xl p-6 sm:p-8 border border-white/15 space-y-6 shadow-2xl">
-      <div className="border-b border-white/10 pb-4">
-        <h2 className="text-base font-bold font-sans text-white">Cấu Hình Thông Tin Cá Nhân (Firestore Sync)</h2>
-        <p className="text-xs font-sans text-slate-400">Các thông tin được cập nhật sẽ đồng bộ trực tiếp lên hệ thống.</p>
+      <div className="border-b border-white/10 pb-4 flex flex-col sm:flex-row sm:items-center justify-between gap-4">
+        <div>
+          <h2 className="text-base font-bold font-sans text-white">Cấu Hình Thông Tin Cá Nhân (Firestore Sync)</h2>
+          <p className="text-xs font-sans text-slate-400">Các thông tin được cập nhật sẽ đồng bộ trực tiếp lên hệ thống.</p>
+        </div>
+        {!isAdmin ? (
+          <span className="px-3 py-1.5 rounded-full text-xs font-medium text-sky-300 bg-sky-500/15 border border-sky-400/25 flex items-center gap-1.5 shrink-0">
+            <UserCheck size={14} /> Quyền Thành Viên (User Role)
+          </span>
+        ) : (
+          <span className="px-3 py-1.5 rounded-full text-xs font-medium text-amber-300 bg-amber-500/15 border border-amber-400/25 flex items-center gap-1.5 shrink-0">
+            <ShieldAlert size={14} /> Quyền Quản Trị Viên (Admin Role)
+          </span>
+        )}
       </div>
 
       {profileSuccess && (
@@ -40,7 +53,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.displayName || ''}
             onChange={e => setProfile({ ...profile, displayName: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="Nguyễn Minh Hiếu"
+            placeholder="Họ và tên của bạn"
           />
         </div>
 
@@ -51,7 +64,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.jobTitle || ''}
             onChange={e => setProfile({ ...profile, jobTitle: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="Middle Frontend & Mobile Developer"
+            placeholder="Frontend / Mobile Developer"
           />
         </div>
 
@@ -62,18 +75,23 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.headline || ''}
             onChange={e => setProfile({ ...profile, headline: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="Chuyên lập trình Flutter, React, TypeScript & Zalo Mini App"
+            placeholder="Mô tả công việc hoặc định hướng ngắn gọn"
           />
         </div>
 
+        {/* Email is a protected important field: disabled for non-admins */}
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-slate-300">Email liên hệ *</label>
+          <div className="flex items-center justify-between">
+            <label className="text-xs font-semibold text-slate-300">Email liên hệ *</label>
+            {!isAdmin && <span className="text-[10px] text-amber-400/80 font-mono">(Chỉ Admin sửa)</span>}
+          </div>
           <input
             type="email"
             required
+            disabled={!isAdmin}
             value={profile.email || ''}
             onChange={e => setProfile({ ...profile, email: e.target.value })}
-            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white disabled:opacity-60 disabled:cursor-not-allowed"
             placeholder="email@domain.com"
           />
         </div>
@@ -107,7 +125,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.avatarUrl || profile.photoURL || ''}
             onChange={e => setProfile({ ...profile, avatarUrl: e.target.value, photoURL: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="/images/avatar.webp"
+            placeholder="https://example.com/avatar.jpg"
           />
         </div>
 
@@ -162,7 +180,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.websiteUrl || ''}
             onChange={e => setProfile({ ...profile, websiteUrl: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="https://profile-17t.pages.dev"
+            placeholder="https://yourwebsite.com"
           />
         </div>
       </div>
@@ -174,7 +192,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
           value={profile.skillsText || ''}
           onChange={e => setProfile({ ...profile, skillsText: e.target.value })}
           className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-          placeholder="React, TypeScript, Flutter, Zalo Mini App, Tailwind CSS, Vite, Firebase"
+          placeholder="React, TypeScript, Flutter, Tailwind CSS, Firebase"
         />
       </div>
 
