@@ -31,7 +31,22 @@ export interface UserProfile {
  * Sign in with Google Popup and save/update user document in Firestore 'users' collection.
  */
 export async function loginWithGoogle(): Promise<UserProfile> {
-  const result = await signInWithPopup(auth, googleProvider);
+  let result;
+  try {
+    result = await signInWithPopup(auth, googleProvider);
+  } catch (err: any) {
+    console.error('Firebase Auth Error Code:', err?.code, err?.message);
+    if (err?.code === 'auth/unauthorized-domain') {
+      throw new Error(
+        'Tên miền chưa được cấp quyền (unauthorized-domain). Hãy thêm domain Cloudflare vào Authorized Domains trong Firebase Console -> Authentication -> Settings.'
+      );
+    } else if (err?.code === 'auth/invalid-api-key') {
+      throw new Error(
+        'Firebase API Key không hợp lệ. Hãy kiểm tra biến môi trường VITE_FIREBASE_API_KEY trên Cloudflare Pages và Re-deploy.'
+      );
+    }
+    throw err;
+  }
   const user = result.user;
 
   const userRef = doc(db, 'users', user.uid);
