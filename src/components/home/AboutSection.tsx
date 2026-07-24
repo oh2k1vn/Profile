@@ -1,9 +1,19 @@
 import React, { useState } from 'react';
-import { User, ChevronRight } from 'lucide-react';
+import { User, ChevronRight, MapPin, Mail, Code, Globe, ExternalLink, Briefcase } from 'lucide-react';
 import { audioService } from '../../services/audioService';
+import { useProfile } from '../../contexts/ProfileContext';
 
 export const AboutSection: React.FC = () => {
+  const { profile } = useProfile();
   const [aboutTab, setAboutTab] = useState<'story' | 'setup' | 'philosophy'>('story');
+
+  const name = profile?.displayName || '';
+  const jobTitle = profile?.jobTitle || '';
+  const location = profile?.location || '';
+  const bio = profile?.bio || '';
+  const skillsList = profile?.skillsText
+    ? profile.skillsText.split(',').map(s => s.trim()).filter(Boolean)
+    : [];
 
   return (
     <section id="about" className="space-y-6 scroll-mt-24">
@@ -36,13 +46,49 @@ export const AboutSection: React.FC = () => {
         <div className="md:col-span-8 liquid-glass rounded-3xl p-6 sm:p-8 text-sm text-slate-300 leading-relaxed font-sans border border-white/15">
           {aboutTab === 'story' && (
             <div className="space-y-4">
-              <h3 className="text-white font-bold text-base flex items-center gap-2">
-                <ChevronRight size={18} className="text-sky-400" />
-                Tóm tắt chuyên môn
-              </h3>
+              <div className="flex flex-wrap items-center justify-between gap-2 border-b border-white/10 pb-3">
+                <div>
+                  <h3 className="text-white font-bold text-base flex items-center gap-2">
+                    <ChevronRight size={18} className="text-sky-400" />
+                    {name || 'Chưa cập nhật tên'}
+                  </h3>
+                  {jobTitle && <p className="text-xs text-sky-400 font-mono mt-0.5">{jobTitle}</p>}
+                </div>
+                {location && (
+                  <div className="flex items-center gap-2 text-xs text-slate-400">
+                    <MapPin size={13} className="text-rose-400" />
+                    <span>{location}</span>
+                  </div>
+                )}
+              </div>
+
               <p className="text-slate-300 leading-relaxed">
-                Mình tên là Nguyễn Minh Hiếu, sinh ngày 16/06/2001, cựu sinh viên tốt nghiệp khóa K25 trường Đại học Văn Lang. Tính đến nay, mình đã có hơn 4 năm kinh nghiệm làm việc thực chiến liên tục tại một công ty duy nhất từ vị trí thực tập sinh lên nhân viên chính thức, đạt cấp độ Middle Developer. Mình chuyên lập trình giao diện Web App, Mobile App bằng Flutter và phát triển các sản phẩm trong hệ sinh thái Zalo Mini App. Sở hữu khả năng chuyển đổi thiết kế mượt mà từ Figma ra mã nguồn và làm chủ giao diện với CSS, Bootstrap, Tailwind CSS.
+                {bio || 'Chưa có thông tin tiểu sử. Bạn có thể cập nhật trong trang Dashboard.'}
               </p>
+
+              {/* Quick Contact Badges */}
+              <div className="flex flex-wrap gap-2 pt-2">
+                {profile?.email && (
+                  <a href={`mailto:${profile.email}`} className="liquid-glass-pill px-3 py-1.5 rounded-xl text-xs text-slate-300 flex items-center gap-1.5">
+                    <Mail size={13} className="text-sky-400" /> {profile.email}
+                  </a>
+                )}
+                {profile?.githubUrl && (
+                  <a href={profile.githubUrl} target="_blank" rel="noreferrer" className="liquid-glass-pill px-3 py-1.5 rounded-xl text-xs text-slate-300 flex items-center gap-1.5">
+                    <Code size={13} className="text-purple-400" /> GitHub
+                  </a>
+                )}
+                {profile?.linkedinUrl && (
+                  <a href={profile.linkedinUrl} target="_blank" rel="noreferrer" className="liquid-glass-pill px-3 py-1.5 rounded-xl text-xs text-slate-300 flex items-center gap-1.5">
+                    <Globe size={13} className="text-sky-400" /> LinkedIn
+                  </a>
+                )}
+                {profile?.websiteUrl && (
+                  <a href={profile.websiteUrl} target="_blank" rel="noreferrer" className="liquid-glass-pill px-3 py-1.5 rounded-xl text-xs text-slate-300 flex items-center gap-1.5">
+                    <ExternalLink size={13} className="text-emerald-400" /> Website
+                  </a>
+                )}
+              </div>
             </div>
           )}
 
@@ -50,23 +96,31 @@ export const AboutSection: React.FC = () => {
             <div className="space-y-4">
               <h3 className="text-white font-bold text-base flex items-center gap-2">
                 <ChevronRight size={18} className="text-sky-400" />
-                Công nghệ & Thiết bị
+                Công nghệ &amp; Thiết bị
               </h3>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
                 <div className="p-4 bg-slate-900/40 border border-white/10 rounded-2xl">
-                  <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-2">Hệ điều hành & Thiết bị</h4>
-                  <ul className="text-xs space-y-1.5 text-slate-300">
-                    <li>• OS: Windows 10</li>
-                    <li>• Tools: VS Code, Android Studio, Figma</li>
-                    <li>• Terminal: Git Bash & MacOS Terminal</li>
-                  </ul>
+                  <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-2 flex items-center gap-1.5">
+                    <Briefcase size={13} className="text-sky-400" /> Chuyên môn cốt lõi
+                  </h4>
+                  <div className="flex flex-wrap gap-1.5 pt-1">
+                    {skillsList.length > 0 ? (
+                      skillsList.map((s, idx) => (
+                        <span key={idx} className="px-2 py-0.5 bg-sky-500/10 border border-sky-400/20 text-sky-300 rounded-md text-xs">
+                          {s}
+                        </span>
+                      ))
+                    ) : (
+                      <span className="text-xs text-slate-500 italic">Chưa cập nhật kỹ năng</span>
+                    )}
+                  </div>
                 </div>
                 <div className="p-4 bg-slate-900/40 border border-white/10 rounded-2xl">
-                  <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-2">Công cụ & Giao diện</h4>
+                  <h4 className="text-white font-semibold text-xs uppercase tracking-wider mb-2">Công cụ &amp; Thiết bị</h4>
                   <ul className="text-xs space-y-1.5 text-slate-300">
-                    <li>• Frameworks: Flutter (Dart), ReactJS, Nextjs</li>
-                    <li>• Web & UI: Vuejs, Nuxtjs, Zalo Mini SDK</li>
-                    <li>• Styling: CSS, TailwindCSS, Bootstrap, Figma</li>
+                    <li>• OS: Windows 10 &amp; macOS</li>
+                    <li>• IDE: VS Code, Android Studio, Xcode</li>
+                    <li>• UI/UX Design: Figma, Tailwind CSS</li>
                   </ul>
                 </div>
               </div>
@@ -86,7 +140,7 @@ export const AboutSection: React.FC = () => {
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1.5" />
-                  <span><strong className="text-white">Tối giản & tinh gọn:</strong> Loại bỏ các yếu tố trang trí thừa. Mọi hiệu ứng động phải phục vụ chức năng trải nghiệm.</span>
+                  <span><strong className="text-white">Tối giản &amp; tinh gọn:</strong> Loại bỏ các yếu tố trang trí thừa. Mọi hiệu ứng động phải phục vụ chức năng trải nghiệm.</span>
                 </li>
                 <li className="flex items-start gap-2">
                   <span className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-1.5" />

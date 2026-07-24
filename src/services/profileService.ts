@@ -1,26 +1,27 @@
-import { doc, getDoc, setDoc, serverTimestamp } from 'firebase/firestore';
+import { doc, getDoc, setDoc, collection, query, limit, getDocs, serverTimestamp } from 'firebase/firestore';
 import { db } from './firebase';
+import type { UserProfile } from './authService';
 
-export interface UserProfileData {
-  uid: string;
-  displayName: string;
-  jobTitle?: string;
-  bio?: string;
-  email: string;
-  phone?: string;
-  location?: string;
-  avatarUrl?: string;
-  githubUrl?: string;
-  linkedinUrl?: string;
-  skillsText?: string;
-  lastLogin?: string;
-}
+export type UserProfileData = UserProfile;
 
 export const fetchUserProfileData = async (uid: string): Promise<UserProfileData | null> => {
   const docRef = doc(db, 'users', uid);
   const docSnap = await getDoc(docRef);
   if (docSnap.exists()) {
     return docSnap.data() as UserProfileData;
+  }
+  return null;
+};
+
+export const fetchPublicOwnerProfile = async (): Promise<UserProfileData | null> => {
+  try {
+    const q = query(collection(db, 'users'), limit(1));
+    const snapshot = await getDocs(q);
+    if (!snapshot.empty) {
+      return snapshot.docs[0].data() as UserProfileData;
+    }
+  } catch (err) {
+    console.error('Error fetching public owner profile from Firestore:', err);
   }
   return null;
 };

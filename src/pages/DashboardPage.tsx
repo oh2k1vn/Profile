@@ -1,13 +1,9 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { onAuthStateChanged } from 'firebase/auth';
-import type { User } from 'firebase/auth';
 import { LayoutDashboard, BookOpen, FolderKanban, Tags, Loader2 } from 'lucide-react';
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
-import { auth, db } from '../services/firebase';
+import { db } from '../services/firebase';
 import { logoutUser } from '../services/authService';
-import { fetchUserProfileData, updateUserProfileData } from '../services/profileService';
-import type { UserProfileData } from '../services/profileService';
 import { createBlogPost, updateBlogPost, deleteBlogPostById } from '../services/blogService';
 import { fetchProjectsFromFirestore, createProjectInFirestore, deleteProjectInFirestore } from '../services/projectService';
 import type { CreateProjectInput } from '../services/projectService';
@@ -15,6 +11,7 @@ import { audioService } from '../services/audioService';
 import { useSEO } from '../hooks/useSEO';
 import type { BlogPost, CreateBlogInput } from '../types/blog';
 import type { Project } from '../types/project';
+import { useProfile } from '../contexts/ProfileContext';
 
 import { DashboardHeader } from '../components/dashboard/DashboardHeader';
 import { DashboardAccessDenied } from '../components/dashboard/DashboardAccessDenied';
@@ -32,26 +29,20 @@ export default function DashboardPage() {
   });
 
   const navigate = useNavigate();
-  const [user, setUser] = useState<User | null>(null);
-  const [loadingAuth, setLoadingAuth] = useState(true);
+  const { user, profile: contextProfile, loading: loadingAuth, updateProfile } = useProfile();
   const [activeTab, setActiveTab] = useState<DashboardTab>('profile');
 
-  // Profile Form State
-  const [profile, setProfile] = useState<UserProfileData>({
-    uid: '',
-    displayName: '',
-    jobTitle: 'Middle Frontend & Mobile Developer',
-    bio: '',
-    email: '',
-    phone: '',
-    location: 'TP. Hồ Chí Minh',
-    avatarUrl: '/images/avatar.webp',
-    githubUrl: 'https://github.com/oh2k1vn',
-    linkedinUrl: '',
-    skillsText: 'React, TypeScript, Flutter, Zalo Mini App, Tailwind CSS, Vite, Firebase',
-  });
+  // Local state for profile form editing
+  const [profile, setProfile] = useState(contextProfile);
   const [savingProfile, setSavingProfile] = useState(false);
   const [profileSuccess, setProfileSuccess] = useState(false);
+
+  // Sync local profile state with context profile when context updates
+  useEffect(() => {
+    if (contextProfile) {
+      setProfile(contextProfile);
+    }
+  }, [contextProfile]);
 
   // Blog State
   const [blogPosts, setBlogPosts] = useState<BlogPost[]>([]);
@@ -61,41 +52,7 @@ export default function DashboardPage() {
   const [projects, setProjects] = useState<Project[]>([]);
   const [loadingProjects, setLoadingProjects] = useState(true);
 
-  // 1. Auth Listener
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
-      setUser(currentUser);
-      setLoadingAuth(false);
-
-      if (currentUser) {
-        try {
-          const fetchedProfile = await fetchUserProfileData(currentUser.uid);
-          if (fetchedProfile) {
-            setProfile(prev => ({
-              ...prev,
-              ...fetchedProfile,
-              uid: currentUser.uid,
-              email: currentUser.email || prev.email,
-              displayName: fetchedProfile.displayName || currentUser.displayName || prev.displayName,
-            }));
-          } else {
-            setProfile(prev => ({
-              ...prev,
-              uid: currentUser.uid,
-              email: currentUser.email || prev.email,
-              displayName: currentUser.displayName || prev.displayName,
-            }));
-          }
-        } catch (err) {
-          console.error('Error fetching profile:', err);
-        }
-      }
-    });
-
-    return () => unsubscribe();
-  }, []);
-
-  // 2. Realtime Blog Listener (100% Firestore)
+  // Realtime Blog Listener
   useEffect(() => {
     if (!user) return;
     const q = query(collection(db, 'blog_posts'), orderBy('createdAt', 'desc'));
@@ -116,7 +73,7 @@ export default function DashboardPage() {
     return () => unsubscribe();
   }, [user]);
 
-  // 3. Projects Loader
+  // Projects Loader
   useEffect(() => {
     if (!user) return;
     const loadProjects = async () => {
@@ -135,12 +92,12 @@ export default function DashboardPage() {
   // Actions
   const handleSaveProfile = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user) return;
+    if (!user || !profile) return;
     setSavingProfile(true);
     audioService.playClick();
 
     try {
-      await updateUserProfileData(user.uid, profile);
+      await updateProfile(profile);
       audioService.playSuccess();
       setProfileSuccess(true);
       setTimeout(() => setProfileSuccess(false), 3000);
@@ -275,7 +232,7 @@ export default function DashboardPage() {
       </div>
 
       {/* Tab Content */}
-      {activeTab === 'profile' && (
+      {activeTab === 'profile' && profile && (
         <ProfileTab
           profile={profile}
           setProfile={setProfile}

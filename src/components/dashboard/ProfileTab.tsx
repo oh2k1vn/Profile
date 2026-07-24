@@ -33,10 +33,11 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-slate-300">Họ và tên</label>
+          <label className="text-xs font-semibold text-slate-300">Họ và tên *</label>
           <input
             type="text"
-            value={profile.displayName}
+            required
+            value={profile.displayName || ''}
             onChange={e => setProfile({ ...profile, displayName: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="Nguyễn Minh Hiếu"
@@ -55,13 +56,36 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-slate-300">Email liên hệ</label>
+          <label className="text-xs font-semibold text-slate-300">Slogan / Headline ngắn</label>
+          <input
+            type="text"
+            value={profile.headline || ''}
+            onChange={e => setProfile({ ...profile, headline: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="Chuyên lập trình Flutter, React, TypeScript & Zalo Mini App"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">Email liên hệ *</label>
           <input
             type="email"
-            value={profile.email}
+            required
+            value={profile.email || ''}
             onChange={e => setProfile({ ...profile, email: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="email@domain.com"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">Số điện thoại</label>
+          <input
+            type="text"
+            value={profile.phone || ''}
+            onChange={e => setProfile({ ...profile, phone: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="+84 901 234 567"
           />
         </div>
 
@@ -72,7 +96,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
             value={profile.location || ''}
             onChange={e => setProfile({ ...profile, location: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-            placeholder="TP. Hồ Chí Minh"
+            placeholder="TP. Hồ Chí Minh, Việt Nam"
           />
         </div>
 
@@ -80,21 +104,65 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
           <label className="text-xs font-semibold text-slate-300">Avatar Image URL</label>
           <input
             type="text"
-            value={profile.avatarUrl || ''}
-            onChange={e => setProfile({ ...profile, avatarUrl: e.target.value })}
+            value={profile.avatarUrl || profile.photoURL || ''}
+            onChange={e => setProfile({ ...profile, avatarUrl: e.target.value, photoURL: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="/images/avatar.webp"
           />
         </div>
 
         <div className="space-y-2">
-          <label className="text-xs font-semibold text-slate-300">GitHub Repository URL</label>
+          <label className="text-xs font-semibold text-slate-300">Link CV / Resume (PDF)</label>
+          <input
+            type="text"
+            value={profile.cvUrl || ''}
+            onChange={e => setProfile({ ...profile, cvUrl: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="https://drive.google.com/..."
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">GitHub URL</label>
           <input
             type="text"
             value={profile.githubUrl || ''}
             onChange={e => setProfile({ ...profile, githubUrl: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://github.com/username"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">LinkedIn URL</label>
+          <input
+            type="text"
+            value={profile.linkedinUrl || ''}
+            onChange={e => setProfile({ ...profile, linkedinUrl: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="https://linkedin.com/in/username"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">Facebook URL</label>
+          <input
+            type="text"
+            value={profile.facebookUrl || ''}
+            onChange={e => setProfile({ ...profile, facebookUrl: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="https://facebook.com/username"
+          />
+        </div>
+
+        <div className="space-y-2">
+          <label className="text-xs font-semibold text-slate-300">Website URL</label>
+          <input
+            type="text"
+            value={profile.websiteUrl || ''}
+            onChange={e => setProfile({ ...profile, websiteUrl: e.target.value })}
+            className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
+            placeholder="https://profile-17t.pages.dev"
           />
         </div>
       </div>
@@ -106,7 +174,7 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
           value={profile.skillsText || ''}
           onChange={e => setProfile({ ...profile, skillsText: e.target.value })}
           className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
-          placeholder="React, TypeScript, Flutter, Zalo Mini App, Tailwind CSS"
+          placeholder="React, TypeScript, Flutter, Zalo Mini App, Tailwind CSS, Vite, Firebase"
         />
       </div>
 

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { MainLayout } from './components/layout/MainLayout';
 import { useSound } from './hooks/useSound';
 import { audioService } from './services/audioService';
+import { ProfileProvider } from './contexts/ProfileContext';
 
 // Lazy Loaded Pages for Code Splitting
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -13,9 +14,11 @@ const DashboardPage = lazy(() => import('./pages/DashboardPage'));
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ProfileProvider>
+      <Router>
+        <AppContent />
+      </Router>
+    </ProfileProvider>
   );
 }
 
@@ -59,4 +62,3 @@ function AppContent() {
 }
 
 export default App;
-

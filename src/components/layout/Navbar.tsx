@@ -1,10 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { BookOpen, Sparkles, Layout, Terminal as TerminalIcon, Volume2, VolumeX, LayoutDashboard } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { onAuthStateChanged } from 'firebase/auth';
-import type { User } from 'firebase/auth';
-import { auth } from '../../services/firebase';
 import { audioService } from '../../services/audioService';
+import { useProfile } from '../../contexts/ProfileContext';
 
 interface NavbarProps {
   soundMuted: boolean;
@@ -14,15 +12,7 @@ interface NavbarProps {
 export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => {
   const navigate = useNavigate();
   const location = useLocation();
-
-  const [user, setUser] = useState<User | null>(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
-    return () => unsubscribe();
-  }, []);
+  const { user } = useProfile();
 
   const isHome = location.pathname === '/';
   const isPlayground = location.pathname === '/playground';
@@ -58,10 +48,6 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
           onClick={() => navAndScroll('/')}
           className="flex items-center space-x-2 font-sans select-none bg-transparent border-none text-left cursor-pointer group"
         >
-          <div className="relative flex items-center justify-center">
-            <span className="w-3 h-3 rounded-full bg-sky-400 animate-pulse shadow-[0_0_12px_#38bdf8]" />
-            <span className="absolute w-5 h-5 rounded-full bg-sky-400/30 animate-ping" />
-          </div>
           <span className="text-sm font-extrabold tracking-wider bg-linear-to-r from-white via-slate-100 to-sky-400 bg-clip-text text-transparent group-hover:to-indigo-400 transition-all">
             MINHHIEU<span className="text-sky-400 font-mono text-xs ml-0.5">.DEV</span>
           </span>
