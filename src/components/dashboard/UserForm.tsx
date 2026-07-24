@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Save, Loader2, User, Crown, Mail, ShieldAlert } from 'lucide-react';
+import { Save, Loader2, User, Crown } from 'lucide-react';
 import type { UserProfileData } from '../../services/profileService';
 import { audioService } from '../../services/audioService';
 

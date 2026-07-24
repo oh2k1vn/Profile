@@ -4,7 +4,7 @@ import type { UserProfileData } from '../../services/profileService';
 
 interface ProfileTabProps {
   profile: UserProfileData;
-  setProfile: React.Dispatch<React.SetStateAction<UserProfileData>>;
+  setProfile: React.Dispatch<React.SetStateAction<UserProfileData | null>>;
   savingProfile: boolean;
   profileSuccess: boolean;
   onSaveProfile: (e: React.FormEvent) => void;

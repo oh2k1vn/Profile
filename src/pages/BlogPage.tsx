@@ -16,7 +16,7 @@ export default function BlogPage() {
     keywords: 'Blog lập trình, Flutter Tutorial, React Performance, Zalo Mini App, Software Engineering, Nguyễn Minh Hiếu',
   });
 
-  const { isAdmin, user } = useProfile();
+  const { user } = useProfile();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [showEditor, setShowEditor] = useState(false);

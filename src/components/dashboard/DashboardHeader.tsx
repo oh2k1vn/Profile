@@ -6,7 +6,7 @@ import { audioService } from '../../services/audioService';
 
 interface DashboardHeaderProps {
   user: User;
-  profile: UserProfileData;
+  profile: UserProfileData | null;
   onNavigateHome: () => void;
   onLogout: () => void;
 }
@@ -21,7 +21,7 @@ export const DashboardHeader: React.FC<DashboardHeaderProps> = ({
     <div className="liquid-glass rounded-3xl p-6 border border-white/20 shadow-xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
       <div className="flex items-center space-x-4">
         <img
-          src={user.photoURL || profile.avatarUrl || '/images/avatar.webp'}
+          src={user.photoURL || profile?.avatarUrl || '/images/avatar.webp'}
           alt={user.displayName || 'Admin'}
           className="w-14 h-14 rounded-2xl object-cover border-2 border-sky-400/40 shadow-md"
         />

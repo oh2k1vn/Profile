@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Search, ShieldCheck, User, Crown, RefreshCw, Loader2, Mail, Calendar, MapPin, Briefcase, Edit3 } from 'lucide-react';
+import { Users, Search, User, Crown, RefreshCw, Loader2, Mail, Calendar, MapPin, Briefcase, Edit3 } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { fetchAllUsers, updateUserRole, updateUserProfileData, type UserProfileData } from '../../services/profileService';
 import { audioService } from '../../services/audioService';
