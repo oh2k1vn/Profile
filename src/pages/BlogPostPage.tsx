@@ -2,11 +2,13 @@ import { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { ArrowLeft, Clock, Tag, Trash2, Loader2, AlertTriangle } from 'lucide-react';
 import type { BlogPost } from '../types/blog';
-import { MOCK_POSTS } from '../constants/mockPosts';
 import { fetchBlogPostById, deleteBlogPostById } from '../services/blogService';
+
 import { audioService } from '../services/audioService';
+import { useSEO } from '../hooks/useSEO';
 
 function renderMarkdown(md: string): string {
+
   let html = md
     .replace(/&/g, '&amp;')
     .replace(/</g, '&lt;')
@@ -44,15 +46,14 @@ export default function BlogPostPage() {
   const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
   const [deleting, setDeleting] = useState(false);
 
+  useSEO({
+    title: post?.title || 'Bài Viết',
+    description: post ? post.content.slice(0, 160).replace(/[#*`]/g, '') : 'Đọc bài viết kỹ thuật của Nguyễn Minh Hiếu.',
+    keywords: post?.tags.join(', ') || 'Blog, Software Engineering, Nguyễn Minh Hiếu',
+  });
+
   useEffect(() => {
     if (!id) return;
-
-    const mock = MOCK_POSTS.find(p => p.id === id);
-    if (mock) {
-      setPost(mock);
-      setLoading(false);
-      return;
-    }
 
     const loadPost = async () => {
       try {
@@ -73,8 +74,9 @@ export default function BlogPostPage() {
     loadPost();
   }, [id]);
 
+
   const handleDelete = async () => {
-    if (!id || post?.isMock) return;
+    if (!id) return;
     setDeleting(true);
 
     try {
@@ -86,6 +88,7 @@ export default function BlogPostPage() {
       setDeleting(false);
     }
   };
+
 
   const formatDate = (ts: { seconds: number }) => {
     const date = new Date(ts.seconds * 1000);
@@ -132,15 +135,14 @@ export default function BlogPostPage() {
           Quay lại Kho Bài Viết
         </button>
 
-        {!post.isMock && (
-          <button
-            onClick={() => { audioService.playClick(); setShowDeleteConfirm(true); }}
-            className="px-3.5 py-1.5 rounded-full text-xs font-medium text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all cursor-pointer flex items-center gap-1.5"
-          >
-            <Trash2 size={12} />
-            Xoá
-          </button>
-        )}
+        <button
+          onClick={() => { audioService.playClick(); setShowDeleteConfirm(true); }}
+          className="px-3.5 py-1.5 rounded-full text-xs font-medium text-rose-400 bg-rose-500/10 border border-rose-500/20 hover:bg-rose-500/20 transition-all cursor-pointer flex items-center gap-1.5"
+        >
+          <Trash2 size={12} />
+          Xoá
+        </button>
+
       </div>
 
       {/* Post Header */}

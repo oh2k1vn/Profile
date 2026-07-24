@@ -93,6 +93,25 @@ html, body, #root {
   100% { transform: translate(0); text-shadow: none; }
 }
 
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.35s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.25s ease-out forwards;
+}
+
+
 /* Screen glitch overlay effect */
 .glitch-screen {
   animation: screen-glitch 0.2s infinite;

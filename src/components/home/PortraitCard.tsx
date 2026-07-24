@@ -25,7 +25,7 @@ export const PortraitCard: React.FC = () => {
         <div className="w-full h-full relative overflow-hidden rounded-2xl bg-slate-900/60">
           <div className="absolute inset-0 bg-linear-to-tr from-sky-500/10 via-transparent to-indigo-500/10 z-10 pointer-events-none" />
           <img
-            src="/avatar.webp"
+            src="/images/avatar.webp"
             alt="Nguyễn Minh Hiếu Portrait"
             className="w-full h-full object-cover brightness-95 group-hover:scale-105 group-hover:brightness-105 transition-all duration-700 ease-out"
           />

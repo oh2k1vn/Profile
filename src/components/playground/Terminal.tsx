@@ -1,8 +1,12 @@
 import React, { useState, useEffect, useRef } from 'react';
+import { onAuthStateChanged } from 'firebase/auth';
+import type { User } from 'firebase/auth';
+import { auth } from '../../services/firebase';
 import { audioService } from '../../services/audioService';
+import { loginWithGoogle, logoutUser } from '../../services/authService';
 
 interface TerminalProps {
-  onTriggerGlitch: () => void;
+  onTriggerGlitch?: () => void;
 }
 
 interface LogLine {
@@ -10,7 +14,8 @@ interface LogLine {
   type: 'input' | 'output' | 'error' | 'success';
 }
 
-export const Terminal: React.FC<TerminalProps> = ({ onTriggerGlitch }) => {
+export const Terminal: React.FC<TerminalProps> = () => {
+  const [currentUser, setCurrentUser] = useState<User | null>(null);
   const [history, setHistory] = useState<LogLine[]>([
     { text: 'HỆ THỐNG DÒNG LỆNH TƯƠNG TÁC v1.0.0', type: 'success' },
     { text: 'Gõ lệnh "help" để hiển thị danh sách các câu lệnh có sẵn.', type: 'output' },
@@ -21,6 +26,14 @@ export const Terminal: React.FC<TerminalProps> = ({ onTriggerGlitch }) => {
   
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
   const inputRef = useRef<HTMLInputElement | null>(null);
+
+  // Auth listener
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (user) => {
+      setCurrentUser(user);
+    });
+    return () => unsubscribe();
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
@@ -68,7 +81,7 @@ export const Terminal: React.FC<TerminalProps> = ({ onTriggerGlitch }) => {
     }
   };
 
-  const executeCommand = () => {
+  const executeCommand = async () => {
     const trimmedInput = inputVal.trim();
     if (!trimmedInput) return;
 
@@ -83,25 +96,101 @@ export const Terminal: React.FC<TerminalProps> = ({ onTriggerGlitch }) => {
     setInputVal('');
 
     switch (cmd) {
-      case 'help':
-        newLines.push(
+      case 'help': {
+        const helpLines: LogLine[] = [
           { text: 'Danh sách các lệnh khả dụng:', type: 'success' },
+        ];
+
+        if (!currentUser) {
+          helpLines.push(
+            { text: '  login        - Đăng nhập tài khoản bằng Google Auth & lưu thông tin vào Firestore', type: 'output' }
+          );
+        } else {
+          helpLines.push(
+            { text: '  whoami       - Trích xuất thông tin người dùng đang đăng nhập', type: 'output' },
+            { text: '  logout       - Đăng xuất tài khoản người dùng hiện tại', type: 'output' }
+          );
+        }
+
+        helpLines.push(
           { text: '  about        - Xem thông tin giới thiệu và định hướng lập trình', type: 'output' },
           { text: '  skills       - Hiển thị danh sách kỹ năng chuyên môn kỹ thuật', type: 'output' },
           { text: '  projects     - Hiển thị tóm tắt các dự án nổi bật của mình', type: 'output' },
           { text: '  clear        - Xóa toàn bộ nội dung dòng lệnh hiện tại', type: 'output' },
-          { text: '  date         - Hiển thị ngày giờ hệ thống hiện tại', type: 'output' },
-          { text: '  cat          - Đọc nội dung tệp tin (Ví dụ: cat secret.txt)', type: 'output' },
-          { text: '  sudo rm -rf / - CẢNH BÁO: Lệnh xóa phân vùng hệ thống gốc (nguy hiểm)', type: 'error' }
+          { text: '  date         - Hiển thị ngày giờ hệ thống hiện tại', type: 'output' }
+        );
+
+        newLines.push(...helpLines);
+        break;
+      }
+
+      case 'login': {
+        if (currentUser) {
+          newLines.push({
+            text: `Bạn đã đăng nhập tài khoản ${currentUser.displayName || 'Người dùng'} <${currentUser.email}> rồi. Gõ "whoami" để xem thông tin hoặc "logout" để đăng xuất.`,
+            type: 'output',
+          });
+          break;
+        }
+
+        newLines.push({ text: 'Đang khởi chạy Firebase Google Auth Popup...', type: 'output' });
+        setHistory((prev) => [...prev, ...newLines]);
+        try {
+          const profile = await loginWithGoogle();
+          audioService.playSuccess();
+          setHistory((prev) => [
+            ...prev,
+            { text: `ĐĂNG NHẬP THÀNH CÔNG! Xin chào, ${profile.displayName} <${profile.email}>`, type: 'success' },
+            { text: `[Firestore] Thông tin người dùng (UID: ${profile.uid}) đã được lưu/cập nhật vào bộ sưu tập 'users'.`, type: 'output' }
+          ]);
+        } catch (err: unknown) {
+          audioService.playError();
+          const errorMsg = err instanceof Error ? err.message : 'Đã có lỗi xảy ra hoặc người dùng đã đóng cửa sổ Popup.';
+          setHistory((prev) => [
+            ...prev,
+            { text: `ĐĂNG NHẬP THẤT BẠI: ${errorMsg}`, type: 'error' }
+          ]);
+        }
+        return;
+      }
+
+      case 'logout': {
+        if (!currentUser) {
+          newLines.push({ text: 'Lỗi: Bạn chưa đăng nhập. Không thể đăng xuất.', type: 'error' });
+          break;
+        }
+
+        try {
+          await logoutUser();
+          audioService.playSuccess();
+          newLines.push({ text: 'Đã đăng xuất tài khoản thành công.', type: 'success' });
+        } catch (err: unknown) {
+          const errorMsg = err instanceof Error ? err.message : 'Lỗi đăng xuất.';
+          newLines.push({ text: `Lỗi đăng xuất: ${errorMsg}`, type: 'error' });
+        }
+        break;
+      }
+
+      case 'whoami': {
+        if (!currentUser) {
+          newLines.push({ text: 'Lỗi: Lệnh "whoami" chỉ khả dụng khi đã đăng nhập. Gõ "login" để đăng nhập bằng Google.', type: 'error' });
+          break;
+        }
+
+        newLines.push(
+          { text: `TÀI KHOẢN HIỆN TẠI: ${currentUser.displayName || 'Khách'} <${currentUser.email}>`, type: 'success' },
+          { text: `UID: ${currentUser.uid}`, type: 'output' },
+          { text: `Lần đăng nhập cuối: ${currentUser.metadata.lastSignInTime || 'Không rõ'}`, type: 'output' }
         );
         break;
+      }
 
       case 'clear':
         setHistory([
           { text: 'HỆ THỐNG DÒNG LỆNH TƯƠNG TÁC v1.0.0', type: 'success' },
           { text: 'Gõ lệnh "help" để hiển thị danh sách các câu lệnh có sẵn.', type: 'output' },
         ]);
-        break;
+        return;
 
       case 'date':
         newLines.push({ text: `Ngày và giờ hiện tại: ${new Date().toLocaleString('vi-VN')}`, type: 'output' });
@@ -134,33 +223,6 @@ export const Terminal: React.FC<TerminalProps> = ({ onTriggerGlitch }) => {
           { text: '  3. CyberForest UI   - Cổng thông tin doanh nghiệp mượt mà bằng NuxtJS & Bootstrap', type: 'output' },
           { text: '  4. OptiFlow Board   - Sơ đồ tương tác kéo thả canvas hiệu năng bằng ReactJS', type: 'output' }
         );
-        break;
-
-      case 'cat':
-        const file = cmdParts[1];
-        if (file === 'secret.txt') {
-          newLines.push(
-            { text: 'Đang giải mã secret.txt...', type: 'success' },
-            { text: '"Lập trình không chỉ là gõ code, đó là cách chúng ta xây dựng thế giới bằng logic. Tái bút: Nếu bạn chưa thử click vào con robot đang bay lơ lửng bên góc phải, bạn đang bỏ lỡ các phản ứng thú vị đấy!"', type: 'output' }
-          );
-        } else if (!file) {
-          newLines.push({ text: 'Lỗi: Vui lòng chỉ định tệp tin cần đọc. Ví dụ: cat secret.txt', type: 'error' });
-        } else {
-          newLines.push({ text: `Lỗi: Không tìm thấy tệp tin: "${file}"`, type: 'error' });
-        }
-        break;
-
-      case 'sudo':
-        const action = cmdParts.slice(1).join(' ');
-        if (action === 'rm -rf /') {
-          newLines.push(
-            { text: 'CẢNH BÁO: ĐANG TIẾN HÀNH XÓA THƯ MỤC GỐC!', type: 'error' },
-            { text: 'PHÁT HIỆN LỖI TOÀN BỘ HỆ THỐNG... DÒNG LỆNH BỊ HỎNG...', type: 'error' }
-          );
-          onTriggerGlitch();
-        } else {
-          newLines.push({ text: 'Quyền truy cập bị từ chối: Người dùng không nằm trong danh sách sudoers.', type: 'error' });
-        }
         break;
 
       default:

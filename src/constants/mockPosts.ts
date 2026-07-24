@@ -4,10 +4,16 @@ export const MOCK_POSTS: BlogPost[] = [
   {
     id: 'flutter-performance-optimization',
     title: 'Tối ưu hóa hiệu năng và bộ đệm Widget trong Flutter App',
+    slug: 'toi-uu-hoa-hieu-nang-widget-flutter',
+    summary: 'Kiểm soát số lần rebuild của Widget tree giúp ứng dụng Flutter đạt tốc độ mượt mà 60FPS - 120FPS.',
+    category: 'Mobile',
     tags: ['Flutter', 'Dart', 'Performance', 'Mobile App'],
+    authorName: 'Nguyễn Minh Hiếu',
+    readTime: '4 phút đọc',
+    published: true,
+    views: 128,
     createdAt: { seconds: 1784300000, nanoseconds: 0 },
     updatedAt: { seconds: 1784300000, nanoseconds: 0 },
-    isMock: true,
     content: `Trong quá trình phát triển ứng dụng di động bằng **Flutter**, việc kiểm soát số lần render lại (rebuild) của Widget tree là yếu tố quyết định giúp ứng dụng đạt mượt mà 60FPS đến 120FPS.
 
 ### 1. Sử dụng từ khóa \`const\` đúng nơi đúng lúc
@@ -45,10 +51,16 @@ Tối ưu ứng dụng Flutter là một hành trình liên tục từ việc ch
   {
     id: 'zalo-mini-app-sdk-tips',
     title: 'Kinh nghiệm thực chiến phát triển Zalo Mini App cho ngành E-Commerce',
+    slug: 'kinh-nghiem-phat-trien-zalo-mini-app-ecommerce',
+    summary: 'Giải pháp tiếp cận hàng chục triệu người dùng Zalo không cần cài đặt thêm app ngoài.',
+    category: 'Zalo Mini App',
     tags: ['Zalo Mini App', 'Vuejs', 'TailwindCSS', 'SDK'],
+    authorName: 'Nguyễn Minh Hiếu',
+    readTime: '3 phút đọc',
+    published: true,
+    views: 245,
     createdAt: { seconds: 1784200000, nanoseconds: 0 },
     updatedAt: { seconds: 1784200000, nanoseconds: 0 },
-    isMock: true,
     content: `Hệ sinh thái **Zalo Mini App** đang bùng nổ tại Việt Nam nhờ khả năng tiếp cận hàng chục triệu người dùng mà không cần cài đặt thêm ứng dụng ngoài.
 
 ## Các thách thức cốt lõi khi làm Zalo Mini App
@@ -77,10 +89,16 @@ const fetchUserProfile = async () => {
   {
     id: 'react-glassmorphism-tailwind-v4',
     title: 'Xây dựng hệ thống Liquid Glassmorphism với CSS & Tailwind v4',
+    slug: 'xay-dung-he-thong-liquid-glassmorphism-tailwind-v4',
+    summary: 'Hướng dẫn thiết kế giao diện kính lỏng iOS 18 / VisionOS đẳng cấp sử dụng Tailwind v4.',
+    category: 'Frontend',
     tags: ['React', 'CSS', 'TailwindCSS', 'UI UX', 'Design System'],
+    authorName: 'Nguyễn Minh Hiếu',
+    readTime: '5 phút đọc',
+    published: true,
+    views: 310,
     createdAt: { seconds: 1784100000, nanoseconds: 0 },
     updatedAt: { seconds: 1784100000, nanoseconds: 0 },
-    isMock: true,
     content: `Phong cách thiết kế **iOS 18 Liquid Glass** mang lại cảm giác sang trọng, trong suốt và mượt mà cho giao diện Web hiện đại.
 
 ### Các thuộc tính CSS cốt lõi
