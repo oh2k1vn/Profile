@@ -1,2 +1,3 @@
-# Cloudflare SPA routing handled via wrangler.toml (not_found_handling = "single-page-app")
+# Cloudflare SPA routing handled via wrangler.toml (not_found_handling = "single-page-application")
+
 
