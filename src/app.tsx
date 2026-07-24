@@ -1,8 +1,10 @@
 import { useState, lazy, Suspense } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
 import { MainLayout } from './components/layout/MainLayout';
 import { useSound } from './hooks/useSound';
 import { audioService } from './services/audioService';
+import { ProfileProvider } from './contexts/ProfileContext';
 
 // Lazy Loaded Pages for Code Splitting
 const HomePage = lazy(() => import('./pages/HomePage'));
@@ -13,9 +15,39 @@ const DashboardPage = lazy(() => import('./pages/DashboardPage'));
 
 function App() {
   return (
-    <Router>
-      <AppContent />
-    </Router>
+    <ProfileProvider>
+      <Router>
+        <AppContent />
+      </Router>
+      <Toaster
+        position="top-right"
+        toastOptions={{
+          duration: 3500,
+          style: {
+            background: 'rgba(15, 23, 42, 0.95)',
+            color: '#f8fafc',
+            border: '1px solid rgba(255, 255, 255, 0.18)',
+            backdropFilter: 'blur(16px)',
+            borderRadius: '1rem',
+            fontSize: '12px',
+            fontFamily: 'Inter, sans-serif',
+            boxShadow: '0 20px 40px rgba(0, 0, 0, 0.5)',
+          },
+          success: {
+            iconTheme: {
+              primary: '#38bdf8',
+              secondary: '#0f172a',
+            },
+          },
+          error: {
+            iconTheme: {
+              primary: '#f43f5e',
+              secondary: '#0f172a',
+            },
+          },
+        }}
+      />
+    </ProfileProvider>
   );
 }
 
@@ -59,4 +91,3 @@ function AppContent() {
 }
 
 export default App;
-

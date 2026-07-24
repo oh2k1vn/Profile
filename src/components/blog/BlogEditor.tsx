@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { X, Save, Tag, FileText, Type } from 'lucide-react';
 import { createBlogPost } from '../../services/blogService';
 import { audioService } from '../../services/audioService';
+import { useProfile } from '../../contexts/ProfileContext';
 
 interface BlogEditorProps {
   onClose: () => void;
@@ -10,6 +11,7 @@ interface BlogEditorProps {
 
 
 export function BlogEditor({ onClose, onSaved }: BlogEditorProps) {
+  const { user, profile } = useProfile();
   const [title, setTitle] = useState('');
   const [content, setContent] = useState('');
   const [tagInput, setTagInput] = useState('');
@@ -52,12 +54,16 @@ export function BlogEditor({ onClose, onSaved }: BlogEditorProps) {
     setError('');
 
     try {
+      const authorName = profile?.displayName || user?.displayName || user?.email?.split('@')[0] || 'Tác giả';
       await createBlogPost({
         title: title.trim(),
         content: content.trim(),
         tags,
         summary: content.slice(0, 140) + '...',
         category: 'Kỹ Thuật',
+        authorId: user?.uid || '',
+        authorName,
+        authorAvatar: user?.photoURL || '',
       });
       audioService.playSuccess();
       onSaved();

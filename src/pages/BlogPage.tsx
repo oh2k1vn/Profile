@@ -5,9 +5,9 @@ import { db } from '../services/firebase';
 import { audioService } from '../services/audioService';
 import type { BlogPost } from '../types/blog';
 import { BlogCard } from '../components/blog/BlogCard';
-
 import { BlogEditor } from '../components/blog/BlogEditor';
 import { useSEO } from '../hooks/useSEO';
+import { useProfile } from '../contexts/ProfileContext';
 
 export default function BlogPage() {
   useSEO({
@@ -16,8 +16,8 @@ export default function BlogPage() {
     keywords: 'Blog lập trình, Flutter Tutorial, React Performance, Zalo Mini App, Software Engineering, Nguyễn Minh Hiếu',
   });
 
+  const { user } = useProfile();
   const [posts, setPosts] = useState<BlogPost[]>([]);
-
   const [loading, setLoading] = useState(true);
   const [showEditor, setShowEditor] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -43,7 +43,6 @@ export default function BlogPage() {
     return () => unsubscribe();
   }, []);
 
-
   const allTags = Array.from(new Set(posts.flatMap(p => p.tags)));
 
   const filteredPosts = posts.filter(p => {
@@ -64,21 +63,25 @@ export default function BlogPage() {
             <div className="p-2 rounded-xl bg-sky-500/10 border border-sky-400/20 text-sky-400">
               <BookOpen size={20} />
             </div>
-            <h1 className="text-xl font-bold font-sans text-white tracking-wide">Kho Bài Viết & Chia Sẻ</h1>
+            <h1 className="text-xl font-bold font-sans text-white tracking-wide">Kho Bài Viết &amp; Chia Sẻ</h1>
           </div>
 
-          <button
-            onClick={() => { audioService.playClick(); setShowEditor(true); }}
-            className="liquid-glass-accent-btn px-5 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer transition-all duration-200 w-full sm:w-auto justify-center"
-          >
-            <Plus size={14} />
-            Viết Bài Mới
-          </button>
+          {/* Show Create Post button for logged in users */}
+          {user && (
+            <button
+              onClick={() => { audioService.playClick(); setShowEditor(true); }}
+              className="liquid-glass-accent-btn px-5 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer transition-all duration-200 w-full sm:w-auto justify-center"
+            >
+              <Plus size={14} />
+              Viết Bài Mới
+            </button>
+          )}
         </div>
 
+
         {/* Search & Filter Bar */}
-        <div className="flex flex-col sm:flex-row gap-4">
-          <div className="relative flex-1">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-4">
+          <div className="relative w-full md:w-80 shrink-0">
             <Search size={16} className="absolute left-3.5 top-1/2 -translate-y-1/2 text-slate-400" />
             <input
               type="text"
@@ -130,10 +133,10 @@ export default function BlogPage() {
             <BookOpen size={48} className="text-slate-600" />
             <p className="text-sm font-sans text-slate-400">
               {posts.length === 0
-                ? 'Chưa có bài viết nào. Hãy viết bài đầu tiên!'
+                ? 'Chưa có bài viết nào.'
                 : 'Không tìm thấy bài viết phù hợp.'}
             </p>
-            {posts.length === 0 && (
+            {posts.length === 0 && user && (
               <button
                 onClick={() => { audioService.playClick(); setShowEditor(true); }}
                 className="liquid-glass-accent-btn px-5 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer transition-all duration-200"

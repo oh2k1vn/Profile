@@ -7,6 +7,7 @@ export interface BlogPost {
   coverImage?: string;
   category: string;
   tags: string[];
+  authorId?: string;
   authorName?: string;
   authorAvatar?: string;
   readTime?: string;
@@ -24,6 +25,8 @@ export interface CreateBlogInput {
   coverImage?: string;
   category: string;
   tags: string[];
+  authorId?: string;
   authorName?: string;
+  authorAvatar?: string;
   published?: boolean;
 }

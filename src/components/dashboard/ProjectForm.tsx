@@ -30,7 +30,7 @@ export const ProjectForm: React.FC<ProjectFormProps> = ({
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!projectInput.title.trim() || !projectInput.shortDesc.trim()) return;
+    if (saving || !projectInput.title.trim() || !projectInput.shortDesc.trim()) return;
     setSaving(true);
     try {
       await onSave(projectInput, techInput);
@@ -147,7 +147,7 @@ export const ProjectForm: React.FC<ProjectFormProps> = ({
           <button
             type="submit"
             disabled={saving}
-            className="liquid-glass-accent-btn px-6 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer disabled:opacity-50"
+            className="liquid-glass-accent-btn px-6 py-2.5 rounded-2xl text-xs font-semibold flex items-center gap-2 cursor-pointer disabled:opacity-50 disabled:pointer-events-none"
           >
             {saving ? <Loader2 size={14} className="animate-spin" /> : <Save size={14} />}
             Lưu Dự Án

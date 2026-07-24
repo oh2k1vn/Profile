@@ -1,8 +1,33 @@
-import React from 'react';
-import { FolderGit2, Inbox } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { FolderGit2, Inbox, Loader2 } from 'lucide-react';
 import { PROJECTS_DATA } from '../../constants/projects';
+import { fetchProjectsFromFirestore } from '../../services/projectService';
+import type { Project } from '../../types/project';
 
 export const ProjectsSection: React.FC = () => {
+  const [projects, setProjects] = useState<Project[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    const loadProjects = async () => {
+      try {
+        const fetched = await fetchProjectsFromFirestore();
+        if (fetched && fetched.length > 0) {
+          setProjects(fetched);
+        } else {
+          setProjects(PROJECTS_DATA);
+        }
+      } catch (err) {
+        console.error('Error loading projects from Firestore:', err);
+        setProjects(PROJECTS_DATA);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadProjects();
+  }, []);
+
   const getVietnameseCategory = (cat: string) => {
     if (cat === 'All') return 'Tất Cả';
     if (cat === 'Game Engine') return 'Công Cụ Game';
@@ -20,7 +45,11 @@ export const ProjectsSection: React.FC = () => {
         <h2 className="text-xl font-bold font-sans text-white tracking-wide">Kho dự án tiêu biểu</h2>
       </div>
 
-      {PROJECTS_DATA.length === 0 ? (
+      {loading ? (
+        <div className="flex items-center justify-center py-12">
+          <Loader2 size={32} className="text-sky-400 animate-spin" />
+        </div>
+      ) : projects.length === 0 ? (
         <div className="liquid-glass rounded-3xl p-10 sm:p-14 border border-white/15 text-center flex flex-col items-center justify-center space-y-4">
           <div className="p-4 rounded-2xl bg-sky-500/10 border border-sky-400/20 text-sky-400">
             <Inbox size={36} className="animate-pulse" />
@@ -31,13 +60,10 @@ export const ProjectsSection: React.FC = () => {
               Dữ liệu dự án đang được cập nhật. Vui lòng quay lại sau!
             </p>
           </div>
-          <span className="inline-block px-3 py-1 rounded-full text-[10px] font-mono text-sky-300 bg-sky-500/15 border border-sky-400/25">
-            SẼ CẬP NHẬT LẦN SAU
-          </span>
         </div>
       ) : (
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {PROJECTS_DATA.map((p) => (
+          {projects.map((p) => (
             <div
               key={p.id}
               className="liquid-glass-card rounded-3xl p-6 border border-white/15 hover:border-sky-400/50 transition-all duration-300 flex flex-col justify-between group hover:-translate-y-1.5 relative"
@@ -55,7 +81,7 @@ export const ProjectsSection: React.FC = () => {
               </div>
 
               <div className="flex flex-wrap gap-2 pt-3 border-t border-white/10">
-                {p.tech.map((t, idx) => (
+                {p.tech?.map((t, idx) => (
                   <span key={idx} className="px-2.5 py-1 bg-white/5 border border-white/10 text-[10px] font-mono text-slate-200 rounded-full">
                     {t}
                   </span>
@@ -68,6 +94,3 @@ export const ProjectsSection: React.FC = () => {
     </section>
   );
 };
-
-
-

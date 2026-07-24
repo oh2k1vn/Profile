@@ -10,4 +10,6 @@ export interface Project {
   github: string;
   demoUrl?: string;
   simulationType: SimulationType;
+  authorId?: string;
+  authorName?: string;
 }
