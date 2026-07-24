@@ -25,10 +25,10 @@ export function calculateReadTime(content: string): string {
 export const createBlogPost = async (input: CreateBlogInput): Promise<string> => {
   const generatedSlug = input.slug?.trim() || slugify(input.title);
   const readTimeStr = calculateReadTime(input.content);
-  const finalCategory = input.category?.trim() || 'Kỹ Thuật';
+  const finalCategory = input.category?.trim() || '';
 
   // Automatically save new category to Firestore
-  addBlogCategory(finalCategory, input.authorId, input.authorName).catch(() => {});
+  addBlogCategory(finalCategory, input.authorId, input.authorName).catch(() => { });
 
   const docRef = await addDoc(collection(db, 'blog_posts'), {
     title: input.title.trim(),
@@ -39,7 +39,7 @@ export const createBlogPost = async (input: CreateBlogInput): Promise<string> =>
     category: finalCategory,
     tags: input.tags || [],
     authorId: input.authorId || '',
-    authorName: input.authorName || 'Nguyễn Minh Hiếu',
+    authorName: input.authorName || '',
     authorAvatar: input.authorAvatar || '',
     readTime: readTimeStr,
     published: input.published ?? true,
@@ -58,7 +58,7 @@ export const updateBlogPost = async (id: string, input: Partial<CreateBlogInput>
 
   if (input.category !== undefined && input.category.trim()) {
     updateData.category = input.category.trim();
-    addBlogCategory(input.category.trim()).catch(() => {});
+    addBlogCategory(input.category.trim()).catch(() => { });
   }
   if (input.title !== undefined) {
     updateData.title = input.title.trim();
