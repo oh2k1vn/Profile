@@ -4,12 +4,21 @@ import { audioService } from '../services/audioService';
 import { Terminal } from '../components/playground/Terminal';
 import { GuestbookWidget } from '../components/playground/GuestbookWidget';
 
+import { useSEO } from '../hooks/useSEO';
+
 interface PlaygroundPageProps {
   onTriggerGlitch: () => void;
 }
 
 export default function PlaygroundPage({ onTriggerGlitch }: PlaygroundPageProps) {
   const navigate = useNavigate();
+
+  useSEO({
+    title: 'Interactive CLI Terminal & Guestbook',
+    description: 'Không gian tương tác dòng lệnh CLI giả lập và sổ lưu bút của Nguyễn Minh Hiếu.',
+    keywords: 'CLI Terminal, Guestbook, Interactive Workspace, Developer Playground, Nguyễn Minh Hiếu',
+  });
+
 
   return (
     <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-8 md:py-12 space-y-12">

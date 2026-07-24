@@ -1,6 +1,9 @@
-import React from 'react';
-import { BookOpen, Sparkles, Layout, Terminal as TerminalIcon, Volume2, VolumeX } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { BookOpen, Sparkles, Layout, Terminal as TerminalIcon, Volume2, VolumeX, LayoutDashboard } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { onAuthStateChanged } from 'firebase/auth';
+import type { User } from 'firebase/auth';
+import { auth } from '../../services/firebase';
 import { audioService } from '../../services/audioService';
 
 interface NavbarProps {
@@ -12,9 +15,19 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
   const navigate = useNavigate();
   const location = useLocation();
 
+  const [user, setUser] = useState<User | null>(null);
+
+  useEffect(() => {
+    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
+      setUser(currentUser);
+    });
+    return () => unsubscribe();
+  }, []);
+
   const isHome = location.pathname === '/';
   const isPlayground = location.pathname === '/playground';
   const isBlog = location.pathname.startsWith('/blog');
+  const isDashboard = location.pathname.startsWith('/dashboard');
 
   const navAndScroll = (to: string, elementId?: string) => {
     audioService.playClick();
@@ -88,6 +101,17 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
             <Sparkles size={13} className="text-purple-400" />
             Trải nghiệm
           </button>
+
+          {/* Render Dashboard tab when logged in */}
+          {user && (
+            <button
+              onClick={() => navAndScroll('/dashboard')}
+              className={`px-4 py-1.5 rounded-full transition-all cursor-pointer bg-transparent border-none flex items-center gap-1.5 ${isDashboard ? 'bg-emerald-500/25 text-emerald-300 font-semibold shadow-[0_2px_10px_rgba(16,185,129,0.3)] border border-emerald-400/30' : 'text-emerald-400 hover:text-emerald-300 hover:bg-emerald-500/10'}`}
+            >
+              <LayoutDashboard size={13} className="text-emerald-400" />
+              Dashboard
+            </button>
+          )}
         </nav>
 
         {/* Action Controls */}
@@ -126,6 +150,12 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
           Blog
         </button>
         <button onClick={() => navAndScroll('/playground')} className={`whitespace-nowrap px-2.5 py-1 rounded-full cursor-pointer bg-transparent border-none ${isPlayground ? 'text-sky-400 font-semibold bg-white/10' : ''}`}>Trải nghiệm</button>
+        {user && (
+          <button onClick={() => navAndScroll('/dashboard')} className={`whitespace-nowrap px-2.5 py-1 rounded-full cursor-pointer bg-transparent border-none flex items-center gap-1 text-emerald-400 ${isDashboard ? 'font-semibold bg-emerald-500/20' : ''}`}>
+            <LayoutDashboard size={11} />
+            Dashboard
+          </button>
+        )}
       </div>
     </div>
   );

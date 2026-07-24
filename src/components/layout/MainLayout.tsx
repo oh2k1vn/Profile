@@ -2,7 +2,6 @@ import React from 'react';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { GlitchAlert } from '../common/GlitchAlert';
-import { Companion } from '../common/Companion';
 
 interface MainLayoutProps {
   children: React.ReactNode;
@@ -39,11 +38,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
         {children}
       </div>
 
-      {/* Floating Robot Companion */}
-      <Companion glitchActive={glitchActive} />
-
       {/* Footer */}
       <Footer />
     </div>
   );
 };
+

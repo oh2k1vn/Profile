@@ -4,12 +4,20 @@ import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import { db } from '../services/firebase';
 import { audioService } from '../services/audioService';
 import type { BlogPost } from '../types/blog';
-import { MOCK_POSTS } from '../constants/mockPosts';
 import { BlogCard } from '../components/blog/BlogCard';
+
 import { BlogEditor } from '../components/blog/BlogEditor';
+import { useSEO } from '../hooks/useSEO';
 
 export default function BlogPage() {
+  useSEO({
+    title: 'Kho Bài Viết & Chia Sẻ Kỹ Thuật',
+    description: 'Tổng hợp các bài viết chuyên môn về lập trình Frontend, React, Flutter, Zalo Mini App và kinh nghiệm phát triển phần mềm của Nguyễn Minh Hiếu.',
+    keywords: 'Blog lập trình, Flutter Tutorial, React Performance, Zalo Mini App, Software Engineering, Nguyễn Minh Hiếu',
+  });
+
   const [posts, setPosts] = useState<BlogPost[]>([]);
+
   const [loading, setLoading] = useState(true);
   const [showEditor, setShowEditor] = useState(false);
   const [searchQuery, setSearchQuery] = useState('');
@@ -24,20 +32,17 @@ export default function BlogPage() {
         ...doc.data(),
       } as BlogPost));
       
-      if (newPosts.length === 0) {
-        setPosts(MOCK_POSTS);
-      } else {
-        setPosts(newPosts);
-      }
+      setPosts(newPosts);
       setLoading(false);
     }, (err) => {
       console.error('Firestore listener error:', err);
-      setPosts(MOCK_POSTS);
+      setPosts([]);
       setLoading(false);
     });
 
     return () => unsubscribe();
   }, []);
+
 
   const allTags = Array.from(new Set(posts.flatMap(p => p.tags)));
 

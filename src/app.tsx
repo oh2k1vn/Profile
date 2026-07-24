@@ -9,6 +9,7 @@ const HomePage = lazy(() => import('./pages/HomePage'));
 const PlaygroundPage = lazy(() => import('./pages/PlaygroundPage'));
 const BlogPage = lazy(() => import('./pages/BlogPage'));
 const BlogPostPage = lazy(() => import('./pages/BlogPostPage'));
+const DashboardPage = lazy(() => import('./pages/DashboardPage'));
 
 function App() {
   return (
@@ -50,6 +51,7 @@ function AppContent() {
           <Route path="/playground" element={<PlaygroundPage onTriggerGlitch={handleTriggerGlitch} />} />
           <Route path="/blog" element={<BlogPage />} />
           <Route path="/blog/:id" element={<BlogPostPage />} />
+          <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </Suspense>
     </MainLayout>

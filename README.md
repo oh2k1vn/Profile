@@ -8,7 +8,8 @@ Dự án được thiết kế hoàn toàn theo ngôn ngữ giao diện **iOS 18
 
 ## 🎨 Quy Chuẩn Thiết Kế (iOS Liquid Glass Design System)
 
-Mọi đóng góp hoặc phát triển thêm tính năng cho dự án đều tuân thủ các quy tắc trong [.agents/AGENTS.md](file:///d:/Profile/.agents/AGENTS.md):
+Giao diện được xây dựng tuân thủ theo phong cách thiết kế kính lỏng hiện đại:
+
 
 * **Ambient Light Mesh Background**: Các khối đèn chuyển động đa tầng (`mesh-float-1`, `mesh-float-2`) nằm cố định phía sau lớp kính tạo độ sâu cho toàn bộ ứng dụng.
 * **Liquid Glass Surfaces & Specular Edge Highlights**: Bề mặt kính mờ độ phân giải cao (`backdrop-blur-xl`, `backdrop-saturate-180`), kết hợp viền kính phản quang mỏng (`border-white/14`) và vệt sáng ánh kim trượt khi hover.

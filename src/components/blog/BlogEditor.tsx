@@ -1,8 +1,13 @@
 import { useState } from 'react';
 import { X, Save, Tag, FileText, Type } from 'lucide-react';
-import type { BlogEditorProps } from '../../types/blog';
 import { createBlogPost } from '../../services/blogService';
 import { audioService } from '../../services/audioService';
+
+interface BlogEditorProps {
+  onClose: () => void;
+  onSaved: () => void;
+}
+
 
 export function BlogEditor({ onClose, onSaved }: BlogEditorProps) {
   const [title, setTitle] = useState('');
@@ -47,7 +52,13 @@ export function BlogEditor({ onClose, onSaved }: BlogEditorProps) {
     setError('');
 
     try {
-      await createBlogPost(title, content, tags);
+      await createBlogPost({
+        title: title.trim(),
+        content: content.trim(),
+        tags,
+        summary: content.slice(0, 140) + '...',
+        category: 'Kỹ Thuật',
+      });
       audioService.playSuccess();
       onSaved();
       onClose();
@@ -57,6 +68,7 @@ export function BlogEditor({ onClose, onSaved }: BlogEditorProps) {
       setSaving(false);
     }
   };
+
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/75 backdrop-blur-xl">
