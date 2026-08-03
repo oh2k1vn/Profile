@@ -1,4 +1,5 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import { Navbar } from './Navbar';
 import { Footer } from './Footer';
 import { GlitchAlert } from '../common/GlitchAlert';
@@ -16,6 +17,9 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
   soundMuted,
   onToggleSound,
 }) => {
+  const location = useLocation();
+  const isDashboard = location.pathname.startsWith('/dashboard');
+
   return (
     <div className={`min-h-screen flex flex-col relative overflow-hidden transition-all duration-500 bg-dark-bg text-slate-100 ${glitchActive ? 'glitch-screen bg-red-950/20' : ''}`}>
 
@@ -28,7 +32,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
 
       {/* Header Navbar */}
-      <Navbar soundMuted={soundMuted} onToggleSound={onToggleSound} />
+      {!isDashboard && <Navbar soundMuted={soundMuted} onToggleSound={onToggleSound} />}
 
       {/* Glitch Overlay Alert */}
       {glitchActive && <GlitchAlert />}
@@ -39,7 +43,7 @@ export const MainLayout: React.FC<MainLayoutProps> = ({
       </div>
 
       {/* Footer */}
-      <Footer />
+      {!isDashboard && <Footer />}
     </div>
   );
 };

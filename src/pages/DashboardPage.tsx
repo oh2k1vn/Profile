@@ -1,13 +1,29 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { LayoutDashboard, BookOpen, FolderKanban, Tags, Users, Loader2, ShieldAlert } from 'lucide-react';
+import {
+  LayoutDashboard,
+  BookOpen,
+  FolderKanban,
+  Tags,
+  Users,
+  Loader2,
+  ShieldAlert,
+} from 'lucide-react';
 
 import { collection, query, orderBy, onSnapshot } from 'firebase/firestore';
 import toast from 'react-hot-toast';
 import { db } from '../services/firebase';
 import { logoutUser } from '../services/authService';
-import { createBlogPost, updateBlogPost, deleteBlogPostById } from '../services/blogService';
-import { fetchProjectsFromFirestore, createProjectInFirestore, deleteProjectInFirestore } from '../services/projectService';
+import {
+  createBlogPost,
+  updateBlogPost,
+  deleteBlogPostById,
+} from '../services/blogService';
+import {
+  fetchProjectsFromFirestore,
+  createProjectInFirestore,
+  deleteProjectInFirestore,
+} from '../services/projectService';
 import type { CreateProjectInput } from '../services/projectService';
 import { audioService } from '../services/audioService';
 import { useSEO } from '../hooks/useSEO';
@@ -15,25 +31,37 @@ import type { BlogPost, CreateBlogInput } from '../types/blog';
 import type { Project } from '../types/project';
 import { useProfile } from '../contexts/ProfileContext';
 
-import { DashboardHeader } from '../components/dashboard/DashboardHeader';
-import { DashboardAccessDenied } from '../components/dashboard/DashboardAccessDenied';
-import { ProfileTab } from '../components/dashboard/ProfileTab';
-import { BlogTab } from '../components/dashboard/BlogTab';
-import { CategoriesTab } from '../components/dashboard/CategoriesTab';
-import { ProjectsTab } from '../components/dashboard/ProjectsTab';
-import { UsersTab } from '../components/dashboard/UsersTab';
-
-type DashboardTab = 'profile' | 'blog' | 'categories' | 'projects' | 'users';
+import {
+  DashboardHeader,
+  DashboardSidebar,
+  DashboardStats,
+  DashboardAccessDenied,
+  ProfileTab,
+  BlogTab,
+  CategoriesTab,
+  ProjectsTab,
+  UsersTab,
+} from '../components/dashboard';
+import type { DashboardTab } from '../components/dashboard';
 
 export default function DashboardPage() {
   useSEO({
     title: 'Quản Trị Hệ Thống & Cấu Hình',
-    description: 'Trang quản trị hệ thống cá nhân, quản lý thông tin profile, bài viết blog, danh mục và danh sách dự án.',
+    description:
+      'Trang quản trị hệ thống cá nhân, quản lý thông tin profile, bài viết blog, danh mục và danh sách dự án.',
   });
 
   const navigate = useNavigate();
-  const { user, profile: contextProfile, isAdmin, loading: loadingAuth, updateProfile } = useProfile();
+  const {
+    user,
+    profile: contextProfile,
+    isAdmin,
+    loading: loadingAuth,
+    updateProfile,
+  } = useProfile();
+
   const [activeTab, setActiveTab] = useState<DashboardTab>('profile');
+  const [isSidebarCollapsed, setIsSidebarCollapsed] = useState(false);
 
   // Local state for profile form editing
   const [profile, setProfile] = useState(contextProfile);
@@ -59,19 +87,26 @@ export default function DashboardPage() {
   useEffect(() => {
     if (!user) return;
     const q = query(collection(db, 'blog_posts'), orderBy('createdAt', 'desc'));
-    const unsubscribe = onSnapshot(q, (snapshot) => {
-      const posts: BlogPost[] = snapshot.docs.map(doc => ({
-        id: doc.id,
-        ...doc.data(),
-      } as BlogPost));
+    const unsubscribe = onSnapshot(
+      q,
+      (snapshot) => {
+        const posts: BlogPost[] = snapshot.docs.map(
+          (doc) =>
+            ({
+              id: doc.id,
+              ...doc.data(),
+            }) as BlogPost
+        );
 
-      setBlogPosts(posts);
-      setLoadingBlog(false);
-    }, (err) => {
-      console.error('Firestore blog listener error:', err);
-      setBlogPosts([]);
-      setLoadingBlog(false);
-    });
+        setBlogPosts(posts);
+        setLoadingBlog(false);
+      },
+      (err) => {
+        console.error('Firestore blog listener error:', err);
+        setBlogPosts([]);
+        setLoadingBlog(false);
+      }
+    );
 
     return () => unsubscribe();
   }, [user]);
@@ -156,7 +191,10 @@ export default function DashboardPage() {
   const handleCreateProject = async (input: CreateProjectInput, techText: string) => {
     audioService.playClick();
     try {
-      const techArray = techText.split(',').map(t => t.trim()).filter(t => t.length > 0);
+      const techArray = techText
+        .split(',')
+        .map((t) => t.trim())
+        .filter((t) => t.length > 0);
       await createProjectInFirestore({
         ...input,
         tech: techArray.length > 0 ? techArray : ['React', 'TypeScript'],
@@ -178,14 +216,13 @@ export default function DashboardPage() {
       await deleteProjectInFirestore(id);
       audioService.playSuccess();
       toast.success('Đã xoá dự án khỏi Firestore!');
-      setProjects(prev => prev.filter(p => p.id !== id));
+      setProjects((prev) => prev.filter((p) => p.id !== id));
     } catch (err) {
       console.error('Error deleting project:', err);
       audioService.playError();
       toast.error('Lỗi khi xoá dự án!');
     }
   };
-
 
   const handleLogout = async () => {
     audioService.playClick();
@@ -196,8 +233,10 @@ export default function DashboardPage() {
   if (loadingAuth) {
     return (
       <main className="flex-1 max-w-5xl w-full mx-auto px-4 py-20 flex flex-col items-center justify-center space-y-4">
-        <Loader2 size={36} className="text-sky-400 animate-spin" />
-        <p className="text-sm font-sans text-slate-400">Đang xác thực quyền truy cập...</p>
+        <div className="w-16 h-16 rounded-3xl bg-slate-900/80 backdrop-blur-2xl border border-sky-400/30 flex items-center justify-center shadow-2xl shadow-sky-500/20">
+          <Loader2 size={32} className="text-sky-400 animate-spin" />
+        </div>
+        <p className="text-xs font-mono text-slate-400">Đang xác thực quyền truy cập hệ thống...</p>
       </main>
     );
   }
@@ -212,132 +251,177 @@ export default function DashboardPage() {
   }
 
   return (
-    <main className="flex-1 max-w-6xl w-full mx-auto px-4 py-6 md:py-10 space-y-8">
-      {/* Top Header */}
-      <DashboardHeader
-        user={user}
-        profile={profile}
-        onNavigateHome={() => navigate('/')}
-        onLogout={handleLogout}
-      />
+    <main className="flex-1 max-w-7xl w-full mx-auto px-3 sm:px-6 py-6 md:py-8">
+      <div className="flex flex-col md:flex-row gap-6 items-start">
+        {/* Desktop Collapsible Glass Sidebar */}
+        <DashboardSidebar
+          activeTab={activeTab}
+          setActiveTab={setActiveTab}
+          user={user}
+          profile={profile}
+          isAdmin={isAdmin}
+          isCollapsed={isSidebarCollapsed}
+          onToggleCollapse={() => setIsSidebarCollapsed((prev) => !prev)}
+          blogCount={blogPosts.length}
+          projectCount={projects.length}
+          onNavigateHome={() => navigate('/')}
+          onLogout={handleLogout}
+        />
 
-      {/* Informative Banner for Non-Admin Users */}
-      {!isAdmin && (
-        <div className="p-4 rounded-2xl bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-sans flex items-center gap-3 shadow-lg">
-          <ShieldAlert size={20} className="text-sky-400 shrink-0" />
-          <div>
-            <strong className="block text-white font-semibold text-sm">Chế độ Thành Viên (User Mode)</strong>
-            Tài khoản của bạn đang có quyền <span className="underline font-bold text-sky-200">User</span>. Bạn có thể Thêm, Sửa và Xoá các bài viết, dự án và danh mục <strong className="text-white">do chính bạn tạo ra</strong>.
+        {/* Main Workspace Column */}
+        <div className="flex-1 w-full space-y-6 min-w-0">
+          {/* Top Header & Breadcrumbs Toolbar */}
+          <DashboardHeader
+            user={user}
+            profile={profile}
+            activeTab={activeTab}
+            onNavigateHome={() => navigate('/')}
+            onLogout={handleLogout}
+          />
+
+          {/* Mobile Tab Navigation Segmented Bar */}
+          <div className="md:hidden flex bg-slate-900/80 backdrop-blur-xl p-1.5 rounded-2xl border border-white/14 gap-1 overflow-x-auto scrollbar-none shadow-lg">
+            <button
+              onClick={() => {
+                audioService.playClick();
+                setActiveTab('profile');
+              }}
+              className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                activeTab === 'profile'
+                  ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <LayoutDashboard size={14} />
+              Profile
+            </button>
+
+            <button
+              onClick={() => {
+                audioService.playClick();
+                setActiveTab('blog');
+              }}
+              className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                activeTab === 'blog'
+                  ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <BookOpen size={14} />
+              Blog ({blogPosts.length})
+            </button>
+
+            <button
+              onClick={() => {
+                audioService.playClick();
+                setActiveTab('categories');
+              }}
+              className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                activeTab === 'categories'
+                  ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <Tags size={14} />
+              Danh Mục
+            </button>
+
+            <button
+              onClick={() => {
+                audioService.playClick();
+                setActiveTab('projects');
+              }}
+              className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                activeTab === 'projects'
+                  ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                  : 'text-slate-400 hover:text-slate-200'
+              }`}
+            >
+              <FolderKanban size={14} />
+              Dự Án ({projects.length})
+            </button>
+
+            {isAdmin && (
+              <button
+                onClick={() => {
+                  audioService.playClick();
+                  setActiveTab('users');
+                }}
+                className={`flex-1 py-2 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-1.5 transition-all cursor-pointer whitespace-nowrap ${
+                  activeTab === 'users'
+                    ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
+                    : 'text-slate-400 hover:text-slate-200'
+                }`}
+              >
+                <Users size={14} />
+                Users
+              </button>
+            )}
+          </div>
+
+          {/* Informative Banner for Non-Admin Users */}
+          {!isAdmin && (
+            <div className="p-4 rounded-2xl bg-sky-500/15 border border-sky-400/30 text-sky-300 text-xs font-sans flex items-center gap-3 shadow-lg">
+              <ShieldAlert size={20} className="text-sky-400 shrink-0" />
+              <div>
+                <strong className="block text-white font-semibold text-sm">
+                  Chế độ Thành Viên (User Mode)
+                </strong>
+                Tài khoản của bạn có quyền <span className="underline font-bold text-sky-200">User</span>. Bạn có thể Thêm, Sửa và Xoá bài viết, dự án và danh mục do chính bạn tạo ra.
+              </div>
+            </div>
+          )}
+
+          {/* Overview Metrics Cards Bar */}
+          <DashboardStats
+            blogCount={blogPosts.length}
+            projectCount={projects.length}
+            isAdmin={isAdmin}
+            onSelectTab={setActiveTab}
+          />
+
+          {/* Active Workspace Tab Content */}
+          <div className="space-y-6 pt-2">
+            {activeTab === 'profile' && profile && (
+              <ProfileTab
+                profile={profile}
+                setProfile={setProfile}
+                savingProfile={savingProfile}
+                profileSuccess={profileSuccess}
+                onSaveProfile={handleSaveProfile}
+                isAdmin={isAdmin}
+              />
+            )}
+
+            {activeTab === 'blog' && (
+              <BlogTab
+                blogPosts={blogPosts}
+                loadingBlog={loadingBlog}
+                onDeleteBlog={handleDeleteBlog}
+                onCreateBlog={handleCreateBlog}
+                onUpdateBlog={handleUpdateBlog}
+                isAdmin={isAdmin}
+              />
+            )}
+
+            {activeTab === 'categories' && <CategoriesTab isAdmin={isAdmin} />}
+
+            {activeTab === 'projects' && (
+              <ProjectsTab
+                projects={projects}
+                loadingProjects={loadingProjects}
+                onDeleteProject={handleDeleteProject}
+                onCreateProject={handleCreateProject}
+                isAdmin={isAdmin}
+              />
+            )}
+
+            {activeTab === 'users' && isAdmin && (
+              <UsersTab currentUserId={user.uid} />
+            )}
           </div>
         </div>
-      )}
-
-      {/* Tab Segmented Control */}
-      <div className="flex bg-slate-900/60 backdrop-blur-xl p-1.5 rounded-2xl border border-white/12 gap-1.5 max-w-3xl overflow-x-auto scrollbar-none">
-        <button
-          onClick={() => { audioService.playClick(); setActiveTab('profile'); }}
-          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-            activeTab === 'profile'
-              ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
-              : 'text-slate-400 hover:text-slate-200'
-          }`}
-        >
-          <LayoutDashboard size={14} />
-          Thông Tin Profile
-        </button>
-
-        <button
-          onClick={() => { audioService.playClick(); setActiveTab('blog'); }}
-          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-            activeTab === 'blog'
-              ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
-              : 'text-slate-400 hover:text-slate-200'
-          }`}
-        >
-          <BookOpen size={14} />
-          Quản Lý Blog
-        </button>
-
-        <button
-          onClick={() => { audioService.playClick(); setActiveTab('categories'); }}
-          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-            activeTab === 'categories'
-              ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
-              : 'text-slate-400 hover:text-slate-200'
-          }`}
-        >
-          <Tags size={14} />
-          Quản Lý Danh Mục
-        </button>
-
-        <button
-          onClick={() => { audioService.playClick(); setActiveTab('projects'); }}
-          className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-            activeTab === 'projects'
-              ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
-              : 'text-slate-400 hover:text-slate-200'
-          }`}
-        >
-          <FolderKanban size={14} />
-          Quản Lý Dự Án
-        </button>
-
-        {isAdmin && (
-          <button
-            onClick={() => { audioService.playClick(); setActiveTab('users'); }}
-            className={`flex-1 py-2.5 px-3 rounded-xl text-xs font-semibold flex items-center justify-center gap-2 transition-all cursor-pointer whitespace-nowrap ${
-              activeTab === 'users'
-                ? 'bg-white/15 text-sky-400 border border-white/20 shadow-md'
-                : 'text-slate-400 hover:text-slate-200'
-            }`}
-          >
-            <Users size={14} />
-            Quản Lý User
-          </button>
-        )}
       </div>
-
-      {/* Tab Content */}
-      {activeTab === 'profile' && profile && (
-        <ProfileTab
-          profile={profile}
-          setProfile={setProfile}
-          savingProfile={savingProfile}
-          profileSuccess={profileSuccess}
-          onSaveProfile={handleSaveProfile}
-          isAdmin={isAdmin}
-        />
-      )}
-
-      {activeTab === 'blog' && (
-        <BlogTab
-          blogPosts={blogPosts}
-          loadingBlog={loadingBlog}
-          onDeleteBlog={handleDeleteBlog}
-          onCreateBlog={handleCreateBlog}
-          onUpdateBlog={handleUpdateBlog}
-          isAdmin={isAdmin}
-        />
-      )}
-
-      {activeTab === 'categories' && (
-        <CategoriesTab isAdmin={isAdmin} />
-      )}
-
-      {activeTab === 'projects' && (
-        <ProjectsTab
-          projects={projects}
-          loadingProjects={loadingProjects}
-          onDeleteProject={handleDeleteProject}
-          onCreateProject={handleCreateProject}
-          isAdmin={isAdmin}
-        />
-      )}
-
-      {activeTab === 'users' && isAdmin && (
-        <UsersTab currentUserId={user.uid} />
-      )}
     </main>
   );
 }
-

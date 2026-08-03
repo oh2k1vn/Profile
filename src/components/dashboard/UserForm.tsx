@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Save, Loader2, User, Crown } from 'lucide-react';
 import type { UserProfileData } from '../../services/profileService';
 import { audioService } from '../../services/audioService';
+import { useUserForm } from '../../hooks/dashboard/useUserForm';
 
 interface UserFormProps {
   user: UserProfileData;
@@ -16,46 +17,23 @@ export const UserForm: React.FC<UserFormProps> = ({
   onSave,
   onCancel,
 }) => {
-  const [formData, setFormData] = useState<UserProfileData>({ ...user });
-  const [saving, setSaving] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    if (saving) return;
-    audioService.playClick();
-    setSaving(true);
-
-    try {
-      const skillsArray = (formData.skillsText || '')
-        .split(',')
-        .map(s => s.trim())
-        .filter(Boolean);
-
-      const payload: Partial<UserProfileData> = {
-        ...formData,
-        skills: skillsArray,
-      };
-
-      await onSave(payload);
-    } catch (err) {
-      console.error('Error saving user profile:', err);
-    } finally {
-      setSaving(false);
-    }
-  };
+  const { state, actions } = useUserForm({ user, onSave });
+  const { formData, saving } = state;
 
   return (
-    <form id={formId} onSubmit={handleSubmit} className="space-y-6">
+    <form id={formId} onSubmit={actions.handleSubmit} className="space-y-6">
       {/* Role Selection Bar */}
       <div className="p-4 rounded-2xl bg-slate-900/80 border border-white/12 space-y-2">
         <label className="text-xs font-semibold text-slate-300 flex items-center justify-between">
           <span>Vai Trò Hệ Thống (Role) *</span>
-          <span className="text-[10px] font-mono text-amber-400 font-normal">Quyền hạn truy cập Dashboard</span>
+          <span className="text-[10px] font-mono text-amber-400 font-normal">
+            Quyền hạn truy cập Dashboard
+          </span>
         </label>
         <div className="grid grid-cols-2 gap-3">
           <button
             type="button"
-            onClick={() => { audioService.playClick(); setFormData({ ...formData, role: 'user' }); }}
+            onClick={() => actions.handleRoleChange('user')}
             className={`p-3 rounded-2xl border text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer transition-all ${
               formData.role !== 'admin'
                 ? 'bg-sky-500/20 text-sky-300 border-sky-400/40 shadow-lg'
@@ -68,7 +46,7 @@ export const UserForm: React.FC<UserFormProps> = ({
 
           <button
             type="button"
-            onClick={() => { audioService.playClick(); setFormData({ ...formData, role: 'admin' }); }}
+            onClick={() => actions.handleRoleChange('admin')}
             className={`p-3 rounded-2xl border text-xs font-semibold flex items-center justify-center gap-2 cursor-pointer transition-all ${
               formData.role === 'admin'
                 ? 'bg-amber-500/20 text-amber-300 border-amber-400/40 shadow-lg'
@@ -89,7 +67,9 @@ export const UserForm: React.FC<UserFormProps> = ({
             type="text"
             required
             value={formData.displayName || ''}
-            onChange={e => setFormData({ ...formData, displayName: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, displayName: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="Nguyễn Văn A"
           />
@@ -102,7 +82,7 @@ export const UserForm: React.FC<UserFormProps> = ({
             type="email"
             required
             value={formData.email || ''}
-            onChange={e => setFormData({ ...formData, email: e.target.value })}
+            onChange={(e) => actions.setFormData({ ...formData, email: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="user@example.com"
           />
@@ -114,7 +94,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.jobTitle || ''}
-            onChange={e => setFormData({ ...formData, jobTitle: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, jobTitle: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="Software Engineer"
           />
@@ -126,7 +108,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.headline || ''}
-            onChange={e => setFormData({ ...formData, headline: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, headline: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="Đam mê phát triển ứng dụng web..."
           />
@@ -138,7 +122,7 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.phone || ''}
-            onChange={e => setFormData({ ...formData, phone: e.target.value })}
+            onChange={(e) => actions.setFormData({ ...formData, phone: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="+84 901 234 567"
           />
@@ -150,7 +134,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.location || ''}
-            onChange={e => setFormData({ ...formData, location: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, location: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="TP. Hồ Chí Minh"
           />
@@ -162,7 +148,13 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.avatarUrl || formData.photoURL || ''}
-            onChange={e => setFormData({ ...formData, avatarUrl: e.target.value, photoURL: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({
+                ...formData,
+                avatarUrl: e.target.value,
+                photoURL: e.target.value,
+              })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://..."
           />
@@ -174,7 +166,7 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.cvUrl || ''}
-            onChange={e => setFormData({ ...formData, cvUrl: e.target.value })}
+            onChange={(e) => actions.setFormData({ ...formData, cvUrl: e.target.value })}
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://drive.google.com/..."
           />
@@ -186,7 +178,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.githubUrl || ''}
-            onChange={e => setFormData({ ...formData, githubUrl: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, githubUrl: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://github.com/..."
           />
@@ -198,7 +192,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.linkedinUrl || ''}
-            onChange={e => setFormData({ ...formData, linkedinUrl: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, linkedinUrl: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://linkedin.com/in/..."
           />
@@ -210,7 +206,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.facebookUrl || ''}
-            onChange={e => setFormData({ ...formData, facebookUrl: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, facebookUrl: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://facebook.com/..."
           />
@@ -222,7 +220,9 @@ export const UserForm: React.FC<UserFormProps> = ({
           <input
             type="text"
             value={formData.websiteUrl || ''}
-            onChange={e => setFormData({ ...formData, websiteUrl: e.target.value })}
+            onChange={(e) =>
+              actions.setFormData({ ...formData, websiteUrl: e.target.value })
+            }
             className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
             placeholder="https://..."
           />
@@ -231,11 +231,15 @@ export const UserForm: React.FC<UserFormProps> = ({
 
       {/* Skills Text */}
       <div className="space-y-1.5">
-        <label className="text-xs font-semibold text-slate-300">Danh Sách Kỹ Năng (Phân cách bằng dấu phẩy)</label>
+        <label className="text-xs font-semibold text-slate-300">
+          Danh Sách Kỹ Năng (Phân cách bằng dấu phẩy)
+        </label>
         <input
           type="text"
           value={formData.skillsText || ''}
-          onChange={e => setFormData({ ...formData, skillsText: e.target.value })}
+          onChange={(e) =>
+            actions.setFormData({ ...formData, skillsText: e.target.value })
+          }
           className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white"
           placeholder="React, TypeScript, Flutter, Tailwind CSS"
         />
@@ -247,7 +251,7 @@ export const UserForm: React.FC<UserFormProps> = ({
         <textarea
           rows={3}
           value={formData.bio || ''}
-          onChange={e => setFormData({ ...formData, bio: e.target.value })}
+          onChange={(e) => actions.setFormData({ ...formData, bio: e.target.value })}
           className="glass-input w-full px-4 py-2.5 rounded-2xl text-xs text-white resize-none"
           placeholder="Mô tả thông tin chi tiết..."
         />
@@ -257,7 +261,10 @@ export const UserForm: React.FC<UserFormProps> = ({
       <div className="pt-3 border-t border-white/10 flex items-center justify-end gap-3">
         <button
           type="button"
-          onClick={() => { audioService.playClick(); onCancel(); }}
+          onClick={() => {
+            audioService.playClick();
+            onCancel();
+          }}
           className="liquid-glass-pill px-5 py-2.5 rounded-2xl text-xs font-medium text-slate-300 hover:text-white cursor-pointer"
         >
           Huỷ Bỏ
