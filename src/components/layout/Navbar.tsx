@@ -1,8 +1,9 @@
 import React from 'react';
-import { BookOpen, Sparkles, Layout, Terminal as TerminalIcon, Volume2, VolumeX, LayoutDashboard } from 'lucide-react';
+import { BookOpen, Sparkles, Layout, Terminal as TerminalIcon, Volume2, VolumeX, LayoutDashboard, Users } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { audioService } from '../../services/audioService';
 import { useProfile } from '../../contexts/ProfileContext';
+import { usePresence } from '../../hooks/usePresence';
 
 interface NavbarProps {
   soundMuted: boolean;
@@ -13,6 +14,7 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
   const navigate = useNavigate();
   const location = useLocation();
   const { user } = useProfile();
+  const { activeVisitors } = usePresence();
 
   const isHome = location.pathname === '/';
   const isPlayground = location.pathname === '/playground';
@@ -115,6 +117,15 @@ export const Navbar: React.FC<NavbarProps> = ({ soundMuted, onToggleSound }) => 
 
         {/* Action Controls */}
         <div className="flex items-center space-x-2">
+          {/* Realtime Active Visitor Pill */}
+          <div
+            className="hidden sm:flex items-center space-x-1.5 px-2.5 py-1 rounded-full bg-slate-900/60 border border-white/12 text-[11px] font-mono text-slate-300 shadow-inner"
+            title={`${activeVisitors} độc giả đang trực tuyến`}
+          >
+            <span className="w-1.5 h-1.5 rounded-full bg-sky-400 animate-pulse shadow-[0_0_6px_#38bdf8]" />
+            <Users size={12} className="text-sky-400" />
+            <span className="text-sky-300 font-bold">{activeVisitors}</span>
+          </div>
           <button
             onClick={() => {
               audioService.playClick();

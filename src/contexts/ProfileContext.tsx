@@ -5,6 +5,7 @@ import { doc, collection, query, limit, onSnapshot } from 'firebase/firestore';
 import { auth, db } from '../services/firebase';
 import { updateUserProfileData } from '../services/profileService';
 import type { UserProfileData } from '../services/profileService';
+import { trackUserPresence } from '../services/presenceService';
 
 interface ProfileContextType {
   user: User | null;
@@ -29,20 +30,28 @@ export const ProfileProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const [profile, setProfile] = useState<UserProfileData | null>(null);
   const [loading, setLoading] = useState(true);
 
-  // Real-time listener for profile changes in Firestore
+  // Real-time listener for profile changes in Firestore & Realtime DB Presence
   useEffect(() => {
     let unSubProfile: (() => void) | null = null;
+    let unSubPresence: (() => void) | null = null;
 
     const unSubAuth = onAuthStateChanged(auth, (currentUser) => {
       setUser(currentUser);
 
-      // Clean up previous profile listener if any
+      // Clean up previous profile & presence listeners if any
       if (unSubProfile) {
         unSubProfile();
         unSubProfile = null;
       }
+      if (unSubPresence) {
+        unSubPresence();
+        unSubPresence = null;
+      }
 
       if (currentUser) {
+        // Track authenticated user's online presence in Realtime DB
+        unSubPresence = trackUserPresence(currentUser.uid);
+
         // Authenticated user: Listen to their user document in real-time
         const userRef = doc(db, 'users', currentUser.uid);
         unSubProfile = onSnapshot(userRef, (snapshot) => {
@@ -72,6 +81,7 @@ export const ProfileProvider: React.FC<{ children: React.ReactNode }> = ({ child
     return () => {
       unSubAuth();
       if (unSubProfile) unSubProfile();
+      if (unSubPresence) unSubPresence();
     };
   }, []);
 

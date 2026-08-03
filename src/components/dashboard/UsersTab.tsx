@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from 'react';
-import { Users, Search, User, Crown, RefreshCw, Loader2, Mail, Calendar, MapPin, Briefcase, Edit3 } from 'lucide-react';
+import { Users, Search, User, Crown, RefreshCw, Loader2, Mail, Calendar, MapPin, Briefcase, Edit3, Radio } from 'lucide-react';
 import toast from 'react-hot-toast';
 import { fetchAllUsers, updateUserRole, updateUserProfileData, type UserProfileData } from '../../services/profileService';
 import { audioService } from '../../services/audioService';
+import { usePresence } from '../../hooks/usePresence';
 import { Drawer } from '../common/Drawer';
 import { UserForm } from './UserForm';
 
@@ -11,6 +12,7 @@ interface UsersTabProps {
 }
 
 export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
+  const { activeVisitors, onlineUsersMap } = usePresence();
   const [users, setUsers] = useState<UserProfileData[]>([]);
   const [loading, setLoading] = useState(true);
   const [refreshing, setRefreshing] = useState(false);
@@ -134,7 +136,7 @@ export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
       </div>
 
       {/* Summary Stats Bar */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
         <div className="liquid-glass p-4 rounded-2xl border border-white/12 flex items-center gap-3">
           <div className="p-2.5 rounded-xl bg-sky-500/20 text-sky-400 border border-sky-400/30">
             <Users size={18} />
@@ -162,6 +164,22 @@ export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
           <div>
             <div className="text-xs text-slate-400">Thành Viên (User)</div>
             <div className="text-lg font-bold text-purple-300">{totalMembers}</div>
+          </div>
+        </div>
+
+        {/* Realtime Active Visitors Card */}
+        <div className="liquid-glass p-4 rounded-2xl border border-emerald-400/25 bg-emerald-500/5 flex items-center gap-3 relative overflow-hidden">
+          <div className="p-2.5 rounded-xl bg-emerald-500/20 text-emerald-400 border border-emerald-400/30">
+            <Radio size={18} className="animate-pulse" />
+          </div>
+          <div>
+            <div className="text-xs text-emerald-300/80 font-medium flex items-center gap-1.5">
+              <span>Độc Giả Online</span>
+              <span className="w-1.5 h-1.5 rounded-full bg-emerald-400 animate-ping inline-block" />
+            </div>
+            <div className="text-lg font-bold font-mono text-emerald-300">
+              {activeVisitors} <span className="text-xs font-normal text-emerald-400/80">phiên</span>
+            </div>
           </div>
         </div>
       </div>
@@ -197,6 +215,7 @@ export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
             const isUserAdmin = u.role === 'admin';
             const isSelf = u.uid === currentUserId;
             const isUpdating = updatingUid === u.uid;
+            const isUserOnline = Boolean(onlineUsersMap[u.uid]);
 
             return (
               <div
@@ -206,12 +225,21 @@ export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
                 {/* Header Info */}
                 <div className="flex items-start justify-between gap-3">
                   <div className="flex items-center gap-3">
-                    <img
-                      src={u.avatarUrl || u.photoURL || '/images/avatar.webp'}
-                      alt={u.displayName || 'Avatar'}
-                      className="w-11 h-11 rounded-2xl object-cover border border-white/20 shadow-md shrink-0"
-                      onError={e => { (e.target as HTMLImageElement).src = '/images/avatar.webp'; }}
-                    />
+                    <div className="relative shrink-0">
+                      <img
+                        src={u.avatarUrl || u.photoURL || '/images/avatar.webp'}
+                        alt={u.displayName || 'Avatar'}
+                        className="w-11 h-11 rounded-2xl object-cover border border-white/20 shadow-md"
+                        onError={e => { (e.target as HTMLImageElement).src = '/images/avatar.webp'; }}
+                      />
+                      <span
+                        className={`absolute -bottom-0.5 -right-0.5 w-3.5 h-3.5 rounded-full border-2 border-slate-950 ${
+                          isUserOnline ? 'bg-emerald-400 shadow-[0_0_8px_#10b981]' : 'bg-slate-500'
+                        }`}
+                        title={isUserOnline ? 'Đang trực tuyến (Online)' : 'Ngoại tuyến (Offline)'}
+                      />
+                    </div>
+
                     <div className="min-w-0">
                       <div className="flex items-center gap-1.5">
                         <h3 className="text-sm font-bold text-white truncate">
@@ -230,17 +258,34 @@ export const UsersTab: React.FC<UsersTabProps> = ({ currentUserId }) => {
                     </div>
                   </div>
 
-                  {/* Current Role Badge */}
-                  <span
-                    className={`px-3 py-1 rounded-full text-xs font-semibold flex items-center gap-1.5 border shrink-0 ${
-                      isUserAdmin
-                        ? 'bg-amber-500/20 text-amber-300 border-amber-400/40 shadow-sm'
-                        : 'bg-slate-800/60 text-slate-300 border-white/10'
-                    }`}
-                  >
-                    {isUserAdmin ? <Crown size={12} className="text-amber-400" /> : <User size={12} />}
-                    {isUserAdmin ? 'Admin' : 'User'}
-                  </span>
+                  {/* Status & Role Badges */}
+                  <div className="flex items-center gap-1.5 shrink-0">
+                    <span
+                      className={`text-[10px] font-mono px-2.5 py-0.5 rounded-full font-semibold flex items-center gap-1 border ${
+                        isUserOnline
+                          ? 'bg-emerald-500/20 text-emerald-300 border-emerald-400/30 shadow-[0_0_10px_rgba(16,185,129,0.2)]'
+                          : 'bg-slate-800/60 text-slate-400 border-white/10'
+                      }`}
+                    >
+                      <span
+                        className={`w-1.5 h-1.5 rounded-full ${
+                          isUserOnline ? 'bg-emerald-400 animate-pulse' : 'bg-slate-500'
+                        }`}
+                      />
+                      {isUserOnline ? 'Online' : 'Offline'}
+                    </span>
+
+                    <span
+                      className={`px-2.5 py-0.5 rounded-full text-xs font-semibold flex items-center gap-1 border ${
+                        isUserAdmin
+                          ? 'bg-amber-500/20 text-amber-300 border-amber-400/40 shadow-sm'
+                          : 'bg-slate-800/60 text-slate-300 border-white/10'
+                      }`}
+                    >
+                      {isUserAdmin ? <Crown size={11} className="text-amber-400" /> : <User size={11} />}
+                      {isUserAdmin ? 'Admin' : 'User'}
+                    </span>
+                  </div>
                 </div>
 
                 {/* Sub details */}

@@ -14,8 +14,12 @@ import {
   MapPin,
   Mail,
   Globe,
+  Radio,
+  Users,
 } from 'lucide-react';
+import toast from 'react-hot-toast';
 import type { UserProfileData } from '../../services/profileService';
+import { usePresence } from '../../hooks/usePresence';
 
 // Custom Feather/Lucide styled Brand SVG Icons (lucide-react removed brand icons in recent versions)
 const Github: React.FC<{ size?: number; className?: string }> = ({ size = 14, className = '' }) => (
@@ -56,6 +60,29 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
   onSaveProfile,
   isAdmin = true,
 }) => {
+  const { activeVisitors, ownerStatus, updateStatusText } = usePresence();
+  const [realtimeStatusInput, setRealtimeStatusInput] = React.useState(ownerStatus.statusText);
+  const [updatingStatus, setUpdatingStatus] = React.useState(false);
+
+  React.useEffect(() => {
+    if (ownerStatus.statusText) {
+      setRealtimeStatusInput(ownerStatus.statusText);
+    }
+  }, [ownerStatus.statusText]);
+
+  const handleUpdateStatus = async () => {
+    if (!realtimeStatusInput.trim()) return;
+    setUpdatingStatus(true);
+    try {
+      await updateStatusText(realtimeStatusInput);
+      toast.success('Đã cập nhật trạng thái Realtime thành công!');
+    } catch {
+      toast.error('Lỗi cập nhật trạng thái!');
+    } finally {
+      setUpdatingStatus(false);
+    }
+  };
+
   return (
     <form onSubmit={onSaveProfile} className="space-y-6">
       {/* Top Banner Card */}
@@ -154,6 +181,49 @@ export const ProfileTab: React.FC<ProfileTabProps> = ({
                   className="glass-input w-full px-3.5 py-2 rounded-2xl text-xs text-white"
                   placeholder="https://yourwebsite.com"
                 />
+              </div>
+            </div>
+          </div>
+
+          {/* Card: Realtime Database Status & Active Visitors */}
+          <div className="liquid-glass-card rounded-3xl p-6 border border-white/15 space-y-4">
+            <div className="flex items-center space-x-2 border-b border-white/10 pb-3">
+              <Radio size={16} className="text-emerald-400 animate-pulse" />
+              <h3 className="text-xs font-bold text-white uppercase tracking-wider">Trạng Thái Realtime DB</h3>
+            </div>
+
+            <div className="space-y-3">
+              <div className="p-3 rounded-2xl bg-slate-900/60 border border-white/10 flex items-center justify-between">
+                <div className="flex items-center space-x-2 text-xs text-slate-300">
+                  <Users size={14} className="text-sky-400" />
+                  <span>Độc giả đang trực tuyến:</span>
+                </div>
+                <span className="font-mono text-xs font-bold text-sky-300 bg-sky-500/15 border border-sky-400/30 px-2.5 py-0.5 rounded-full">
+                  {activeVisitors} Online
+                </span>
+              </div>
+
+              <div className="space-y-1.5">
+                <label className="text-[11px] font-semibold text-slate-300">
+                  Dòng trạng thái công việc (Live Status)
+                </label>
+                <div className="flex gap-2">
+                  <input
+                    type="text"
+                    value={realtimeStatusInput}
+                    onChange={(e) => setRealtimeStatusInput(e.target.value)}
+                    placeholder="Đang làm việc / Sẵn sàng nhận dự án..."
+                    className="glass-input flex-1 px-3.5 py-2 rounded-2xl text-xs text-white"
+                  />
+                  <button
+                    type="button"
+                    disabled={updatingStatus}
+                    onClick={handleUpdateStatus}
+                    className="liquid-glass-pill px-3 py-2 rounded-2xl text-xs font-semibold text-sky-300 hover:text-white cursor-pointer disabled:opacity-50"
+                  >
+                    {updatingStatus ? <Loader2 size={14} className="animate-spin" /> : 'Lưu'}
+                  </button>
+                </div>
               </div>
             </div>
           </div>

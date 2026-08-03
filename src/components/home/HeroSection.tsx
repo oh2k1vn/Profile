@@ -1,7 +1,8 @@
 import React from 'react';
-import { ArrowRight, Sparkles } from 'lucide-react';
+import { ArrowRight, Sparkles, Users } from 'lucide-react';
 import { useNavigate } from 'react-router-dom';
 import { useTypewriter } from '../../hooks/useTypewriter';
+import { usePresence } from '../../hooks/usePresence';
 import { audioService } from '../../services/audioService';
 import { PortraitCard } from './PortraitCard';
 import { useProfile } from '../../contexts/ProfileContext';
@@ -9,6 +10,7 @@ import { useProfile } from '../../contexts/ProfileContext';
 export const HeroSection: React.FC = () => {
   const navigate = useNavigate();
   const { profile } = useProfile();
+  const { activeVisitors, ownerStatus } = usePresence();
 
   const headlineText = profile?.headline || (profile?.jobTitle ? `Lập trình viên ${profile.jobTitle}` : '');
   const typedTitle = useTypewriter(headlineText, 45);
@@ -24,10 +26,25 @@ export const HeroSection: React.FC = () => {
     <section id="hero" className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center min-h-[65vh] pt-4 pb-8">
       <div className="lg:col-span-7 space-y-6">
 
-        {/* Status Pill */}
-        <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 liquid-glass-pill rounded-full text-xs font-medium text-sky-300">
-          <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse shadow-[0_0_8px_#10b981]" />
-          <span>Sẵn sàng nhận dự án &amp; công việc mới</span>
+        {/* Realtime Status & Active Visitor Badges */}
+        <div className="flex flex-wrap items-center gap-2.5">
+          <div className="inline-flex items-center space-x-2.5 px-4 py-1.5 liquid-glass-pill rounded-full text-xs font-medium text-sky-300">
+            <span
+              className={`w-2 h-2 rounded-full ${
+                ownerStatus.isOnline
+                  ? 'bg-emerald-400 animate-pulse shadow-[0_0_8px_#10b981]'
+                  : 'bg-slate-400'
+              }`}
+            />
+            <span>{ownerStatus.isOnline ? ownerStatus.statusText : 'Đang ngoại tuyến'}</span>
+          </div>
+
+          <div className="inline-flex items-center space-x-2 px-3.5 py-1.5 liquid-glass-pill rounded-full text-xs font-mono text-slate-300 border border-white/10">
+            <Users size={12} className="text-sky-400" />
+            <span>
+              <strong className="text-sky-300 font-bold">{activeVisitors}</strong> trực tuyến
+            </span>
+          </div>
         </div>
 
         <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold tracking-tight leading-tight text-white">
