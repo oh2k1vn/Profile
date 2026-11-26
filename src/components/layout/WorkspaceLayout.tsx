@@ -22,7 +22,7 @@ export default function WorkspaceLayout() {
   const isHub = location.pathname === '/';
 
   return (
-    <div className="relative min-h-screen overflow-hidden bg-[#07090e] text-slate-100 px-4 pb-12 pt-4 sm:pt-6">
+    <div className="relative min-h-screen overflow-x-clip bg-[#07090e] text-slate-100 px-3 sm:px-4 pb-10 sm:pb-12 pt-3 sm:pt-6">
       {/* Ambient Light Mesh */}
       <div className="pointer-events-none fixed inset-0 overflow-hidden">
         <div className="absolute -top-32 -left-24 h-96 w-96 rounded-full bg-gradient-to-br from-sky-500/20 via-blue-600/15 to-transparent blur-3xl" />
@@ -30,12 +30,13 @@ export default function WorkspaceLayout() {
         <div className="absolute -bottom-32 left-1/3 h-96 w-96 rounded-full bg-gradient-to-br from-teal-500/15 via-sky-600/10 to-transparent blur-3xl" />
       </div>
 
-      <div className="relative z-10 max-w-5xl mx-auto space-y-6">
+      <div className="relative z-10 max-w-5xl mx-auto space-y-4 sm:space-y-6">
         {/* Floating iOS Liquid Glass Navbar */}
-        <nav className="sticky top-3 sm:top-5 z-30 flex items-center justify-between gap-2 rounded-full px-4 sm:px-6 py-2.5 liquid-glass">
+        <nav className="sticky top-3 sm:top-5 z-30 flex items-center justify-between gap-2 rounded-full px-3 sm:px-6 py-2 sm:py-2.5 liquid-glass">
           {isHub ? (
-            <div className="inline-flex items-center gap-2 text-xs font-medium text-slate-200">
-              <LayoutGrid className="w-4 h-4 text-sky-400" />
+            <div className="inline-flex items-center gap-2 text-xs font-medium text-slate-200 pl-1 whitespace-nowrap">
+              <LayoutGrid className="w-4 h-4 text-sky-400 shrink-0" />
+              <span className="sm:hidden">Modules</span>
               <span className="hidden sm:inline">Workspace Modules</span>
             </div>
           ) : (
@@ -45,14 +46,15 @@ export default function WorkspaceLayout() {
                 audioService.playClick();
                 navigate('/');
               }}
-              className="liquid-glass-pill rounded-full px-3.5 py-1.5 text-xs text-slate-200 hover:text-white inline-flex items-center gap-1.5 transition cursor-pointer"
+              className="liquid-glass-pill rounded-full px-3 sm:px-3.5 py-1.5 text-xs text-slate-200 hover:text-white inline-flex items-center gap-1.5 transition whitespace-nowrap shrink-0 cursor-pointer"
             >
-              <ArrowLeft className="w-3.5 h-3.5" />
-              Danh sách module
+              <ArrowLeft className="w-3.5 h-3.5 shrink-0" />
+              <span className="sm:hidden">Module</span>
+              <span className="hidden sm:inline">Danh sách module</span>
             </button>
           )}
 
-          <div className="flex items-center gap-2">
+          <div className="flex items-center gap-1.5 sm:gap-2 shrink-0">
             <button
               type="button"
               onClick={() => {
@@ -60,7 +62,7 @@ export default function WorkspaceLayout() {
                 void checkConnection();
               }}
               title={error || 'Nhấn để kiểm tra lại kết nối Google Sheets'}
-              className={`liquid-glass-pill rounded-full px-3 py-1.5 text-[11px] inline-flex items-center gap-1.5 transition cursor-pointer ${
+              className={`liquid-glass-pill rounded-full px-2.5 sm:px-3 py-1.5 text-[11px] inline-flex items-center gap-1.5 transition whitespace-nowrap cursor-pointer ${
                 status === 'connected'
                   ? 'text-emerald-300 border-emerald-400/25'
                   : status === 'checking'
@@ -69,7 +71,7 @@ export default function WorkspaceLayout() {
               }`}
             >
               <span
-                className={`h-1.5 w-1.5 rounded-full ${
+                className={`h-1.5 w-1.5 rounded-full shrink-0 ${
                   status === 'connected'
                     ? 'bg-emerald-400'
                     : status === 'checking'
@@ -77,7 +79,14 @@ export default function WorkspaceLayout() {
                       : 'bg-rose-400'
                 }`}
               />
-              <span>
+              <span className="sm:hidden">
+                {status === 'connected'
+                  ? `OK (${tabCount})`
+                  : status === 'checking'
+                    ? 'Đang nối...'
+                    : 'Lỗi'}
+              </span>
+              <span className="hidden sm:inline">
                 {status === 'connected'
                   ? `Sheets OK (${tabCount})`
                   : status === 'checking'
@@ -92,10 +101,11 @@ export default function WorkspaceLayout() {
                 audioService.playClick();
                 logout();
               }}
-              className="liquid-glass-pill rounded-full px-3.5 py-1.5 text-xs text-slate-300 hover:text-white inline-flex items-center gap-1.5 transition cursor-pointer"
+              aria-label="Khóa phiên"
+              className="liquid-glass-pill rounded-full px-2.5 sm:px-3.5 py-1.5 text-xs text-slate-300 hover:text-white inline-flex items-center gap-1.5 transition whitespace-nowrap cursor-pointer"
             >
-              <LogOut className="w-3.5 h-3.5" />
-              Khóa
+              <LogOut className="w-3.5 h-3.5 shrink-0" />
+              <span className="hidden sm:inline">Khóa</span>
             </button>
           </div>
         </nav>

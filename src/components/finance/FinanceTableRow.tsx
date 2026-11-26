@@ -79,17 +79,8 @@ export default function FinanceTableRow({
           {catMeta.label}
         </span>
       </td>
-      <td className="py-3.5 px-3 min-w-[140px]">
-        <div className="font-medium text-white">{formatVND(remaining)}</div>
-        <div className="flex items-center gap-2 mt-1">
-          <div className="h-1 flex-1 rounded-full bg-white/10 overflow-hidden">
-            <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${pct}%` }} />
-          </div>
-          <span className="text-[10px] text-slate-400">{pct}%</span>
-        </div>
-      </td>
-      <td className="py-3.5 px-3 hidden md:table-cell text-slate-300">
-        <div>{formatVND(Number(item.monthlyPayment) || 0)}</div>
+      <td className="py-3.5 px-3 text-slate-200">
+        <div className="font-semibold text-sky-300">{formatVND(Number(item.monthlyPayment) || 0)}</div>
         {totalTerms > 0 && (
           <div className="text-[11px] text-indigo-300">
             {remainingTerms > 0 ? `Còn ${remainingTerms}/${totalTerms} kỳ` : `Hoàn tất ${totalTerms} kỳ`}
@@ -101,7 +92,16 @@ export default function FinanceTableRow({
           </div>
         )}
       </td>
-      <td className="py-3.5 px-3 hidden sm:table-cell">
+      <td className="py-3.5 px-3 min-w-[140px]">
+        <div className="font-medium text-white">{formatVND(remaining)}</div>
+        <div className="flex items-center gap-2 mt-1">
+          <div className="h-1 flex-1 rounded-full bg-white/10 overflow-hidden">
+            <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${pct}%` }} />
+          </div>
+          <span className="text-[10px] text-slate-400">{pct}%</span>
+        </div>
+      </td>
+      <td className="py-3.5 px-3">
         <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[11px] ${statusMeta.badgeClass}`}>
           {statusMeta.label}
         </span>

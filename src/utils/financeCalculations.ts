@@ -52,6 +52,7 @@ export interface PaymentDueAlert {
   label: string;
   badgeClass: string;
   rowClass: string;
+  cardClass: string;
 }
 
 export function calculateRolloverFee(
@@ -130,7 +131,8 @@ export function getPaymentDueAlert(item: DebtRecord, now = new Date()): PaymentD
       daysLeft: 0,
       label: 'Đã quá hạn',
       badgeClass: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
-      rowClass: 'bg-rose-500/[0.04]',
+      rowClass: 'bg-rose-500/[0.06] border-l-2 border-l-rose-400',
+      cardClass: 'border-rose-500/45 bg-rose-500/[0.06]',
     };
   }
 
@@ -144,7 +146,8 @@ export function getPaymentDueAlert(item: DebtRecord, now = new Date()): PaymentD
         daysLeft: 0,
         label: 'Đã quá hạn',
         badgeClass: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
-        rowClass: 'bg-rose-500/[0.04]',
+        rowClass: 'bg-rose-500/[0.06] border-l-2 border-l-rose-400',
+        cardClass: 'border-rose-500/45 bg-rose-500/[0.06]',
       };
     }
   }
@@ -155,13 +158,14 @@ export function getPaymentDueAlert(item: DebtRecord, now = new Date()): PaymentD
   const daysLeft = Math.round((nextTs - today.getTime()) / 86_400_000);
   if (daysLeft < 0 || daysLeft > 7) return null;
 
-  if (daysLeft <= 3) {
+  if (daysLeft < 4) {
     return {
       level: 'urgent',
       daysLeft,
       label: daysLeft === 0 ? 'Đến hạn hôm nay' : `Còn ${daysLeft} ngày`,
       badgeClass: 'bg-rose-500/20 text-rose-300 border-rose-500/40',
-      rowClass: 'bg-rose-500/[0.04]',
+      rowClass: 'bg-rose-500/[0.06] border-l-2 border-l-rose-400',
+      cardClass: 'border-rose-500/45 bg-rose-500/[0.06]',
     };
   }
 
@@ -170,6 +174,7 @@ export function getPaymentDueAlert(item: DebtRecord, now = new Date()): PaymentD
     daysLeft,
     label: `Còn ${daysLeft} ngày`,
     badgeClass: 'bg-amber-500/20 text-amber-300 border-amber-500/40',
-    rowClass: 'bg-amber-500/[0.03]',
+    rowClass: 'bg-amber-500/[0.05] border-l-2 border-l-amber-400',
+    cardClass: 'border-amber-500/45 bg-amber-500/[0.05]',
   };
 }

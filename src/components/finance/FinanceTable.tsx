@@ -1,4 +1,5 @@
 import type { DebtRecord } from '../../types/database';
+import FinanceMobileCard from './FinanceMobileCard';
 import FinanceTableRow from './FinanceTableRow';
 
 interface FinanceTableProps {
@@ -49,33 +50,50 @@ export default function FinanceTable({
   }
 
   return (
-    <section className="liquid-glass rounded-3xl overflow-hidden">
-      <div className="overflow-x-auto">
-        <table className="w-full text-left text-xs">
-          <thead className="border-b border-white/10 text-slate-400">
-            <tr>
-              <th className="py-3.5 px-4 font-medium">Khoản mục</th>
-              <th className="py-3.5 px-3 font-medium">Phân loại</th>
-              <th className="py-3.5 px-3 font-medium">Còn lại / Tổng</th>
-              <th className="py-3.5 px-3 font-medium hidden md:table-cell">Định kỳ</th>
-              <th className="py-3.5 px-3 font-medium hidden sm:table-cell">Trạng thái</th>
-              <th className="py-3.5 px-4 font-medium text-right">Thao tác</th>
-            </tr>
-          </thead>
-          <tbody className="divide-y divide-white/10">
-            {items.map((item) => (
-              <FinanceTableRow
-                key={item.id}
-                item={item}
-                onQuickPay={onQuickPay}
-                onRollover={onRollover}
-                onEdit={onEdit}
-                onDelete={onDelete}
-              />
-            ))}
-          </tbody>
-        </table>
-      </div>
-    </section>
+    <>
+      {/* Mobile Card Layout */}
+      <section className="md:hidden space-y-3">
+        {items.map((item) => (
+          <FinanceMobileCard
+            key={item.id}
+            item={item}
+            onQuickPay={onQuickPay}
+            onRollover={onRollover}
+            onEdit={onEdit}
+            onDelete={onDelete}
+          />
+        ))}
+      </section>
+
+      {/* Desktop Table Layout */}
+      <section className="hidden md:block liquid-glass rounded-3xl overflow-hidden">
+        <div className="overflow-x-auto">
+          <table className="w-full text-left text-xs">
+            <thead className="border-b border-white/10 text-slate-400">
+              <tr>
+                <th className="py-3.5 px-4 font-medium">Khoản mục</th>
+                <th className="py-3.5 px-3 font-medium">Phân loại</th>
+                <th className="py-3.5 px-3 font-medium">Đóng kỳ này</th>
+                <th className="py-3.5 px-3 font-medium">Còn lại / Tổng</th>
+                <th className="py-3.5 px-3 font-medium">Trạng thái</th>
+                <th className="py-3.5 px-4 font-medium text-right">Thao tác</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-white/10">
+              {items.map((item) => (
+                <FinanceTableRow
+                  key={item.id}
+                  item={item}
+                  onQuickPay={onQuickPay}
+                  onRollover={onRollover}
+                  onEdit={onEdit}
+                  onDelete={onDelete}
+                />
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </section>
+    </>
   );
 }
