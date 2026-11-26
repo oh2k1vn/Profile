@@ -18,11 +18,13 @@ export default function FinancePage() {
     error,
     stats,
     upcomingAlerts,
+    duplicateCount,
     loadItems,
     saveItem,
     quickPay,
     confirmRollover,
     removeItem,
+    cleanDuplicates,
   } = useFinanceItems();
 
   const [categoryFilter, setCategoryFilter] = useState<DebtCategory | 'all'>('all');
@@ -94,6 +96,20 @@ export default function FinancePage() {
       {error && (
         <div className="rounded-2xl border border-rose-500/40 bg-rose-500/10 px-4 py-2.5 text-xs text-rose-300">
           {error}
+        </div>
+      )}
+
+      {duplicateCount > 0 && (
+        <div className="rounded-2xl border border-amber-500/40 bg-amber-500/10 px-4 py-2.5 text-xs text-amber-200 flex items-center justify-between gap-3">
+          <span>Phát hiện {duplicateCount} bản ghi bị trùng lặp trong Google Sheets.</span>
+          <button
+            type="button"
+            onClick={() => void cleanDuplicates()}
+            disabled={saving}
+            className="shrink-0 rounded-full bg-amber-500/20 border border-amber-400/40 px-3 py-1 font-medium text-amber-200 hover:bg-amber-500/30 disabled:opacity-50 cursor-pointer"
+          >
+            {saving ? 'Đang dọn...' : 'Xóa trùng lặp'}
+          </button>
         </div>
       )}
 

@@ -5,9 +5,11 @@ import { INITIAL_FINANCE_ITEMS } from '../constants/seedFinance';
 import { audioService } from '../services/audioService';
 import { db } from '../services/db';
 import type { DebtRecord, DebtStatus } from '../types/database';
-import { computeFinanceStats } from '../utils/financeCalculations';
+import { computeFinanceStats, findDuplicateDebtIds } from '../utils/financeCalculations';
 
 export const FINANCE_SEED_FLAG_KEY = 'finance_initial_seeded_v1';
+
+let seedInFlight: Promise<DebtRecord[]> | null = null;
 
 export function useFinanceItems() {
   const [items, setItems] = useState<DebtRecord[]>([]);
@@ -16,12 +18,25 @@ export function useFinanceItems() {
   const [error, setError] = useState<string | null>(null);
 
   const seedInitialItems = useCallback(async (): Promise<DebtRecord[]> => {
-    const created: DebtRecord[] = [];
-    for (const entry of INITIAL_FINANCE_ITEMS) {
-      created.push(await db.debts.create(entry));
-    }
+    if (seedInFlight) return seedInFlight;
+
     localStorage.setItem(FINANCE_SEED_FLAG_KEY, '1');
-    return created;
+    seedInFlight = (async () => {
+      try {
+        const existing = await db.debts.list({ bypassCache: true });
+        if (existing.length > 0) return existing;
+
+        const created: DebtRecord[] = [];
+        for (const entry of INITIAL_FINANCE_ITEMS) {
+          created.push(await db.debts.create(entry));
+        }
+        return created;
+      } finally {
+        seedInFlight = null;
+      }
+    })();
+
+    return seedInFlight;
   }, []);
 
   const loadItems = useCallback(async (bypassCache = false) => {
@@ -153,5 +168,31 @@ export function useFinanceItems() {
     }
   }, []);
 
-  return { items, loading, saving, error, stats, upcomingAlerts, loadItems, saveItem, quickPay, confirmRollover, removeItem };
+  const duplicateIds = useMemo(() => findDuplicateDebtIds(items), [items]);
+
+  const cleanDuplicates = useCallback(async () => {
+    if (duplicateIds.length === 0) return;
+    audioService.playClick();
+    setSaving(true);
+    setError(null);
+    try {
+      for (const id of duplicateIds) {
+        await db.debts.remove(id);
+      }
+      const dupSet = new Set(duplicateIds);
+      setItems((prev) => prev.filter((item) => !dupSet.has(item.id)));
+      audioService.playSuccess();
+    } catch (err) {
+      audioService.playError();
+      setError(err instanceof Error ? err.message : 'Không thể xóa bản ghi trùng lặp');
+    } finally {
+      setSaving(false);
+    }
+  }, [duplicateIds]);
+
+  return {
+    items, loading, saving, error, stats, upcomingAlerts,
+    duplicateCount: duplicateIds.length,
+    loadItems, saveItem, quickPay, confirmRollover, removeItem, cleanDuplicates,
+  };
 }

@@ -3,6 +3,7 @@ import type { DebtCategory, DebtStatus } from '../types/database';
 export {
   calculateRolloverFee,
   DEFAULT_ROLLOVER_FEE_RATE,
+  getDaysUntilDue,
   getNextPaymentTimestamp,
   getNextRolloverDueDate,
   getPaymentDueAlert,

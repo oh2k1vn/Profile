@@ -6,6 +6,7 @@ import {
   DEBT_STATUS_META,
   DEFAULT_ROLLOVER_FEE_RATE,
   formatVND,
+  getDaysUntilDue,
   getPaymentDueAlert,
 } from '../../constants/finance';
 import { audioService } from '../../services/audioService';
@@ -35,6 +36,7 @@ export default function FinanceMobileCard({
   const catMeta = DEBT_CATEGORY_MAP[item.category] ?? DEBT_CATEGORY_MAP.personal_loan;
   const statusMeta = DEBT_STATUS_META[item.status] ?? DEBT_STATUS_META.active;
   const dueAlert = getPaymentDueAlert(item);
+  const daysUntilDue = getDaysUntilDue(item);
   const totalTerms = Number(item.totalTerms) || 0;
   const currentTerm = Number(item.currentTerm) || 0;
   const remainingTerms = totalTerms > 0 ? Math.max(0, totalTerms - currentTerm) : 0;
@@ -63,9 +65,13 @@ export default function FinanceMobileCard({
             {currentTerm}/{totalTerms} kỳ • Còn {remainingTerms} kỳ
           </span>
         )}
-        {dueAlert && (
+        {dueAlert ? (
           <span className={`rounded-full border px-2 py-0.5 text-[10px] font-medium ${dueAlert.badgeClass}`}>
             {dueAlert.label}
+          </span>
+        ) : daysUntilDue !== null && (
+          <span className="rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+            Còn {daysUntilDue} ngày
           </span>
         )}
       </div>

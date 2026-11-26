@@ -46,6 +46,17 @@ export function computeFinanceStats(items: DebtRecord[]) {
   return { totalPaid, totalRemaining, monthlyTotal, totalRolloverFees, activeCount, overdueCount, progressPct, byCategory };
 }
 
+export function findDuplicateDebtIds(items: DebtRecord[]): string[] {
+  const seen = new Set<string>();
+  const dups: string[] = [];
+  for (const item of items) {
+    const key = item.title.trim().toLowerCase();
+    if (seen.has(key)) dups.push(item.id);
+    else seen.add(key);
+  }
+  return dups;
+}
+
 export interface PaymentDueAlert {
   level: 'urgent' | 'soon';
   daysLeft: number;
@@ -120,6 +131,14 @@ export function getNextPaymentTimestamp(item: DebtRecord, now = new Date()): num
   }
 
   return Number.MAX_SAFE_INTEGER;
+}
+
+export function getDaysUntilDue(item: DebtRecord, now = new Date()): number | null {
+  if (item.status === 'paid') return null;
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate()).getTime();
+  const nextTs = getNextPaymentTimestamp(item, now);
+  if (!Number.isFinite(nextTs) || nextTs === Number.MAX_SAFE_INTEGER) return null;
+  return Math.round((nextTs - today) / 86_400_000);
 }
 
 export function getPaymentDueAlert(item: DebtRecord, now = new Date()): PaymentDueAlert | null {
