@@ -25,27 +25,35 @@ export default function FinanceSummaryCards({
   return (
     <>
       <section className="grid grid-cols-2 lg:grid-cols-4 gap-3">
-        <div className="liquid-glass rounded-2xl p-4 space-y-1">
-          <p className="text-xs text-slate-400">Tổng số dư còn lại</p>
-          <p className="text-lg sm:text-xl font-semibold text-white">{formatVND(stats.totalRemaining)}</p>
+        <div className="liquid-glass rounded-2xl p-3.5 sm:p-4 space-y-1 min-w-0">
+          <p className="text-xs text-slate-400 truncate">Tổng số dư còn lại</p>
+          <p className="text-base sm:text-xl font-semibold text-white whitespace-nowrap tabular-nums truncate">
+            {formatVND(stats.totalRemaining)}
+          </p>
         </div>
-        <div className="liquid-glass rounded-2xl p-4 space-y-1">
-          <p className="text-xs text-slate-400">Đã thanh toán ({stats.progressPct}%)</p>
-          <p className="text-lg sm:text-xl font-semibold text-emerald-400">{formatVND(stats.totalPaid)}</p>
+        <div className="liquid-glass rounded-2xl p-3.5 sm:p-4 space-y-1 min-w-0">
+          <p className="text-xs text-slate-400 truncate">Đã thanh toán ({stats.progressPct}%)</p>
+          <p className="text-base sm:text-xl font-semibold text-emerald-400 whitespace-nowrap tabular-nums truncate">
+            {formatVND(stats.totalPaid)}
+          </p>
         </div>
-        <div className="liquid-glass rounded-2xl p-4 space-y-1">
-          <p className="text-xs text-slate-400">Dự chi / kỳ</p>
-          <p className="text-lg sm:text-xl font-semibold text-sky-400">{formatVND(stats.monthlyTotal)}</p>
+        <div className="liquid-glass rounded-2xl p-3.5 sm:p-4 space-y-1 min-w-0">
+          <p className="text-xs text-slate-400 truncate">Dự chi / kỳ</p>
+          <p className="text-base sm:text-xl font-semibold text-sky-400 whitespace-nowrap tabular-nums truncate">
+            {formatVND(stats.monthlyTotal)}
+          </p>
           {stats.totalRolloverFees > 0 && (
-            <p className="text-[11px] text-amber-300">Phí đáo thẻ (2.2%): {formatVND(stats.totalRolloverFees)}</p>
+            <p className="text-[11px] text-amber-300 whitespace-nowrap tabular-nums truncate">
+              Phí đáo 2.2%: {formatVND(stats.totalRolloverFees)}
+            </p>
           )}
         </div>
-        <div className="liquid-glass rounded-2xl p-4 space-y-1">
-          <p className="text-xs text-slate-400">Đang theo dõi</p>
-          <p className="text-lg sm:text-xl font-semibold text-white">
+        <div className="liquid-glass rounded-2xl p-3.5 sm:p-4 space-y-1 min-w-0">
+          <p className="text-xs text-slate-400 truncate">Đang theo dõi</p>
+          <p className="text-base sm:text-xl font-semibold text-white whitespace-nowrap tabular-nums">
             {stats.activeCount}
             {stats.overdueCount > 0 && (
-              <span className="ml-2 text-xs font-medium text-rose-400">({stats.overdueCount} quá hạn)</span>
+              <span className="ml-1.5 text-xs font-medium text-rose-400">({stats.overdueCount} quá hạn)</span>
             )}
           </p>
         </div>
@@ -68,7 +76,7 @@ export default function FinanceSummaryCards({
                 audioService.playClick();
                 onSelectCategory(isSelected ? 'all' : cat.value);
               }}
-              className={`text-left rounded-2xl p-3.5 transition cursor-pointer ${
+              className={`text-left rounded-2xl p-3.5 transition min-w-0 cursor-pointer ${
                 isSelected
                   ? 'liquid-glass border-sky-400/50 ring-1 ring-sky-400/30'
                   : 'liquid-glass-pill hover:border-white/25'
@@ -76,9 +84,11 @@ export default function FinanceSummaryCards({
             >
               <div className="flex items-center justify-between gap-2">
                 <span className="text-xs text-slate-300 truncate">{cat.label}</span>
-                <span className="text-[11px] text-slate-400">{info.count}</span>
+                <span className="text-[11px] text-slate-400 shrink-0 tabular-nums">{info.count}</span>
               </div>
-              <p className="text-sm font-semibold text-white mt-1">{formatVND(info.remaining)}</p>
+              <p className="text-sm font-semibold text-white mt-1 whitespace-nowrap tabular-nums truncate">
+                {formatVND(info.remaining)}
+              </p>
               <div className="mt-2 h-1 w-full rounded-full bg-white/10 overflow-hidden">
                 <div className={`h-full rounded-full ${cat.accentBar}`} style={{ width: `${pct}%` }} />
               </div>

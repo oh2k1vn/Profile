@@ -26,12 +26,12 @@ export default function FinanceAlertBanner({ alerts, onSelectItem }: FinanceAler
               audioService.playClick();
               onSelectItem(item);
             }}
-            className={`rounded-full border px-3 py-1 text-[11px] inline-flex items-center gap-1.5 transition hover:opacity-90 cursor-pointer ${alert.badgeClass}`}
+            className={`max-w-full rounded-full border px-3 py-1 text-[11px] inline-flex items-center gap-1.5 transition hover:opacity-90 whitespace-nowrap cursor-pointer ${alert.badgeClass}`}
           >
-            <span className="font-medium">{item.title}</span>
-            <span className="opacity-80">• {alert.label}</span>
+            <span className="font-medium truncate">{item.title}</span>
+            <span className="opacity-80 shrink-0">• {alert.label}</span>
             {Number(item.monthlyPayment) > 0 && (
-              <span className="opacity-90">({formatVND(Number(item.monthlyPayment))})</span>
+              <span className="opacity-90 shrink-0 tabular-nums">({formatVND(Number(item.monthlyPayment))})</span>
             )}
           </button>
         ))}

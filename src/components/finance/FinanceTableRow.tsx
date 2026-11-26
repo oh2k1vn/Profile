@@ -46,24 +46,24 @@ export default function FinanceTableRow({
     <tr className={`hover:bg-white/[0.04] transition ${dueAlert?.rowClass ?? ''}`}>
       <td className="py-3.5 px-4">
         <div className="flex flex-wrap items-center gap-1.5">
-          <span className="font-medium text-white">{item.title}</span>
+          <span className="font-medium text-white whitespace-nowrap">{item.title}</span>
           {totalTerms > 0 && (
-            <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500/15 border border-indigo-400/30 px-2 py-0.5 text-[10px] font-medium text-indigo-300">
+            <span className="inline-flex items-center gap-1 rounded-full bg-indigo-500/15 border border-indigo-400/30 px-2 py-0.5 text-[10px] font-medium text-indigo-300 whitespace-nowrap">
               {currentTerm}/{totalTerms} kỳ
               {remainingTerms > 0 ? ` • Còn ${remainingTerms} kỳ` : ' • Đủ kỳ'}
             </span>
           )}
           {dueAlert ? (
-            <span className={`inline-block rounded-full border px-2 py-0.5 text-[10px] font-medium ${dueAlert.badgeClass}`}>
+            <span className={`inline-block rounded-full border px-2 py-0.5 text-[10px] font-medium whitespace-nowrap ${dueAlert.badgeClass}`}>
               {dueAlert.label}
             </span>
           ) : daysUntilDue !== null && (
-            <span className="inline-block rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+            <span className="inline-block rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300 whitespace-nowrap">
               Còn {daysUntilDue} ngày
             </span>
           )}
         </div>
-        <div className="text-[11px] text-slate-400 mt-0.5">
+        <div className="text-[11px] text-slate-400 mt-0.5 whitespace-nowrap">
           {item.lender || '—'} {item.dueDay ? `• Ngày ${item.dueDay}` : ''}
           {Number(item.principalAmount) > 0 && Number(item.principalAmount) !== total
             ? ` • Gốc ${formatVND(Number(item.principalAmount))}`
@@ -81,39 +81,39 @@ export default function FinanceTableRow({
         )}
       </td>
       <td className="py-3.5 px-3">
-        <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[11px] ${catMeta.badgeClass}`}>
+        <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[11px] whitespace-nowrap ${catMeta.badgeClass}`}>
           {catMeta.label}
         </span>
       </td>
-      <td className="py-3.5 px-3 text-slate-200">
-        <div className="font-semibold text-sky-300">{formatVND(Number(item.monthlyPayment) || 0)}</div>
+      <td className="py-3.5 px-3 text-slate-200 whitespace-nowrap">
+        <div className="font-semibold text-sky-300 tabular-nums">{formatVND(Number(item.monthlyPayment) || 0)}</div>
         {totalTerms > 0 && (
           <div className="text-[11px] text-indigo-300">
             {remainingTerms > 0 ? `Còn ${remainingTerms}/${totalTerms} kỳ` : `Hoàn tất ${totalTerms} kỳ`}
           </div>
         )}
         {item.category === 'credit_card' && item.status !== 'paid' && (
-          <div className="text-[11px] text-amber-300">
+          <div className="text-[11px] text-amber-300 tabular-nums">
             Đáo {rolloverRate}%: {formatVND(calculateRolloverFee(remaining, rolloverRate))}
           </div>
         )}
       </td>
       <td className="py-3.5 px-3 min-w-[140px]">
-        <div className="font-medium text-white">{formatVND(remaining)}</div>
+        <div className="font-medium text-white whitespace-nowrap tabular-nums">{formatVND(remaining)}</div>
         <div className="flex items-center gap-2 mt-1">
           <div className="h-1 flex-1 rounded-full bg-white/10 overflow-hidden">
             <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${pct}%` }} />
           </div>
-          <span className="text-[10px] text-slate-400">{pct}%</span>
+          <span className="text-[10px] text-slate-400 tabular-nums">{pct}%</span>
         </div>
       </td>
       <td className="py-3.5 px-3">
-        <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[11px] ${statusMeta.badgeClass}`}>
+        <span className={`inline-block rounded-full border px-2.5 py-0.5 text-[11px] whitespace-nowrap ${statusMeta.badgeClass}`}>
           {statusMeta.label}
         </span>
       </td>
       <td className="py-3.5 px-4">
-        <div className="flex items-center justify-end gap-1.5">
+        <div className="flex items-center justify-end gap-1.5 whitespace-nowrap">
           {item.category === 'credit_card' && item.status !== 'paid' && (
             <button
               type="button"

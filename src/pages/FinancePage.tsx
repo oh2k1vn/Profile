@@ -73,9 +73,9 @@ export default function FinancePage() {
               void loadItems(true);
             }}
             disabled={loading}
-            className="liquid-glass-pill flex-1 sm:flex-none justify-center rounded-full px-3.5 py-2 text-xs text-slate-300 hover:text-white inline-flex items-center gap-1.5 cursor-pointer"
+            className="liquid-glass-pill flex-1 sm:flex-none justify-center rounded-full px-3.5 py-2 text-xs text-slate-300 hover:text-white inline-flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
           >
-            <RefreshCw className={`w-3.5 h-3.5 ${loading ? 'animate-spin' : ''}`} />
+            <RefreshCw className={`w-3.5 h-3.5 shrink-0 ${loading ? 'animate-spin' : ''}`} />
             Làm mới
           </button>
           <button
@@ -85,9 +85,9 @@ export default function FinancePage() {
               setEditingItem(null);
               setModalOpen(true);
             }}
-            className="liquid-glass-accent-btn flex-1 sm:flex-none justify-center rounded-full px-4 py-2 text-xs font-medium text-white inline-flex items-center gap-1.5 cursor-pointer"
+            className="liquid-glass-accent-btn flex-1 sm:flex-none justify-center rounded-full px-4 py-2 text-xs font-medium text-white inline-flex items-center gap-1.5 whitespace-nowrap cursor-pointer"
           >
-            <Plus className="w-3.5 h-3.5" />
+            <Plus className="w-3.5 h-3.5 shrink-0" />
             Thêm khoản mục
           </button>
         </div>

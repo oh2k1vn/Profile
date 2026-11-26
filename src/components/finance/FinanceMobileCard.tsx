@@ -51,46 +51,46 @@ export default function FinanceMobileCard({
             {item.lender || '—'} {item.dueDay ? `• Ngày ${item.dueDay}` : ''}
           </p>
         </div>
-        <span className={`shrink-0 rounded-full border px-2.5 py-0.5 text-[10px] ${statusMeta.badgeClass}`}>
+        <span className={`shrink-0 whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[10px] ${statusMeta.badgeClass}`}>
           {statusMeta.label}
         </span>
       </div>
 
       <div className="flex flex-wrap items-center gap-1.5">
-        <span className={`rounded-full border px-2.5 py-0.5 text-[10px] ${catMeta.badgeClass}`}>
+        <span className={`whitespace-nowrap rounded-full border px-2.5 py-0.5 text-[10px] ${catMeta.badgeClass}`}>
           {catMeta.label}
         </span>
         {totalTerms > 0 && (
-          <span className="rounded-full bg-indigo-500/15 border border-indigo-400/30 px-2 py-0.5 text-[10px] text-indigo-300">
+          <span className="whitespace-nowrap rounded-full bg-indigo-500/15 border border-indigo-400/30 px-2 py-0.5 text-[10px] text-indigo-300">
             {currentTerm}/{totalTerms} kỳ • Còn {remainingTerms} kỳ
           </span>
         )}
         {dueAlert ? (
-          <span className={`rounded-full border px-2 py-0.5 text-[10px] font-medium ${dueAlert.badgeClass}`}>
+          <span className={`whitespace-nowrap rounded-full border px-2 py-0.5 text-[10px] font-medium ${dueAlert.badgeClass}`}>
             {dueAlert.label}
           </span>
         ) : daysUntilDue !== null && (
-          <span className="rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
+          <span className="whitespace-nowrap rounded-full border border-white/15 bg-white/5 px-2 py-0.5 text-[10px] text-slate-300">
             Còn {daysUntilDue} ngày
           </span>
         )}
       </div>
 
       <div className="grid grid-cols-2 gap-2.5 liquid-glass-pill rounded-2xl p-3">
-        <div>
-          <p className="text-[10px] text-slate-400">Đóng kỳ này</p>
-          <p className="text-sm font-semibold text-sky-300">
+        <div className="min-w-0">
+          <p className="text-[10px] text-slate-400 whitespace-nowrap">Đóng kỳ này</p>
+          <p className="text-sm font-semibold text-sky-300 whitespace-nowrap tabular-nums truncate">
             {formatVND(Number(item.monthlyPayment) || 0)}
           </p>
           {item.category === 'credit_card' && item.status !== 'paid' && (
-            <p className="text-[10px] text-amber-300 mt-0.5">
+            <p className="text-[10px] text-amber-300 mt-0.5 whitespace-nowrap tabular-nums truncate">
               Đáo {rolloverRate}%: {formatVND(calculateRolloverFee(remaining, rolloverRate))}
             </p>
           )}
         </div>
-        <div>
-          <p className="text-[10px] text-slate-400">Còn lại ({pct}%)</p>
-          <p className="text-sm font-semibold text-white">{formatVND(remaining)}</p>
+        <div className="min-w-0">
+          <p className="text-[10px] text-slate-400 whitespace-nowrap">Còn lại ({pct}%)</p>
+          <p className="text-sm font-semibold text-white whitespace-nowrap tabular-nums truncate">{formatVND(remaining)}</p>
           <div className="mt-1.5 h-1 w-full rounded-full bg-white/10 overflow-hidden">
             <div className="h-full bg-emerald-400 rounded-full" style={{ width: `${pct}%` }} />
           </div>
@@ -108,7 +108,7 @@ export default function FinanceMobileCard({
         </div>
       )}
 
-      <div className="flex items-center justify-end gap-2 pt-0.5">
+      <div className="flex flex-wrap items-center justify-end gap-2 pt-0.5">
         {item.category === 'credit_card' && item.status !== 'paid' && (
           <button
             type="button"
@@ -116,9 +116,9 @@ export default function FinanceMobileCard({
               audioService.playClick();
               onRollover(item);
             }}
-            className="liquid-glass-pill rounded-full px-3 py-1.5 text-[11px] text-amber-300 inline-flex items-center gap-1 cursor-pointer"
+            className="liquid-glass-pill whitespace-nowrap rounded-full px-3 py-1.5 text-[11px] text-amber-300 inline-flex items-center gap-1 cursor-pointer"
           >
-            <Repeat className="w-3 h-3" />
+            <Repeat className="w-3 h-3 shrink-0" />
             Đáo thẻ
           </button>
         )}
@@ -126,9 +126,9 @@ export default function FinanceMobileCard({
           <button
             type="button"
             onClick={() => void onQuickPay(item)}
-            className="liquid-glass-pill rounded-full px-3 py-1.5 text-[11px] text-emerald-300 inline-flex items-center gap-1 cursor-pointer"
+            className="liquid-glass-pill whitespace-nowrap rounded-full px-3 py-1.5 text-[11px] text-emerald-300 inline-flex items-center gap-1 cursor-pointer"
           >
-            <CheckCircle2 className="w-3 h-3" />
+            <CheckCircle2 className="w-3 h-3 shrink-0" />
             Thanh toán
           </button>
         )}
